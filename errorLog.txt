@@ -1,0 +1,120 @@
+
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] TalkException(parameterMap={'2': 'c136f6915c3f4d8211924dabf09ec145c'}, code=10, reason='You are not related to group: c136f6915c3f4d8211924dabf09ec145c')
+[<module 'time' (built-in)>] TalkException(parameterMap={'2': 'c136f6915c3f4d8211924dabf09ec145c'}, code=10, reason='You are not related to group: c136f6915c3f4d8211924dabf09ec145c')
+[<module 'time' (built-in)>] TalkException(parameterMap={'2': 'c136f6915c3f4d8211924dabf09ec145c'}, code=10, reason='You are not related to group: c136f6915c3f4d8211924dabf09ec145c')
+[<module 'time' (built-in)>] TalkException(parameterMap={'2': 'c136f6915c3f4d8211924dabf09ec145c'}, code=10, reason='You are not related to group: c136f6915c3f4d8211924dabf09ec145c')
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] TalkException(parameterMap={}, code=0, reason='unable to find midType')
+[<module 'time' (built-in)>] TalkException(parameterMap={}, code=0, reason='unable to find midType')
+[<module 'time' (built-in)>] 'MENTION'
+[<module 'time' (built-in)>] 'MENTION'
+[<module 'time' (built-in)>] 'MENTION'
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] 'comment'
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] 'comment'
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] 'comment'
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] local variable 'sender' referenced before assignment
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] 'comment'
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] local variable 'sender' referenced before assignment
+[<module 'time' (built-in)>] local variable 'sender' referenced before assignment
+[<module 'time' (built-in)>] local variable 'sender' referenced before assignment
+[<module 'time' (built-in)>] local variable 'sender' referenced before assignment
+[<module 'time' (built-in)>] local variable 'sender' referenced before assignment
+[<module 'time' (built-in)>] local variable 'sender' referenced before assignment
+[<module 'time' (built-in)>] local variable 'sender' referenced before assignment
+[<module 'time' (built-in)>] local variable 'sender' referenced before assignment
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] argument of type 'bool' is not iterable
+[<module 'time' (built-in)>] TalkException(reason='You are not related to group: c86b4a1c09caeaae483490ac0f5f30f97', parameterMap={'2': 'c86b4a1c09caeaae483490ac0f5f30f97'}, code=10)
+[<module 'time' (built-in)>] TalkException(reason='You are not related to group: cc0df10728d74be2adffa538a07175b87', parameterMap={'2': 'cc0df10728d74be2adffa538a07175b87'}, code=10)
+[<module 'time' (built-in)>] TalkException(reason='You are not related to group: c681acb0288fd3193a7f41e8ac9f21f13', parameterMap={'2': 'c681acb0288fd3193a7f41e8ac9f21f13'}, code=10)
+[<module 'time' (built-in)>] TalkException(reason='invalid contactIds', parameterMap={}, code=0)
+[<module 'time' (built-in)>] TalkException(reason='invalid contactIds', parameterMap={}, code=0)
+[<module 'time' (built-in)>] TalkException(reason='invalid contactIds', parameterMap={}, code=0)
+[<module 'time' (built-in)>] TalkException(reason='invalid contactIds', parameterMap={}, code=0)
