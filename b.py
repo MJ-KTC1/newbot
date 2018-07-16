@@ -13,27 +13,27 @@ import youtube_dl
 #import pyimgflip
 
 #cl = LineClient(authToken='EtYbwd1KwVZ0ClP97H49.5dqsbNfkyXzVzubqeawL2q.ki+FSaUvV/Cv9k6rmw+AaAlm4kWRu4xQcqGtg86wg2I=')
-cl = LineClinet() 
-cl.log("Auth Token : " + str(cl.authToken))
-channel = LineChannel(cl)
-cl.log("Channel Access Token : " + str(channel.channelAccessToken))
+cl = LineClinet('sunu0734@gmail.com','sunu2018') 
+#cl.log("Auth Token : " + str(cl.authToken))
+#channel = LineChannel(cl)
+#cl.log("Channel Access Token : " + str(channel.channelAccessToken))
 
-#ki = LineClient(authToken='EsjlNp9vlWmkaLc7z6Kf.3n3RWAdsgLZjt/+nOQiXNW.KVm0ddXNhC8jSNgG31sCyr3ZLlYlyXg3PfBab9fNvIk=')
+ki = LineClient('nunu4844@gmail.com','sunu2018')
 #ki.log("Auth Token : " + str(ki.authToken))
 #channel1 = LineChannel(ki)
 #ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
 
-#kk = LineClient(authToken='EsDICM1uFCPNtg7fK254.xABX72IbuY/KMjjOxHNaXa.DVFEXf4T3MJooikuwRnNVLAG5xwTQ7OJ+HUI7sj4YXw=')
+kk = LineClient('su6nu2018@gmail.com','sunu2018')
 #kk.log("Auth Token : " + str(kk.authToken))
 #channel2 = LineChannel(kk)
 #kk.log("Channel Access Token : " + str(channel2.channelAccessToken))
 
-#kc = LineClient(authToken='EsoDagsHgHRSnIX6a2V7.d/ilHm7FtIoI0I9dGqdOfW.XAbV0Af3N2sG28wDm5KxTi0Vb2S6A8WN0YPUS5QSBz8=')
+kc = LineClient('su2nu2018@gmail.com','sunu2018')
 #kc.log("Auth Token : " + str(kc.authToken))
 #channel3 = LineChannel(kc)
 #kc.log("Channel Access Token : " + str(channel3.channelAccessToken))
 
-#km = LineClient(authToken='EsqWMzZpr8GFYqIamJAc.P4bZ/fBf0hIumuuVXCVtJa.PPu7/I3DfSxLIvbggJJDtfsVSbviyFp7+oGYFMbXH7w=')
+km = LineClient('su3nu2018@gmail.com','sunu2018')
 #km.log("Auth Token : " + str(km.authToken))
 #channel4 = LineChannel(km)
 #km.log("Channel Access Token : " + str(channel4.channelAccessToken))
