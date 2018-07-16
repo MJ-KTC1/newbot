@@ -18,28 +18,28 @@ from googletrans import Translator
 #==============================================================================#
 botStart = time.time()
 #==============================================================================#
-line = LINE('jon1bot2018@gmail.com','nunu_kap2018')
+line = LINE("susu76917@gmail.com","nunu_2018")
 #line = LINE()
 #line.log("Auth Token : " + str(line.authToken))
 #line.log("Timeline Token : " + str(line.tl.channelAccessToken))
 
-#ki = LINE()
+ki = LINE("bot1nu2018@gmail.com","nunu_kap2018")
 #ki = LINE("bot5nu2018@gmail.com","nunu_kap2018")
 #ki.log("Auth Token : " + str(ki.authToken))
 #ki.log("Timeline Token : " + str(ki.tl.channelAccessToken))
 
-#kk = LINE()
+kk = LINE("bot2nu2018@gmail.com","nunu_kap2018")
 #kk = LINE('bot1nu2018@gmail.com','nunu_kap2018')
 #kk.log("Auth Token : " + str(kk.authToken))
 #kk.log("Timeline Token : " + str(kk.tl.channelAccessToken))
 
-#kc = LINE()
+kc = LINE("su4nu2018@gmail.com","nunu_kap2018")
 #kc = LINE('bot2nu2018@gmail.com','nunu_kap2018')
 kc.log("Auth Token : " + str(kc.authToken))
 kc.log("Timeline Token : " + str(kc.tl.channelAccessToken))
 
 #ke = LINE()
-ke = LINE('bot3nu2018@gmail.com','nunu_kap2018')
+ke = LINE("bot3nu2018@gmail.com","nunu_kap2018")
 ke.log("Auth Token : " + str(ke.authToken))
 ke.log("Timeline Token : " + str(ke.tl.channelAccessToken))
 
@@ -86,8 +86,8 @@ kcMID = kc.getProfile().mid
 kcMID = ke.getProfile().mid
 bot1 = line.getProfile().mid
 RfuBot=[lineMID,kiMID,kkMID,kcMID,keMID]
-Family=["u9e89c2795376097bbe654ac7477ce1a3",lineMID,kiMID,kkMID,kcMID,keMID]
-admin=['u9e89c2795376097bbe654ac7477ce1a3',lineMID]
+Family=["ue32b11986d8e9e5cf70b642cf7ba88ff",lineMID,kiMID,kkMID,kcMID,keMID]
+admin=['ue32b11986d8e9e5cf70b642cf7ba88ff',lineMID]
 RfuFamily = RfuBot + Family
 
 protectname = []
