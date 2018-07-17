@@ -106,12 +106,12 @@ settings = {
     "autoLeave": True,
     "autoRead": False,
     "leaveRoom": False,
-    "detectMention": False,
+    "detectMention": True,
     "checkSticker": False,
     "checkContact": False,
     "checkPost": False,
     "kickMention": False,
-    "potoMention": False,
+    "potoMention": True,
     "delayMention": False,
     "lang":"JP",
     "Wc": False,
@@ -125,12 +125,11 @@ settings = {
     "dblacklist": False,
     "gift":False,
     "likeOn":False,
-    "Timeline":False,
+    "timeline":False,
     "commentOn":True,
     "commentBlack":{},
-    "Ghost": False,
-    "dblack": False,
     "wblack": False,
+    "dblack": False,
     "clock": False,
     "cName":"",
     "cNames":"",
@@ -148,10 +147,11 @@ settings = {
     "winvite": False,
     "pnharfbot": {},
     "pname": {},
-    "pro_name": {}
-    "message1":"🌥🌤🌥🌤🌥🌤🌥🌤🌥🌤🌥🌤\n✟ℓຫຼี้छゆຸ۞💘⚘ℓຫຼี้छՃิ🌷\n🎊 ติดต่อขอลงทะเบียนใช้งาน\n🎯 @ID.LINE http://line.me/ti/p/t39FP9K59s\n💮 โดยพิมคำว่า.selfbotfree\n🌷 ระบบจะตอบกลับอัตโนมัติ\n🌦🌥🌦🌥🌦🌥🌦🌦🌦🌦🌦🌥🌥\nselfbot by:\n╔══════════════┓\n╠™✟ℓຫຼี้छゆຸ۞💘⚘ℓຫຼี้छՃิ🌷 \n╚══════════════┛",
-    "message":"บัญชีนี้ถูกป้องกันโดย Selfbot By ✟ℓຫຼี้छゆຸ۞💘⚘ℓຫຼี้छՃิ🌷 ระบบได้ทำการบล็อคคุณอัตโนมัติเนื่องจากคุณยังไม่ได้ยืนยันตัวตนกับผู้สร้างบอท\nสามารถยืนตัวตนได้ง่ายโดยการพิม unblock ระบบจะทำการปลดบล็อคท่านโดยอัตโนมัต",
-    "comment":"""🏷✟ℓຫຼี้छゆຸ۞💘⚘ℓຫຼี้छՃิ🌷🏷
+    "pro_name": {},
+    "message1":"รับแก้ไฟล์+เพิ่มไฟล์+แก้ภาษา\n💝ราคาดูที่หน้างาน💝\n👉มีบริการให้เช่าบอทSAMURAI\nราคา300บาทต่อเดือน💖\n#เพิ่มคิกเกอร์ตัวละ100👌\n🎀สนใจรีบทัก..บอทpython3ฟังชั่นล้นหลาม🎁กำลังรอให้คุณเป็นเจ้าของ\n(ผมจะอยู่ที่ห้องนี้แค่15นาทีนะจ๊ะ)\nselfbot by:\n╔══════════════┓\n╠™❍✯͜͡RED™SAMURAI✯͜͡❂➣ \n╚══════════════┛",
+    "message":"บัญชีนี้ถูกป้องกันโดย Selfbot By ™❍✯͜͡RED™SAMURI✯͜͡❂➣ระบบได้ทำการบล็อคคุณอัตโนมัติเนื่องจากคุณยังไม่ได้ยืนยันตัวตนกับผู้สร้างบอท\nสามารถยืนตัวตนได้ง่ายโดยการพิม unblockกับ™❍✯͜͡RED™SAMURI✯͜͡❂➣ระบบจะทำการปลดบล็อคท่านโดยอัตโนมัต",
+    "comment":"""selfbot by:
+      🏷✟ℓຫຼี้छゆຸ۞💘⚘ℓຫຼี้छՃิ🌷🏷
     ─┅═✥SELFBOTFREE✥═┅─ 
     🎆🎇❇✨🎆🎇❇✨🎆🎇❇✨🎆🎇❇✨
     ۩..✟ໄ௮่௮ิთਙԳのਙ ۞ ໄ௮่જӘபլのਙีઈ..۩
@@ -170,8 +170,8 @@ settings = {
 
      การพูดความจริงก็ไม่ได้สวยงามเสมอไปเช่นกัน
 
-────┅═ই۝ई═┅──── 
-selfbot by:
+          ────┅═ই۝ई═┅──── 
+ selfbot by:
 ╔══════════════┓
 ╠✟ℓຫຼี้छゆຸ۞💘⚘ℓຫຼี้छՃิ🌷
 ╚══════════════┛""",
