@@ -11,37 +11,37 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 import youtube_dl
 #import pyimgflip
-cl = LineClient(authToken='EtX6RRobtBm7DLEMkyD5.eQ6R6IOHNqH//M2un/UxXq.vmF0l0PQn/Bjt94qylwNvIAJpBX9hrQuN7g181czTL0=')
+cl = LineClient()
 cl.log("Auth Token : " + str(cl.authToken))
 channel = LineChannel(cl)
 cl.log("Channel Access Token : " + str(channel.channelAccessToken))
 
-ki = LineClient(authToken='Et01kE5vWgqxEHeI8uP2.3I13Zr+YqgUiQL4M5SgkqG.Xf8EfnTv/OqRQHdG/sAoj+Vg+AQFBbVyAzHhzHzYalM=')
+ki = LineClient()
 ki.log("Auth Token : " + str(ki.authToken))
 channel1 = LineChannel(ki)
 ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
 
-kk = LineClient(authToken='Eta8jHaYThcjPtrIwfmf.FcT6jLkdK2I4KjMnWnweJW.NX64SVxT229k/ccCEeyc+7aZrAY5t2Et5N0AfD9jJos=')
+kk = LineClient()
 kk.log("Auth Token : " + str(kk.authToken))
 channel2 = LineChannel(kk)
 kk.log("Channel Access Token : " + str(channel2.channelAccessToken))
 
-kc = LineClient(authToken='EtocquRp3l1ePOpnp9R2.CJF7vfp6SaSjXezpPXkkiG.725QRKK94DRRUaqbOq4O8cSDDgBzYrmYeKohxNV21GY=')
+kc = LineClient()
 kc.log("Auth Token : " + str(kc.authToken))
 channel3 = LineChannel(kc)
 kc.log("Channel Access Token : " + str(channel3.channelAccessToken))
 
-km = LineClient(authToken='EtY9VJgsKMdyHiR2a9O0.Iud4Fmb5VADcfAcHM//8Ca.cJD6nxbbWSCiLrxqzyDeYRKSEeyiQ7Dex4XBamxxndo=')
+km = LineClient()
 km.log("Auth Token : " + str(km.authToken))
 channel4 = LineChannel(km)
 km.log("Channel Access Token : " + str(channel4.channelAccessToken))
 
-kb = LineClient(authToken='EtXa6EEfPQmeKLvGTWdf.ff6fAAzFeHu9lp3/hBtwZW.wlMkAQhyuD+As5ycBr5zHl9Lj5Kqnu+DRoE0wG6rufA=')
+kb = LineClient()
 kb.log("Auth Token : " + str(kb.authToken))
 channel5 = LineChannel(kb)
 kb.log("Channel Access Token : " + str(channel5.channelAccessToken))
 
-sw = LineClient(authToken='EtAd1PwTm6ej0tDCDKe9.NjXz4/z8uyBWBNbHmxynIq.8OprIi8FjKtWilhXfVB+L5Lo/QQ8K5fYmWAMHfMFnqM=')
+sw = LineClient()
 sw.log("Auth Token : " + str(sw.authToken))
 channel6 = LineChannel(sw)
 sw.log("Channel Access Token : " + str(channel6.channelAccessToken))
