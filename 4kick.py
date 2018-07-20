@@ -972,7 +972,7 @@ def lineBot(op):
                     line.sendContact(to, lineMID)
                 elif text.lower() == '.ผส':
                     sendMessageWithMention(to, lineMID)
-                    line.sendContact(to, "u8f4b03bd2f026a30dbff351d5a08dfc3")
+                    line.sendContact(to, "ue32b11986d8e9e5cf70b642cf7ba88ff")
                 elif text.lower() == '.ไอดี':
                     line.sendMessage(msg.to,"[MID]\n" +  lineMID)
                 elif text.lower() == '.คอมเม้น':
