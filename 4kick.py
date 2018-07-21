@@ -1392,8 +1392,8 @@ def lineBot(op):
                             line.sendText(msg.to,"ข้อความสเตตัส:\n"+userData.statusMessage)
                             line.sendText(msg.to,"ไอดีบัญชี: "+userData.mid)
                 
-                elif "รับแก้ไฟล์+เพิ่มไฟล์+แก้ภาษา\n💝ราคาดูที่หน้างาน💝\n👉มีบริการให้เช่าบอทSAMURAI\nราคา300บาทต่อเดือน💖\n#เพิ่มคิกเกอร์ตัวละ100👌\n🎀สนใจรีบทัก..บอทpython3ฟังชั่นล้นหลาม🎁กำลังรอให้คุณเป็นเจ้าของ\n(ผมจะอยู่ที่ห้องนี้แค่15นาทีนะจ๊ะ)\nselfbot by:\n╔══════════════┓\n╠™❍✯͜͡RED™SAMURAI✯͜͡❂➣ \n╚══════════════┛" in msg.text:
-                    spl = msg.text.split("รับแก้ไฟล์+เพิ่มไฟล์+แก้ภาษา\n💝ราคาดูที่หน้างาน💝\n👉มีบริการให้เช่าบอทSAMURAI\nราคา300บาทต่อเดือน💖\n#เพิ่มคิกเกอร์ตัวละ100👌\n🎀สนใจรีบทัก..บอทpython3ฟังชั่นล้นหลาม🎁กำลังรอให้คุณเป็นเจ้าของ\n(ผมจะอยู่ที่ห้องนี้แค่15นาทีนะจ๊ะ)\nselfbot by:\n╔══════════════┓\n╠™❍✯͜͡RED™SAMURAI✯͜͡❂➣ \n╚══════════════┛")
+                elif "💐By.✟ℓຫຼี้छゆຸ۞💘\n💐💐💐💐💐💐💐💐💐\n🐟🐟🐟🐟🐟🐟🐟🐟🐟\n🌸🌸🌸🌸🌸🌸🌸🌸🌸\nบอทฟรีติดต่อขอลงทะเบียนที่\n#@LINE.http://line.me/ti/p/t39FP9K59s \n💐💐💐💐💐💐💐💐💐💐\nselfbot by:\n╔══════════════┓\n╠™💐By.✟ℓຫຼี้छゆຸ۞💘 \n╚══════════════┛" in msg.text:
+                    spl = msg.text.split("💐By.✟ℓຫຼี้छゆຸ۞💘\n🌳🌴🌴🌴🌴🌴🌴🌴🌴🌴🌴🌴\n🌵🌵🌵🌵🌵🌵🌵🌵🌵🌵🌵🌵\n💐💐💐💐💐💐💐💐💐\nบอทฟรีติดต่อขอลงทะเบียนที่\n#@LINE.http://line.me/ti/p/t39FP9K59s \n💐💐💐💐💐💐💐💐💐💐💐\nselfbot by:\n╔══════════════┓\n╠™💐By.✟ℓຫຼี้छゆຸ۞💘 \n╚══════════════┛")
                     if spl[len(spl)-1] == "":
                         line.sendText(msg.to,"กดที่นี่เพื่อเขย่าข้อความด้านบน:\nline://nv/chatMsg?chatId="+msg.to+"&messageId="+msg.id)
                 elif ".รัน @" in msg.text:
@@ -1413,7 +1413,7 @@ def lineBot(op):
                                thisgroup = line.getGroups([msg.to])
                                Mids = [target for contact in thisgroup[0].members]
                                mi_d = Mids[:33]
-                               line.createGroup("RED SAMURI Group",mi_d)
+                               line.createGroup("💐By.✟ℓຫຼี้छゆຸ۞💘",mi_d)
                                line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
                                line.createGroup("RED SAMURI Group",mi_d)
                                line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
