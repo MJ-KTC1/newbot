@@ -4939,10 +4939,8 @@ def lineBot(op):
                                           line.sendMessage(to,str(settings["Respontag"]))
                                           #sendMessageWithMention(to, contact.mid)
                                           break										  
-  #              if msg.text in ["Me","me",".me",".Me","คท","/me"]:
-#                    line.sendText(msg.to,"😆ไม่มี😆")		
-		if msg.text in ["Me","me",".me",".Me","คท","/me"]:
-                    line.sendMessage(msg.to,"เชคทั้งวันไอ้สัส ไม่หลุดหรอก จวย 😆")
+                if msg.text in ["Me","me",".me",".Me","คท","/me"]:
+                    line.sendText(msg.to,"หนัก อกหนักใจ จริงๆ")	
                 if msg.text in ["sp","speed",".speed","/speed","Sp",".Speed"]:
                     line.sendMessage(msg.to,"เชคควยรัยหนักหรา สึด !!!😉")
                 if msg.text in ["runtime","Runtime","/uptime","ออน",".uptime"]:
