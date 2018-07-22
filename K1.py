@@ -1,20 +1,4 @@
-# -*- coding: utf-8 -*-
 
-import LINETCR
-from LINETCR.lib.curve.ttypes import *
-from io import StringIO
-from datetime import datetime
-import time,random,sys,json,codecs,threading,glob,sys
-import re,string,os
-import os.path,sys,urllib,shutil,subprocess
-
-cl = LINETCR.LINE()
-cl.login(token="EnN1vSr5EUwjrEoPXEc0.3P8iWKJtN6LrHvgeVwLpya.vLhcJtlgz/zr7CLlMOTVJ0MQzo7v60XYSxPXvN5qT6E=")
-cl.loginResult()
-
-ki = LINETCR.LINE()
-ki.login(token="EnpHjgr1uiiK1ujj9FS7.ZQKpszwoSBpwV4L7zH2crW.Ke4WAsWRvPSlrtv8Fyhw1IqdNlrOfD8tRUVH6LhehQ0=")
-ki.loginResult()
 
 kk = ks = ki
 kc = ka = ki
