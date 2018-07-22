@@ -143,8 +143,8 @@ cctv = {
 
 with open('creator.json', 'r') as fp:
     creator = json.load(fp)
-with open('owner.json', 'r') as fp:
-    owner = json.load(fp)
+#with open('owner.json', 'r') as fp:
+#    owner = json.load(fp)
 
 Setbot = codecs.open("setting.json","r","utf-8")
 Setmain = json.load(Setbot)
