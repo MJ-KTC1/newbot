@@ -4939,20 +4939,56 @@ def lineBot(op):
                                           line.sendMessage(to,str(settings["Respontag"]))
                                           #sendMessageWithMention(to, contact.mid)
                                           break										  
-                if msg.text in ["Me","me",".me",".Me","คท","/me"]:
-                    line.sendText(msg.to,"😆ไม่มี😆")
-                if msg.text in ["ป๊า","ป๊าเรส","ลุง","เรส","นาย","เพื่อน","จาร์ย","อาจาร์ย","เฮีย"]:
-                    line.sendText(msg.to,"😆ไม่อยู่..ไปทำธุระ😆")
-                if msg.text in ["บอท","เซล","เซลบอท","selfbot","คนรึบอท","Help","help",".help","/help","คำสั่ง"]:
-                    line.sendText(msg.to,"💖สนใจ👉ติดตั้งเซลบอท\n👉แก้เซลบอท\n👉เรียนทำเซลบอท 😎\nติดต่อไลน์ไอดี🙋redsamuri7🙋\nหรือโทรมาที่เบอร์นี้👉 0946345913 \nราคาคุยกันได้..ชิวๆไม่แพงแน่นอน👌")
-                if msg.text in ["sp","Speed",".speed","/speed","Sp",".Speed"]:
-                    line.sendText(msg.to,"ความเร็วของคุณอยู่ที่👉 0.9526894063737Seconds😁")
+  #              if msg.text in ["Me","me",".me",".Me","คท","/me"]:
+#                    line.sendText(msg.to,"😆ไม่มี😆")		
+		if msg.text in ["Me","me",".me",".Me","คท","/me"]:
+                    line.sendMessage(msg.to,"เชคทั้งวันไอ้สัส ไม่หลุดหรอก จวย 😆")
+                if msg.text in ["sp","speed",".speed","/speed","Sp",".Speed"]:
+                    line.sendMessage(msg.to,"เชคควยรัยหนักหรา สึด !!!😉")
                 if msg.text in ["runtime","Runtime","/uptime","ออน",".uptime"]:
-                    line.sendText(msg.to,"🐣สะสมเวลออนกันเหรอคับ🐶")
-                if msg.text in ["55","555","5555","55555","55+","555+","5555+","ขำ",".ขำ"]:
-                    line.sendText(msg.to,"ฮ่าๆๆๆ..ขำไร..ขำด้วยคนดิ")
-                if msg.text in [".ประกาศ","โฆษณา","ประชาสัมพัน"]:
-                	line.sendText(msg.to,"รับแก้ไฟล์+เพิ่มไฟล์+แก้ภาษา\n??ราคาดูที่หน้างาน💝\n👉มีบริการให้เช่าบอทSAMURAI\nราคา300บาทต่อเดือน💖\n#เพิ่มคิกเกอร์ตัวละ100👌\n🎀สนใจรีบทัก..บอทpython3ฟังชั่นล้นหลาม🎁กำลังรอให้คุณเป็นเจ้าของ\n(ผมจะอยู่ที่ห้องนี้แค่15นาทีนะจ๊ะ)\nselfbot by:\n╔══════════════┓\n╠™❍✯͜͡RED™SAMURAI✯͜͡❂➣ \n╚══════════════┛")
+                    line.sendMessage(msg.to,"ออน ทั้งวันว่างหรา ลูก")	
+                if msg.text in ["@@","แอด","แอดมิน","แอดมิ้น","หัวห้อง"]:
+                    line.sendMessage(msg.to,"👇คนนี้.นี้ไงแอดกลุ่ม👇")
+                    line.sendMessage(msg.to,"Siriv10:グル作成者")				
+                if msg.text in ["@รอง","แอดรอง","แอดสำรอง","รอง","รองแอด"]:
+                    line.sendMessage(msg.to,"เดียวผมเชคให้นะครับรอสักครู่..")
+                    line.sendMessage(msg.to,"siri:予備作成者")				
+                if msg.text in ["พี่นุ","นุ","พี่"]:
+                    line.sendMessage(msg.to,"👇นี้เป็นระบบอัตโนมัติ ยังไม่ว่าง กรุณาติดต่อ👇")
+                    line.sendMessage(msg.to," http://line.me/ti/p/t39FP9K59s ")				
+                if msg.text in ["สวัดดี","สวัสดี","ดีครับ","สวัดดีครับ","สวัสดีครับ","สวัสดีคับ","สวัดดีคับ"]:
+                    line.sendMessage(msg.to,"สวัดดีเช่นกันครับ")
+                    line.sendMessage(msg.to,"ยินดีที่รู้จัก ชื่อ อะไรหรอ!!ครับ😊")				
+                if msg.text in ["คับ","ค่ะ","ครับ","คร้","คร้า","คาฟ","ค่าบ"]:
+                    line.sendMessage(msg.to,"ขอบคุณครับ...😑")
+                    line.sendMessage(msg.to,"😂😂😂😂😂😂😂")				
+                if msg.text in ["กำ","กำนะ","กำหำ","กำหอย"]:
+                    line.sendMessage(msg.to,"มากำคับ..😁😁")
+                    line.sendMessage(msg.to,"แต่อย่ากำแรงนะ เสียว..")				
+               # if msg.text in ["มอง","มองเเรง","มองบน"]:
+                 #   line.sendMessage(msg.to,"มองทำไม...")
+                  #  line.sendMessage(msg.to,"เดียวทิ่มตาบอดเลย")
+		if msg.text in ["55","555","5555","55555","555555"]:
+                    line.sendMessage(msg.to,"ขรรม รัย ครับ.")	
+                    line.sendMessage(msg.to,"ขรรมด้วยคนสิ..ฮ่าาา")				
+            #    if msg.text in [".","..","...","...."]:
+           #         line.sendMessage(msg.to,"จุดทำไมครับ...")
+                    #line.sendMessage(msg.to,"แต่อย่ากำแรงนะ มันเจ็บ")				
+              #  if msg.text in ["@@","แอด","แอดมิน","แอดมิ้น","หัวห้อง"]:
+                   # line.sendMessage(msg.to,"👇ผมรู้...นี้ไงแอดกลุ่ม👇")
+                   # line.sendMessage(msg.to,"Siriv10:グル作成者")
+                if msg.text in ["ที่รัก","ป๊า","ท.ร","ทร","เบบี๋","ที่รักจ๋า"]:
+                    line.sendText(msg.to,"เรียกเค้า หรอ..เตงง")
+                if msg.text in ["@","แอด","@มิ้ล","@มิ้น","แอดมิ้ล","แอดมิ้น"]:
+                    line.sendText(msg.to,"แอด บ้านคุณสิ..!!😆")
+             #   if msg.text in ["กำ",".กำ","กำ.","กรรม",".กรรม","กรรม."]:
+                #    line.sendText(msg.to,"มากำแต่อย่ากำแรงนะ มันเสียว")
+                if msg.text in ["มอง",".มอง","มอง.","มองแรง",".มองแรง","มองแรง.","มองบน",".มองบน"]:
+                    line.sendText(msg.to,"มองไร มองหำผมหรอ เดียวทิ่มตาบอดเลย😅")
+      #          if msg.text in ["55","555","5555","ขรรม","55+","555+","5555+","ขำ",".ขำ"]:
+         #           line.sendText(msg.to,"ขรรมทำไมงับ.ตลกมากรึไง")
+                if msg.text in [".","..","...","....]:
+                	line.sendText(msg.to,"จุดจบของคนพิม 5555")
                 if msg.text in dangerMessage:
                     random.choice(Rfu).kickoutFromGroup(receiver,[sender])
                     random.choice(Rfu).sendText(msg.to,"ตรวจพบคำสั่งของบอทลบกลุ่ม จำเป็นต้องนำออกเพื่อความปลอดภัยของสมาชิก (｀・ω・´)")
@@ -5031,7 +5067,7 @@ def lineBot(op):
             except:
                 pass
         if op.type == 55:
-            print (" [™❍✯͜͡RED™SAMURI✯͜͡❂➣]  ")
+            print (" [™─•۞✟ℓℓஆՁゆຸ۞•─]  ")
             try:
                 if op.param1 in read['readPoint']:
                     if op.param2 in read['readMember'][op.param1]:
