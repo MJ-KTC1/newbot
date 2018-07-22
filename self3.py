@@ -1,12 +1,19 @@
 # -*- coding: utf-8 -*-
 # Support Ghost Team & One Piece Team
-
-from LINEPY import *
+# -*- coding: utf-8 -*- 
+import linepy
+from linepy import *
 from akad.ttypes import *
 from multiprocessing import Pool, Process
+from googletrans import Translator
+from time import sleep
+import pytz, datetime, pafy, time, timeit, random, sys, ast, re, os, json, subprocess, threading, string, codecs, requests, tweepy, ctypes, urllib, wikipedia
+from datetime import timedelta, date
 from datetime import datetime
-import time,random,sys,json,codecs,threading,glob,re,os,subprocess
-
+from bs4 import BeautifulSoup
+import youtube_dl
+#import pyimgflip
+#~~~~~~~~~~~~~แก้ไขดัดแปลงโดยP'✟ℓຫຼี้छゆຸ۞💘⚘~~~~~~~~~#
 cl = LINE()
 cl.log("Auth Token : " + str(cl.authToken))
 cl.log("Timeline Token : " + str(cl.tl.channelAccessToken))
