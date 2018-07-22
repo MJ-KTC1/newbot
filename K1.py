@@ -1,4 +1,27 @@
+# -*- coding: utf-8 -*- 
+import linepy
+from linepy import *
+from akad.ttypes import *
+from multiprocessing import Pool, Process
+from googletrans import Translator
+from time import sleep
+import pytz, datetime, pafy, time, timeit, random, sys, ast, re, os, json, subprocess, threading, string, codecs, requests, tweepy, ctypes, urllib, wikipedia
+from datetime import timedelta, date
+from datetime import datetime
+from bs4 import BeautifulSoup
+import youtube_dl
+#import pyimgflip
 
+#cl = LineClient(authToken='EtYbwd1KwVZ0ClP97H49.5dqsbNfkyXzVzubqeawL2q.ki+FSaUvV/Cv9k6rmw+AaAlm4kWRu4xQcqGtg86wg2I=')
+cl = LINE() 
+#cl.log("Auth Token : " + str(cl.authToken))
+#channel = LineChannel(cl)
+#cl.log("Channel Access Token : " + str(channel.channelAccessToken))
+
+ki = LINE()
+#ki.log("Auth Token : " + str(ki.authToken))
+#channel1 = LineChannel(ki)
+#ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
 
 kk = ks = ki
 kc = ka = ki
