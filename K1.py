@@ -14,14 +14,34 @@ import youtube_dl
 
 #cl = LineClient(authToken='EtYbwd1KwVZ0ClP97H49.5dqsbNfkyXzVzubqeawL2q.ki+FSaUvV/Cv9k6rmw+AaAlm4kWRu4xQcqGtg86wg2I=')
 cl = LINE() 
-#cl.log("Auth Token : " + str(cl.authToken))
+cl.log("Auth Token : " + str(cl.authToken))
 #channel = LineChannel(cl)
-#cl.log("Channel Access Token : " + str(channel.channelAccessToken))
+cl.log("Channel Access Token : " + str(channel.channelAccessToken))
 
 ki = LINE()
-#ki.log("Auth Token : " + str(ki.authToken))
+ki.log("Auth Token : " + str(ki.authToken))
 #channel1 = LineChannel(ki)
-#ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
+ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
+
+kk = LINE()
+kk.log("Auth Token : " + str(kk.authToken))
+#channel1 = LineChannel(kk)
+kk.log("Channel Access Token : " + str(channel1.channelAccessToken))
+
+ks = LINE()
+ks.log("Auth Token : " + str(ks.authToken))
+#channel1 = LineChannel(ki)
+ks.log("Channel Access Token : " + str(channel1.channelAccessToken))
+
+kc = LINE()
+kc.log("Auth Token : " + str(kc.authToken))
+#channel1 = LineChannel(ki)
+kc.log("Channel Access Token : " + str(channel1.channelAccessToken))
+
+ka = LINE()
+ka.log("Auth Token : " + str(ka.authToken))
+#channel1 = LineChannel(ki)
+ka.log("Channel Access Token : " + str(channel1.channelAccessToken))
 
 kk = ks = ki
 kc = ka = ki
