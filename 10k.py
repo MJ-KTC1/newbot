@@ -681,7 +681,7 @@ def helpkicker():
            คำสั่งคิกเกอร์
   ────┅═ই۝ई═┅────
 ╔══════════════┓
-╠❂➣ องครักษ์
+╠❂➣ มาหอย
 ╠❂➣ เช็คชื่อ
 ╠❂➣ ชื่อคิก:
 ╠❂➣ ตัสคิก:
@@ -692,7 +692,8 @@ def helpkicker():
 ╠❂➣ Pz:gac +66+เบอร์โทร
 ╠❂➣ ไล่ดำ
 ╠❂➣ ปวดตับ
-╠❂➣ ถอนกำลัง
+╠❂➣ หนีหอย
+╠❂➣ รายงานตัว
 ╠❂➣ ออกทุกกลุ่ม
 ╠❂➣ sayonara
 ╠❂➣ ลบแชท
@@ -700,3 +701,138 @@ def helpkicker():
 ╰═✰™🕸✟ℓຫຼี้छゆຸ۞🕸"""
     return helpKickker
 #~~~~~~~~~~~~~~~~~~~~เขียนโดย[─•۞✟ℓℓஆՁゆຸ۞•─]~~~~~~~~~~~~~~~#
+def lineBot(op):
+    try:
+        if op.type == 0:
+            return
+        if op.type == 5:
+            if settings["autoAdd"] == True:
+                line.blockContact(op.param1)
+        if op.type == 13:
+            if lineMID in op.param3:
+                G = line.getGroup(op.param1)
+                if settings["autoJoin"] == True:
+                    if settings["autoCancel"]["on"] == True:
+                        if len(G.members) <= settings["autoCancel"]["members"]:
+                            line.rejectGroupInvitation(op.param1)
+                        else:
+                            line.acceptGroupInvitation(op.param1)
+                    else:
+                        line.acceptGroupInvitation(op.param1)
+                elif settings["autoCancel"]["on"] == True:
+                    if len(G.members) <= settings["autoCancel"]["members"]:
+                        line.rejectGroupInvitation(op.param1)
+            else:
+                Inviter = op.param3.replace("",',')
+                InviterX = Inviter.split(",")
+                matched_list = []
+                for tag in settings["blacklist"]:
+                    matched_list+=[str for str in InviterX if str == tag]
+                if matched_list == []:
+                    pass
+                else:
+                    line.cancelGroupInvitation(op.param1, matched_list)				
+#        if op.type == 13:
+#            group = line.getGroup(op.param1)
+#            if settings["autoJoin"] == True:
+#                line.acceptGroupInvitation(op.param1)
+        if op.type == 24:
+            if settings["autoLeave"] == True:
+                line.leaveRoom(op.param1)
+           if op.type == 25:
+            msg = op.message
+            if msg.contentType == 13:
+            	if settings["winvite"] == True:
+                     if msg._from in admin:
+                         _name = msg.contentMetadata["displayName"]
+                         invite = msg.contentMetadata["mid"]
+                         groups = line.getGroup(msg.to)
+                         pending = groups.invitee
+                         targets = []
+                         for s in groups.members:
+                             if _name in s.displayName:
+                                 line.sendText(msg.to,"-> " + _name + " \nทำการเชิญสำเร็จ")
+                                 break
+                             elif invite in settings["blacklist"]:
+                                 line.sendText(msg.to,"ขออภัย, " + _name + " บุคคนนี้อยู่ในรายการบัญชีดำ")
+                                 line.sendText(msg.to,"ใช้คำสั่ง!, \n➡ล้างดำ➡ดึง" )
+                                 break                             
+                             else:
+                                 targets.append(invite)
+                         if targets == []:
+                             pass
+                         else:
+                             for target in targets:
+                                 try:
+                                     line.findAndAddContactsByMid(target)
+                                     line.inviteIntoGroup(msg.to,[target])
+                                     line.sendText(msg.to,"เชิญคนนี้สำเร็จแล้ว : \n➡" + _name)
+                                     settings["winvite"] = False
+                                     break
+                                 except:
+                                     try:
+                                         line.findAndAddContactsByMid(invite)
+                                         line.inviteIntoGroup(op.param1,[invite])
+                                         settings["winvite"] = False
+                                     except:
+                                         line.sendText(msg.to,"😧ตรวจพบข้อผิดพลาดที่ไม่ทราบสาเหตุ😩อาจเป็นได้ว่าบัญชีของคุณถูกแบนเชิญ😨")
+                                         settings["winvite"] = False
+                                         break
+                                         
+        if op.type == 25:
+            msg = op.message
+            text = msg.text
+            msg_id = msg.id
+            receiver = msg.to
+            sender = msg._from
+            if msg.toType == 0:
+                if sender != line.profile.mid:
+                    to = sender
+                else:
+                    to = receiver
+            else:
+                to = receiver
+            if msg.contentType == 0:
+                if text is None:
+                    return
+#~~~~~~~~~~~~~~~~เขียนโดยนุจัง~~~~~~~~~~~~~~#
+                if "พูด " in msg.text.lower():
+                    spl = re.split("พูด ",msg.text,flags=re.IGNORECASE)
+                    if spl[0] == "":
+                        mts = spl[1]
+                        mtsl = mts.split()
+                        mtsTimeArg = len(mtsl) - 1
+                        mtsTime = mtsl[mtsTimeArg]
+                        del mtsl[mtsTimeArg]
+                        mtosay = " ".join(mtsl)
+                        global Rapid1To
+                        Rapid1To = msg.to
+                        RapidTime = mtsTime
+                        rmtosay = []
+                        for count in range(0,int(RapidTime)):
+                            rmtosay.insert(count,mtosay)
+                        p = Pool(20)
+                        p.map(Rapid1Say,rmtosay)
+                        p.close()
+                if text.lower() == 'คำสั่ง':
+                    myHelp = myhelp()
+                    line.sendMessage(to, str(myHelp))
+                elif text.lower() == 'help1':
+                    helpSet = helpset()
+                    line.sendMessage(to, str(helpSet))
+                    sendMessageWithMention(to, lineMID)
+                elif text.lower() == 'help2':
+                    listGrup = listgrup()
+                    line.sendMessage(to, str(listGrup))
+                elif text.lower() == 'help3':
+                    helpSetting = helpsetting()
+                    line.sendMessage(to, str(helpSetting))
+                elif text.lower() == 'help4':
+                    socMedia = socmedia()
+                    line.sendMessage(to, str(socMedia))
+                elif text.lower() == 'help5':
+                    helpTextToSpeech = helptexttospeech()
+                    line.sendMessage(to, str(helpTextToSpeech))
+                elif text.lower() == 'help6':
+                    helpLanguange = helplanguange()
+                    line.sendMessage(to, str(helpLanguange))
