@@ -21,49 +21,49 @@ import requests,urllib,json
 #ririn.log("Timeline Token : " + str(ririn.tl.channelAccessToken))
 
 #Khusus Login Token (Chrome)
-ririn = LINE('Es8F9rvfe5qWM1OyBUKd.UC8K+GXOvK/3A1WWSKmQRq.Ks5f57uNaBJYk8ZYbbM5KSJahM913pRZJI7AoATs9pQ=')
+ririn = LINE()
 ririn.log("Auth Token : " + str(ririn.authToken))
 ririn.log("Timeline Token : " + str(ririn.tl.channelAccessToken))
 
-dna1 = LINE('Esn9u0ubtOSNbrvmZRj2.We7lj7PxgwBQ8O07ppSHuG.yZgTUBb0XWQeIuEeEcOTxrVcnWfEXOKs0ecytY8Ungk=')
-dna1.log("Auth Token : " + str(dna1.authToken))
-dna1.log("Timeline Token : " + str(dna1.tl.channelAccessToken))
+#dna1 = LINE('Esn9u0ubtOSNbrvmZRj2.We7lj7PxgwBQ8O07ppSHuG.yZgTUBb0XWQeIuEeEcOTxrVcnWfEXOKs0ecytY8Ungk=')
+#dna1.log("Auth Token : " + str(dna1.authToken))
+#dna1.log("Timeline Token : " + str(dna1.tl.channelAccessToken))
 
-dna2 = LINE('EswPaA5BOBJTsJYOn671.Sl2u8yHwWYZHMslzI9Bi8q.20nDyP69BtbKbjSH0g+Az8JIhjkvKDyF5cnu+TLbWJc=')
-dna2.log("Auth Token : " + str(dna2.authToken))
-dna2.log("Timeline Token : " + str(dna2.tl.channelAccessToken))
+#dna2 = LINE('EswPaA5BOBJTsJYOn671.Sl2u8yHwWYZHMslzI9Bi8q.20nDyP69BtbKbjSH0g+Az8JIhjkvKDyF5cnu+TLbWJc=')
+#dna2.log("Auth Token : " + str(dna2.authToken))
+#dna2.log("Timeline Token : " + str(dna2.tl.channelAccessToken))
 
-dna3 = LINE('EsEKNt02EJOcnTi6Xzx8.M53qiD/PJ1i6qsVfYwB7Ea.NaLIAwjUUJL6CgB0EDUFAPFuGYBt1Tfnu+Di90xex+w=')
-dna3.log("Auth Token : " + str(dna3.authToken))
-dna3.log("Timeline Token : " + str(dna3.tl.channelAccessToken))
+#dna3 = LINE('EsEKNt02EJOcnTi6Xzx8.M53qiD/PJ1i6qsVfYwB7Ea.NaLIAwjUUJL6CgB0EDUFAPFuGYBt1Tfnu+Di90xex+w=')
+#dna3.log("Auth Token : " + str(dna3.authToken))
+#dna3.log("Timeline Token : " + str(dna3.tl.channelAccessToken))
 
-dna4 = LINE('EsW1g9iNsbBlMKijNfg3.LTjIccO9HW0I2OLJ9e3wmW.mvP+mX2apHj/j8NBNUX/V2mNidEVhpOwAGUyCcNSSDI=')
-dna4.log("Auth Token : " + str(dna4.authToken))
-dna4.log("Timeline Token : " + str(dna4.tl.channelAccessToken))
+#dna4 = LINE('EsW1g9iNsbBlMKijNfg3.LTjIccO9HW0I2OLJ9e3wmW.mvP+mX2apHj/j8NBNUX/V2mNidEVhpOwAGUyCcNSSDI=')
+#dna4.log("Auth Token : " + str(dna4.authToken))
+#dna4.log("Timeline Token : " + str(dna4.tl.channelAccessToken))
 
-dna5 = LINE('EsuIBccvd1yt4fKYcMua.i4cphH9h9VMs4DyAsZSSsG.6dh1FLhE4KKi6AS/yTbG5hYIAd2ZEn5SW2gaOUenUTs=')
-dna5.log("Auth Token : " + str(dna5.authToken))
-dna5.log("Timeline Token : " + str(dna5.tl.channelAccessToken))
+#dna5 = LINE('EsuIBccvd1yt4fKYcMua.i4cphH9h9VMs4DyAsZSSsG.6dh1FLhE4KKi6AS/yTbG5hYIAd2ZEn5SW2gaOUenUTs=')
+#dna5.log("Auth Token : " + str(dna5.authToken))
+#dna5.log("Timeline Token : " + str(dna5.tl.channelAccessToken))
 
-dna6 = LINE('Esrt47QpyN5xDpEI9q7a.fW/HXK/P6ucyNSYHd42E2G.IfXCDZecGl9VI8YP70o5nXE+BVa1MPJ/RArJyIzm7fg=')
-dna6.log("Auth Token : " + str(dna6.authToken))
-dna6.log("Timeline Token : " + str(dna6.tl.channelAccessToken))
+#dna6 = LINE('Esrt47QpyN5xDpEI9q7a.fW/HXK/P6ucyNSYHd42E2G.IfXCDZecGl9VI8YP70o5nXE+BVa1MPJ/RArJyIzm7fg=')
+#dna6.log("Auth Token : " + str(dna6.authToken))
+#dna6.log("Timeline Token : " + str(dna6.tl.channelAccessToken))
 
-dna7 = LINE('EsUm82oDONrrROSjd0o3.GQe1F0FLgkB3suGK5WtUCW.H1Mt8JrAr6MOcF/Jey5dYH62txLV9EUeC7kpIy7xbI8=')
-dna7.log("Auth Token : " + str(dna7.authToken))
-dna7.log("Timeline Token : " + str(dna7.tl.channelAccessToken))
+#dna7 = LINE('EsUm82oDONrrROSjd0o3.GQe1F0FLgkB3suGK5WtUCW.H1Mt8JrAr6MOcF/Jey5dYH62txLV9EUeC7kpIy7xbI8=')
+#dna7.log("Auth Token : " + str(dna7.authToken))
+#dna7.log("Timeline Token : " + str(dna7.tl.channelAccessToken))
 
-dna8 = LINE('EsxzQWuDsnqvc6umvf13.fOtS1/ZYrVfyY2wr74a3uW.5NYRTH6X2K+wXUVCetEqGUoqhqMZEZfh9iY/yY/NeH8=')
-dna8.log("Auth Token : " + str(dna8.authToken))
-dna8.log("Timeline Token : " + str(dna8.tl.channelAccessToken))
+#dna8 = LINE('EsxzQWuDsnqvc6umvf13.fOtS1/ZYrVfyY2wr74a3uW.5NYRTH6X2K+wXUVCetEqGUoqhqMZEZfh9iY/yY/NeH8=')
+#dna8.log("Auth Token : " + str(dna8.authToken))
+#dna8.log("Timeline Token : " + str(dna8.tl.channelAccessToken))
 
-dna9 = LINE('EsCbkUtvMVAsXQ6h0Vj1./PGYhVVe4uDle5Q6kp48qq.QdI0wcEL/lGgxXLSRWgiHGqtblWKBVsv1pw+H+jnqoM=')
-dna9.log("Auth Token : " + str(dna9.authToken))
-dna9.log("Timeline Token : " + str(dna9.tl.channelAccessToken))
+#dna9 = LINE('EsCbkUtvMVAsXQ6h0Vj1./PGYhVVe4uDle5Q6kp48qq.QdI0wcEL/lGgxXLSRWgiHGqtblWKBVsv1pw+H+jnqoM=')
+#dna9.log("Auth Token : " + str(dna9.authToken))
+#dna9.log("Timeline Token : " + str(dna9.tl.channelAccessToken))
 
-dna10 = LINE('Es0Dc6tTZLGHWLdjLoj5.qzjQVWZ0ZEOc9BUr4r9zrq.53ywR6urnzMdrRTfoFuFUXmX92L79AkrN/LPysGzdVg=') #Ghost
-dna10.log("Auth Token : " + str(dna10.authToken))
-dna10.log("Timeline Token : " + str(dna10.tl.channelAccessToken))
+#dna10 = LINE('Es0Dc6tTZLGHWLdjLoj5.qzjQVWZ0ZEOc9BUr4r9zrq.53ywR6urnzMdrRTfoFuFUXmX92L79AkrN/LPysGzdVg=') #Ghost
+#dna10.log("Auth Token : " + str(dna10.authToken))
+#dna10.log("Timeline Token : " + str(dna10.tl.channelAccessToken))
 
 
 startBot = time.time()
@@ -143,32 +143,32 @@ helpMessage ="""
 ╚════════════════════╝
 """
 oepoll = OEPoll(ririn)
-KAC=[ririn,dna1,dna2,dna3,dna4,dna5,dna6,dna7,dna8,dna9]
+#KAC=[ririn,dna1,dna2,dna3,dna4,dna5,dna6,dna7,dna8,dna9]
 mid = ririn.getProfile().mid
-Amid = dna1.getProfile().mid
-Bmid = dna2.getProfile().mid
-Cmid = dna3.getProfile().mid
-Dmid = dna4.getProfile().mid
-Emid = dna5.getProfile().mid
-Fmid = dna6.getProfile().mid
-Gmid = dna7.getProfile().mid
-Hmid = dna8.getProfile().mid
-Imid = dna9.getProfile().mid
-Jmid = dna10.getProfile().mid
+#Amid = dna1.getProfile().mid
+#Bmid = dna2.getProfile().mid
+#Cmid = dna3.getProfile().mid
+#Dmid = dna4.getProfile().mid
+#Emid = dna5.getProfile().mid
+#Fmid = dna6.getProfile().mid
+#Gmid = dna7.getProfile().mid
+#Hmid = dna8.getProfile().mid
+#Imid = dna9.getProfile().mid
+#Jmid = dna10.getProfile().mid
 
 responsename = ririn.getProfile().displayName
-responsename2 = dna1.getProfile().displayName
-responsename3 = dna2.getProfile().displayName
-responsename4 = dna3.getProfile().displayName
-responsename5 = dna4.getProfile().displayName
-responsename6 = dna5.getProfile().displayName
-responsename7 = dna6.getProfile().displayName
-responsename8 = dna7.getProfile().displayName
-responsename9 = dna8.getProfile().displayName
-responsename10 = dna9.getProfile().displayName
-responsename11 = dna10.getProfile().displayName
+#responsename2 = dna1.getProfile().displayName
+#responsename3 = dna2.getProfile().displayName
+#responsename4 = dna3.getProfile().displayName
+#responsename5 = dna4.getProfile().displayName
+#responsename6 = dna5.getProfile().displayName
+#responsename7 = dna6.getProfile().displayName
+#responsename8 = dna7.getProfile().displayName
+#responsename9 = dna8.getProfile().displayName
+#responsename10 = dna9.getProfile().displayName
+#responsename11 = dna10.getProfile().displayName
 
-Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Jmid]
+Bots=[mid]#,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Jmid]
 admin=["ueca4120a9d7b0e4a9e7f4f1b1b96a436","u40d66b1f1c5ce30fdce9507a73247ef1","uc2d366327a79c98701b0b8bd9e08c0c9","ubcce0f23f428d75703fb33ee06c083b6","ubd3c3fa2c0128918d5b484caa42f9fee","u6fc2dc5f5f0d0fc6a4d2e92626afb742"]
 Owner=["ueca4120a9d7b0e4a9e7f4f1b1b96a436"]
 creator=["ueca4120a9d7b0e4a9e7f4f1b1b96a436"]
