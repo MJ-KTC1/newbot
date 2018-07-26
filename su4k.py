@@ -18,74 +18,136 @@ from googletrans import Translator
 #==============================================================================#
 botStart = time.time()
 #==============================================================================#
-line = LINE('sunu0734@gmail.com','sunu2018')
 #line = LINE()
-#line.log("Auth Token : " + str(line.authToken))
-#line.log("Timeline Token : " + str(line.tl.channelAccessToken))
-
-#ki = LINE()
-ki = LINE('nunu4844@gmail.com','sunu2018')
-#ki.log("Auth Token : " + str(ki.authToken))
-#ki.log("Timeline Token : " + str(ki.tl.channelAccessToken))
-
-#kk = LINE()
-kk = LINE('su6nu2018@gmail.com','sunu2018')
-#kk.log("Auth Token : " + str(kk.authToken))
-#kk.log("Timeline Token : " + str(kk.tl.channelAccessToken))
-
-#kc = LINE()
-kc = LINE('su2nu2018@gmail.com','sunu2018')
-#kc.log("Auth Token : " + str(kc.authToken))
-#kc.log("Timeline Token : " + str(kc.tl.channelAccessToken))
-
-#ke = LINE()
-ke = LINE('su3nu2018@gmail.com','sunu2018')
-#ke.log("Auth Token : " + str(ke.authToken))
-#ke.log("Timeline Token : " + str(ke.tl.channelAccessToken))
+#line = LINE("เมล","พาส")
+line = LINE()
+line.log("Auth Token : " + str(line.authToken))
+line.log("Timeline Token : " + str(line.tl.channelAccessToken))
 
 
-print ("ล้อกอินแล้ว")
+ki1 = LINE('')
+ki1.log("Auth Token : " + str(ki1.authToken))
+ki1.log("Timeline Token : " + str(ki.tl.channelAccessToken))
+
+ki2 = LINE('')
+ki2.log("Auth Token : " + str(ki2.authToken))
+ki2.log("Timeline Token : " + str(kk.tl.channelAccessToken))
+
+ki3 = LINE('')
+ki3.log("Auth Token : " + str(ki3.authToken))
+ki3.log("Timeline Token : " + str(kc.tl.channelAccessToken))
+
+ki4 = LINE('')
+ki4.log("Auth Token : " + str(ki4.authToken))
+ki4.log("Timeline Token : " + str(ke.tl.channelAccessToken))
+
+
+ki5 = LINE('')
+ki5.log("Auth Token : " + str(ki5.authToken))
+ki5.log("Timeline Token : " + str(ki.tl.channelAccessToken))
+
+ki6 = LINE('')
+ki6.log("Auth Token : " + str(ki6.authToken))
+ki6.log("Timeline Token : " + str(kk.tl.channelAccessToken))
+
+ki7 = LINE('')
+ki7.log("Auth Token : " + str(ki7.authToken))
+ki7.log("Timeline Token : " + str(kc.tl.channelAccessToken))
+
+ki8 = LINE('')
+ki8.log("Auth Token : " + str(ki8.authToken))
+ki8.log("Timeline Token : " + str(ke.tl.channelAccessToken))
+
+
+ki9 = LINE('')
+ki9.log("Auth Token : " + str(ki9.authToken))
+ki9.log("Timeline Token : " + str(ki.tl.channelAccessToken))
+
+ki9 = LINE('')
+ki9.log("Auth Token : " + str(ki9.authToken))
+ki9.log("Timeline Token : " + str(kk.tl.channelAccessToken))
+
+ki10 = LINE('')
+ki10.log("Auth Token : " + str(ki10.authToken))
+ki10.log("Timeline Token : " + str(kc.tl.channelAccessToken))
+
+
+print ("Login Succes")
 
 lineMID = line.profile.mid
 lineProfile = line.getProfile()
 lineSettings = line.getSettings()
 
-kiMID = ki.profile.mid
-kiProfile = ki.getProfile()
-kiSettings = ki.getSettings()
+ki1MID = ki1.profile.mid
+ki1Profile = ki1.getProfile()
+ki1Settings = ki1.getSettings()
 
-kkMID = kk.profile.mid
-kkProfile = kk.getProfile()
-kkSettings = kk.getSettings()
+ki2MID = ki2.profile.mid
+ki2Profile = ki2.getProfile()
+ki2Settings = ki2.getSettings()
 
-kcMID = kc.profile.mid
-kcProfile = kc.getProfile()
-kcSettings = kc.getSettings()
+ki3MID = ki3.profile.mid
+ki3Profile = ki3.getProfile()
+ki3Settings = ki3.getSettings()
 
-keMID = kc.profile.mid
-keProfile = kc.getProfile()
-keSettings = kc.getSettings()
+ki4MID = ki4.profile.mid
+ki4Profile = ki4.getProfile()
+ki4Settings = ki4.getSettings()
 
+ki5MID = ki5.profile.mid
+ki5Profile = ki5.getProfile()
+ki5Settings = ki5.getSettings()
 
-oepoll = OEPoll(ke)
-oepoll = OEPoll(kc)
-oepoll = OEPoll(kk)
-oepoll = OEPoll(ki)
+ki6MID = ki6.profile.mid
+ki6Profile = ki6.getProfile()
+ki6Settings = ki6.getSettings()
+
+ki7MID = ki7.profile.mid
+ki7Profile = ki7.getProfile()
+ki7Settings = ki7.getSettings()
+
+ki8MID = ki8.profile.mid
+ki8Profile = ki8.getProfile()
+ki8Settings = ki8.getSettings()
+
+ki9MID = ki9.profile.mid
+ki9Profile = ki9.getProfile()
+ki9Settings = ki9.getSettings()
+
+ki10MID = ki10.profile.mid
+ki10Profile = ki10.getProfile()
+ki10Settings = ki10.getSettings()
+
+oepoll = OEPoll(ki10)
+oepoll = OEPoll(ki9)
+oepoll = OEPoll(ki8)
+oepoll = OEPoll(ki7)
+oepoll = OEPoll(ki6)
+oepoll = OEPoll(ki5)
+oepoll = OEPoll(ki4)
+oepoll = OEPoll(ki3)
+oepoll = OEPoll(ki2)
+oepoll = OEPoll(ki1)
 oepoll = OEPoll(line)
-#call = Call(line)
 readOpen = codecs.open("read.json","r","utf-8")
 settingsOpen = codecs.open("temp.json","r","utf-8")
 read = json.load(readOpen)
 settings = json.load(settingsOpen)
-Rfu = [line,ki,kk,kc,ke]
-Exc = [ki,kk,kc,ke]
+Rfu = [line,ki1,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,ki10]
+Exc = [ki1,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,ki10]
 lineMID = line.getProfile().mid
-kiMID = ki.getProfile().mid
-kkMID = kk.getProfile().mid
-kcMID = kc.getProfile().mid
-kcMID = ke.getProfile().mid
+kiMID = ki1.getProfile().mid
+kkMID = ki2.getProfile().mid
+kcMID = ki3.getProfile().mid
+kcMID = ki4.getProfile().mid
+kiMID = ki5.getProfile().mid
+kkMID = ki6.getProfile().mid
+kcMID = ki7.getProfile().mid
+kcMID = ki8.getProfile().mid
+kiMID = ki9.getProfile().mid
+kkMID = ki10.getProfile().mid
 bot1 = line.getProfile().mid
-RfuBot=[lineMID,kiMID,kkMID,kcMID,keMID]
+RfuBot=[lineMID,ki1MID,ki2MID,ki3MID,ki4MID,ki5MID,ki6MID,ki7MID,ki8MID,ki9MID,ki10MID]
 Family=["ud3a6bfda60a956cca0f58f2a14bae808",lineMID,kiMID,kkMID,kcMID,keMID]
 admin=['ud3a6bfda60a956cca0f58f2a14bae808',lineMID]
 RfuFamily = RfuBot + Family
@@ -97,7 +159,7 @@ autocancel = {}
 autoinvite = []
 autoleaveroom = []
 targets = []
-#==============================================================================#
+#~~~~~~~~~~~~~~~~~~[─•۞✟ℓℓஆՁゆຸ۞•─]~~~~~~~~~~~~~~~~#
 settings = {
     "autoAdd": True,
     "autoJoin": False,
@@ -423,10 +485,15 @@ def lineBot(op):
         if op.type == 5:
             if settings["autoAdd"] == True:
                 line.blockContact(op.param1)
-                ki.blockContact(op.param1)
-                kk.blockContact(op.param1)
-                kc.blockContact(op.param1)
-                ke.blockContact(op.param1)                
+                ki1.blockContact(op.param1)
+                ki2.blockContact(op.param1)
+                ki3.blockContact(op.param1)
+                ki5.blockContact(op.param1)  
+		ki6.blockContact(op.param1)
+                ki7.blockContact(op.param1)
+                ki8.blockContact(op.param1)
+                ki9.blockContact(op.param1)  
+		ki10.blockContact(op.param1)  
         if op.type == 13:
             if lineMID in op.param3:
                 G = line.getGroup(op.param1)
@@ -474,8 +541,26 @@ def lineBot(op):
             if msg.contentType == 0:
                 if text is None:
                     return
-
-#==============================================================================#
+#~~~~~~~~~~~~~~~~เขียนโดยนุจัง~~~~~~~~~~~~~~#
+                if "พูด " in msg.text.lower():
+                    spl = re.split("พูด ",msg.text,flags=re.IGNORECASE)
+                    if spl[0] == "":
+                        mts = spl[1]
+                        mtsl = mts.split()
+                        mtsTimeArg = len(mtsl) - 1
+                        mtsTime = mtsl[mtsTimeArg]
+                        del mtsl[mtsTimeArg]
+                        mtosay = " ".join(mtsl)
+                        global Rapid1To
+                        Rapid1To = msg.to
+                        RapidTime = mtsTime
+                        rmtosay = []
+                        for count in range(0,int(RapidTime)):
+                            rmtosay.insert(count,mtosay)
+                        p = Pool(20)
+                        p.map(Rapid1Say,rmtosay)
+                        p.close()
+#~~~~~~~~~~~~~~~~~~~เขียนโดย◇─•۞✟ℓℓஆՁゆຸ۞•─~~~~~~~~~~~~~~#
               
                 if text.lower() == 'คำสั่ง':
                     myHelp = myhelp()
@@ -1282,9 +1367,9 @@ def lineBot(op):
                         }
                         conv = BeautifulSoup(requests.post("http://lullar-de-2.appspot.com/",headers=headers,data=data).content,"html.parser").find("span",attrs={"style":"font-size:40px"}).text
                         if msg.toType != 0:
-                                kk.sendMessage(msg.to,"Conversion:\n"+conv)
+                                ki2.sendMessage(msg.to,"Conversion:\n"+conv)
                         else:
-                                kk.sendMessage(msg.from_,"Conversion:\n"+conv)
+                                ki2.sendMessage(msg.from_,"Conversion:\n"+conv)
                     except Exception as e:
                         print(e)						
                 elif msg.text.lower().startswith("pz:gac "):
@@ -1293,19 +1378,19 @@ def lineBot(op):
                     GACReq = GACSender.send(pnum)
                     if GACReq.responseNum == 0:
                         if msg.toType != 0:
-                                kk.sendMessage(msg.to,"ส่ง SMS สำเร็จแล้ว (｀・ω・´)")
+                                ki2.sendMessage(msg.to,"ส่ง SMS สำเร็จแล้ว (｀・ω・´)")
                         else:
-                                kk.sendMessage(msg.from_,"ส่ง SMS สำเร็จแล้ว (｀・ω・´)")
+                                ki2.sendMessage(msg.from_,"ส่ง SMS สำเร็จแล้ว (｀・ω・´)")
                     elif GACReq.responseNum == 1:
                         if msg.toType != 0:
-                                kk.sendMessage(msg.to,"ไม่สามารถส่ง SMS ได้ เนื่องจากมีการส่งข้อความไปยังเบอร์เป้าหมายในเวลาที่ใกล้เคียงกันมากเกินไป (｀・ω・´)\nกรุณารออย่างมาก 30 วินาทีแล้วลองอีกครั้ง")
+                                ki2.sendMessage(msg.to,"ไม่สามารถส่ง SMS ได้ เนื่องจากมีการส่งข้อความไปยังเบอร์เป้าหมายในเวลาที่ใกล้เคียงกันมากเกินไป (｀・ω・´)\nกรุณารออย่างมาก 30 วินาทีแล้วลองอีกครั้ง")
                         else:
-                                kk.sendMessage(msg.from_,"ไม่สามารถส่ง SMS ได้ เนื่องจากมีการส่งข้อความไปยังเบอร์เป้าหมายในเวลาที่ใกล้เคียงกันมากเกินไป (｀・ω・´)\nกรุณารออย่างมาก 30 วินาทีแล้วลองอีกครั้ง")
+                                ki2.sendMessage(msg.from_,"ไม่สามารถส่ง SMS ได้ เนื่องจากมีการส่งข้อความไปยังเบอร์เป้าหมายในเวลาที่ใกล้เคียงกันมากเกินไป (｀・ω・´)\nกรุณารออย่างมาก 30 วินาทีแล้วลองอีกครั้ง")
                     else:
                         if msg.toType != 0:
-                                kk.sendMessage(msg.to,"พบข้อผิดพลาดที่ไม่รู้จัก (｀・ω・´)")
+                                ki2.sendMessage(msg.to,"พบข้อผิดพลาดที่ไม่รู้จัก (｀・ω・´)")
                         else:
-                                kk.sendMessage(msg.from_,"พบข้อผิดพลาดที่ไม่รู้จัก (｀・ω・´)")
+                                ki2.sendMessage(msg.from_,"พบข้อผิดพลาดที่ไม่รู้จัก (｀・ω・´)")
                 elif msg.text.lower() == ".groupurl":
                     if msg.toType == 2:
                         line.sendMessage(msg.to,"http://line.me/R/ti/g/"+str(line.reissueGroupTicket(msg.to)))
@@ -1368,8 +1453,8 @@ def lineBot(op):
                             b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
                             s += 7
                             txt += '@Alin \n'
-                        ki.sendMessage(to, text=txt, contentMetadata={'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
-                        ki.sendMessage(to, "จำนวน {} คน".format(str(len(nama))))          
+                        ki1.sendMessage(to, text=txt, contentMetadata={'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
+                        ki1.sendMessage(to, "จำนวน {} คน".format(str(len(nama))))          
 
                 elif text.lower() == 'lurking on':
                     tz = pytz.timezone("Asia/Jakarta")
@@ -1943,10 +2028,10 @@ def lineBot(op):
                            targets.append(x["M"])
                        for target in targets:
                            try:
-                               ki.kickoutFromGroup(msg.to,[target])           
+                               ki1.kickoutFromGroup(msg.to,[target])           
                                print ("K1 Kick User")
                            except:
-                               ki.sendMessage(msg.to,"Limit kaka 😫")                               
+                               ki1.sendMessage(msg.to,"Limit kaka 😫")                               
 
                 elif 'k2 kick' in text.lower():
                        targets = []
@@ -1956,10 +2041,10 @@ def lineBot(op):
                            targets.append(x["M"])
                        for target in targets:
                            try:
-                               kk.kickoutFromGroup(msg.to,[target])
+                               ki2.kickoutFromGroup(msg.to,[target])
                                print ("K2 kick user")
                            except:
-                               kk.sendMessage(msg.to,"Limit kaka 😫")                              
+                               ki2.sendMessage(msg.to,"Limit kaka 😫")                              
 
                 elif 'k3 kick' in text.lower():
                        targets = []
@@ -1969,10 +2054,10 @@ def lineBot(op):
                            targets.append(x["M"])
                        for target in targets:
                            try:
-                               kc.kickoutFromGroup(msg.to,[target])
+                               ki3.kickoutFromGroup(msg.to,[target])
                                print ("K3 kick user")
                            except:
-                               kc.sendMessage(msg.to,"Limit kaka 😫")                              
+                               ki3.sendMessage(msg.to,"Limit kaka 😫")                              
 
                 elif 'k4 kick' in text.lower():
                        targets = []
@@ -1982,10 +2067,10 @@ def lineBot(op):
                            targets.append(x["M"])
                        for target in targets:
                            try:
-                               ke.kickoutFromGroup(msg.to,[target])
+                               ki4.kickoutFromGroup(msg.to,[target])
                                print ("K3 kick user")
                            except:
-                               ke.sendMessage(msg.to,"Limit kaka 😫")                              
+                               ki4.sendMessage(msg.to,"Limit kaka 😫")                              
                                
                 elif 'invite' in text.lower():
                        targets = []
@@ -2008,11 +2093,11 @@ def lineBot(op):
                            targets.append(x["M"])
                        for target in targets:
                            try:
-                               ki.inviteIntoGroup(msg.to,[target])
-                               ki.sendMessage(receiver, "Type👉 Invite Succes")
+                               ki1.inviteIntoGroup(msg.to,[target])
+                               ki1.sendMessage(receiver, "Type👉 Invite Succes")
                                print ("R1 invite User")
                            except:
-                               ki.sendMessage(msg.to,"Type👉 Limit Invite")                               
+                               ki1.sendMessage(msg.to,"Type👉 Limit Invite")                               
 
                 elif 'k2 inv' in text.lower():
                        targets = []
@@ -2022,11 +2107,11 @@ def lineBot(op):
                            targets.append(x["M"])
                        for target in targets:
                            try:
-                               kk.inviteIntoGroup(msg.to,[target])
-                               kk.sendMessage(receiver, "Type👉 Invite Succes")
+                               ki2.inviteIntoGroup(msg.to,[target])
+                               ki2.sendMessage(receiver, "Type👉 Invite Succes")
                                ("R2 invite User")
                            except:
-                               kk.sendMessage(msg.to,"Type👉 Limit Invite")                               
+                               ki2.sendMessage(msg.to,"Type👉 Limit Invite")                               
 
                 elif 'k3 getinvite' in text.lower():
                        targets = []
@@ -2036,11 +2121,11 @@ def lineBot(op):
                            targets.append(x["M"])
                        for target in targets:
                            try:
-                               kc.inviteIntoGroup(msg.to,[target])
-                               kc.sendMessage(receiver, "Type👉 Invite Succes")
+                               ki3.inviteIntoGroup(msg.to,[target])
+                               ki3.sendMessage(receiver, "Type👉 Invite Succes")
                                ("R3 invite User")
                            except:
-                               kc.sendMessage(msg.to,"Type👉 Limit Invite")                               
+                               ki3.sendMessage(msg.to,"Type👉 Limit Invite")                               
 
                 elif 'k4 getinvite' in text.lower():
                        targets = []
@@ -2050,11 +2135,11 @@ def lineBot(op):
                            targets.append(x["M"])
                        for target in targets:
                            try:
-                               ke.inviteIntoGroup(msg.to,[target])
-                               ke.sendMessage(receiver, "Type👉 Invite Succes")
+                               ki4.inviteIntoGroup(msg.to,[target])
+                               ki4.sendMessage(receiver, "Type👉 Invite Succes")
                                ("R4 invite User")
                            except:
-                               ke.sendMessage(msg.to,"Type👉 Limit Invite")                               
+                               ki4.sendMessage(msg.to,"Type👉 Limit Invite")                               
 
                 elif "Cleanse" in msg.text:
                 	if msg.toType == 2:
@@ -2071,12 +2156,12 @@ def lineBot(op):
                              for target in targets:
                              	if not target in Rfu:
                                      try:
-                                         klist=[line,ki,kk,kc,ke]
+                                         klist=[line,ki1,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,ki10]
                                          kicker=random.choice(klist)
                                          kicker.kickoutFromGroup(receiver,[target])
                                          print((receiver,[g.mid]))
                                      except:
-                                         line.sendMessage(receiver,"Group cleanse")
+                                         line.sendMessage(receiver,"ล้างห้องเรียบร้อยแล้ว")
                                          print ("Cleanse Group")
 
                 elif msg.text in ["ไล่ดำ"]:
@@ -2091,7 +2176,7 @@ def lineBot(op):
                          else:
                              for jj in matched_list:
                                  try:
-                                     klist=[line,ki,kk,kc,ke]
+                                     klist=[line,ki1,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,ki10]
                                      kicker=random.choice(klist)
                                      kicker.kickoutFromGroup(receiver,[jj])
                                      print((receiver,[jj]))
@@ -2102,10 +2187,17 @@ def lineBot(op):
                 elif text.lower() == "ลบแชท":
                         if msg._from in Family:
                             try:
-                                ki.removeAllMessages(op.param2)
-                                kk.removeAllMessages(op.param2)
-                                kc.removeAllMessages(op.param2)
-                                ke.removeAllMessages(op.param2)                                
+                                ki1.removeAllMessages(op.param2)
+                                ki2.removeAllMessages(op.param2)
+                                ki3.removeAllMessages(op.param2)
+                                ki4.removeAllMessages(op.param2) 
+				ki5.removeAllMessages(op.param2)
+                                ki6.removeAllMessages(op.param2)
+                                ki7.removeAllMessages(op.param2)
+                                ki8.removeAllMessages(op.param2) 
+				ki9.removeAllMessages(op.param2)
+                                ki10.removeAllMessages(op.param2)
+                                line.removeAllMessages(op.param2) 
                                 line.sendMessage(msg.to,"รอสักครู่กำลังลบแชท.")
                             except:
                                 pass
@@ -2113,20 +2205,26 @@ def lineBot(op):
 
                 elif text.lower() == "หนีหอย":
                     if msg._from in Family:
-                        ki.leaveGroup(msg.to)
-                        kk.leaveGroup(msg.to)
-                        kc.leaveGroup(msg.to)
-                        ke.leaveGroup(msg.to)                        
+                        ki1.leaveGroup(msg.to)
+                        ki2.leaveGroup(msg.to)
+                        ki3.leaveGroup(msg.to)
+                        ki4.leaveGroup(msg.to) 
+			ki5.leaveGroup(msg.to)
+                        ki6.leaveGroup(msg.to)
+                        ki7.leaveGroup(msg.to)
+                        ki8.leaveGroup(msg.to) 
+			ki9.leaveGroup(msg.to)
+                        ki10.leaveGroup(msg.to)
                         print ("Kicker Leave")
 
                 elif text.lower() == "leaveall":
                     if msg._from in Family:
                         gid = line.getGroupIdsJoined()
                         for i in gid:
-                            ki.leaveGroup(i)
-                            kk.leaveGroup(i)
-                            kc.leaveGroup(i)
-                            ke.leaveGroup(i)                            
+                            ki1.leaveGroup(i)
+                            ki2.leaveGroup(i)
+                            ki3.leaveGroup(i)
+                            ki4.leaveGroup(i) 
                             print ("Kicker Leave All group")
 
                 elif "myname: " in text.lower():
@@ -2190,16 +2288,16 @@ def lineBot(op):
                 elif text.lower() == "รายงาน":
                     if msg._from in Family:
                         profile = ki.getProfile()
-                        text = profile.displayName + "\nรายงานตัว"
+                        text = profile.displayName + "รายงานตัว\n"
                         ki.sendMessage(to, text)                                
                         profile = kk.getProfile()
-                        text = profile.displayName + "\nรายงานตัว"
+                        text = profile.displayName + "รายงานตัว\n"
                         kk.sendMessage(to, text)                                
                         profile = kc.getProfile()
-                        text = profile.displayName + "\nรายงานตัว"
+                        text = profile.displayName + "รายงานตัว\n"
                         kc.sendMessage(to, text)
                         profile = ke.getProfile()                        
-                        text = profile.displayName + "\nรายงานตัว"
+                        text = profile.displayName + "รายงานตัว\n"
                         ke.sendMessage(to, text)                        
                         print ("Kicker Respon")
 
