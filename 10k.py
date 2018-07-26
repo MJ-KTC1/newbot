@@ -739,7 +739,7 @@ def lineBot(op):
         if op.type == 24:
             if settings["autoLeave"] == True:
                 line.leaveRoom(op.param1)
-           if op.type == 25:
+        if op.type == 25:
             msg = op.message
             if msg.contentType == 13:
             	if settings["winvite"] == True:
