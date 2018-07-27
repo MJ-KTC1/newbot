@@ -492,9 +492,9 @@ def lineBot(op):
                 ki5.blockContact(op.param1)
                 ki6.blockContact(op.param1) 
                 ki7.blockContact(op.param1)
-                ki8.blockContact(op.param1)                
-                ki9.blockContact(op.param1)  
-		ki10.blockContact(op.param1)  
+                ki8.blockContact(op.param1)
+                ki9.blockContact(op.param1)
+                ki10.blockContact(op.param1)
         if op.type == 13:
             if lineMID in op.param3:
                 G = line.getGroup(op.param1)
