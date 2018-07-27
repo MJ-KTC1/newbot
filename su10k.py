@@ -2213,8 +2213,8 @@ def lineBot(op):
                         ki5.leaveGroup(msg.to)
                         ki6.leaveGroup(msg.to)
                         ki7.leaveGroup(msg.to)
-                        ki8.leaveGroup(msg.to) 
-			ki9.leaveGroup(msg.to)
+                        ki8.leaveGroup(msg.to)
+                        ki9.leaveGroup(msg.to)
                         ki10.leaveGroup(msg.to)
                         print ("Kicker Leave")
 
