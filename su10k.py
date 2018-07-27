@@ -3402,8 +3402,8 @@ def lineBot(op):
                         G = ki3.getGroup(op.param1)
                         random.choice(Rfu).kickoutFromGroup(op.param1,[op.param2])
                         G.preventedJoinByTicket = False
-                        ki3.updateGroup(G)                       
-			ticket = ki3.reissueGroupTicket(op.param1)
+                        ki3.updateGroup(G)
+                        ticket = ki3.reissueGroupTicket(op.param1)
                         ki3.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
                         time.sleep(0.0001)
                         line.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
