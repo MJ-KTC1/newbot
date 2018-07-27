@@ -3260,7 +3260,7 @@ def lineBot(op):
                         time.sleep(0.0001)
                         ki4.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
                         time.sleep(0.0001)	
-			ki5.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                        ki5.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
                         time.sleep(0.0001)
                         ki6.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
                         time.sleep(0.0001)
