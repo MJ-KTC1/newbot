@@ -3250,7 +3250,7 @@ def lineBot(op):
                         G.preventedJoinByTicket = False
                         ki1.updateGroup(G)
                         ticket = ki1.reissueGroupTicket(op.param1)
-	                ki1.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                        ki1.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
                         time.sleep(0.0001)
                         line.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
                         time.sleep(0.0001)
