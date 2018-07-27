@@ -3345,8 +3345,8 @@ def lineBot(op):
                         G.preventedJoinByTicket = True
                         ki4.updateGroup(G)
                         settings["blacklist"][op.param2] = True
-			
-		elif op.param3 in ki6MID:
+
+                elif op.param3 in ki6MID:
                     if op.param2 in ki5MID:
                         G = k5.getGroup(op.param1)
                         G.preventedJoinByTicket = False
@@ -3383,8 +3383,8 @@ def lineBot(op):
                         G.preventedJoinByTicket = True
                         ki5.updateGroup(G)
                         settings["blacklist"][op.param2] = True
-			
-		elif op.param3 in ki7MID:
+
+                elif op.param3 in ki7MID:
                     if op.param2 in ki6MID:
                         G = ki6.getGroup(op.param1)
                         G.preventedJoinByTicket = False
@@ -3421,7 +3421,7 @@ def lineBot(op):
                         G.preventedJoinByTicket = True
                         ki6.updateGroup(G)
                         settings["blacklist"][op.param2] = True
-			
+
 		elif op.param3 in ki8MID:
                     if op.param2 in ki7MID:
                         G = ki7.getGroup(op.param1)
@@ -3459,7 +3459,7 @@ def lineBot(op):
                         G.preventedJoinByTicket = True
                         ki7.updateGroup(G)
                         settings["blacklist"][op.param2] = True
-			
+
 		elif op.param3 in ki9MID:
                     if op.param2 in ki8MID:
                         G = ki8.getGroup(op.param1)
@@ -3497,7 +3497,7 @@ def lineBot(op):
                         G.preventedJoinByTicket = True
                         ki8.updateGroup(G)
                         settings["blacklist"][op.param2] = True
-			
+
 		elif op.param3 in ki10MID:
                     if op.param2 in ki9MID:
                         G = ki9.getGroup(op.param1)
