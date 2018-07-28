@@ -1922,7 +1922,7 @@ def lineBot(op):
                         else:
                             chiya = ""
                             for rom in wait2["ROM"][msg.to].items():
-                                print rom
+                               'print' rom
                                 chiya += rom[1] + "\n"
                         line.sendText(msg.to, "╔═══════════════%s\n╠════════════════\n%s╠═══════════════\n║Readig point creation:\n║ [%s]\n╚════════════════"  % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
                     else:
