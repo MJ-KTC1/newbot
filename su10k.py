@@ -1585,7 +1585,7 @@ def lineBot(op):
                     else:
                         line.sendMessage(receiver,"Lurking has not been set.")
 #============================ระบบรัน====เขียนโดย◇─•۞✟ℓℓஆՁゆຸ۞•─==============================================#
-                 elif ".รัน @" in msg.text:
+                elif ".รัน @" in msg.text:
                     print ("[Command]covergroup")
                     _name = msg.text.replace(".รัน @","")
                     _nametarget = _name.rstrip('  ')
@@ -1766,7 +1766,7 @@ def lineBot(op):
                             except:
                                 pass
                     print ("[Command]covergroup]")
-		                elif ".รันแชท @" in msg.text:
+		elif ".รันแชท @" in msg.text:
                     _name = msg.text.replace(".รันแชท @","")
                     _nametarget = _name.rstrip(' ')
                     gs = line.getGroup(msg.to)
