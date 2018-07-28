@@ -2620,15 +2620,15 @@ def lineBot(op):
                         profile = ki3.getProfile()
                         text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki3.sendMessage(to, text)
-                        profile = ki4.getProfile()                        
+                        profile = ki4.getProfile()
                         text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
-                        ki4.sendMessage(to, text)     
-			profile = ki5.getProfile()
+                        ki4.sendMessage(to, text)                                
+                        profile = ki5.getProfile()
                         text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki5.sendMessage(to, text)                                
                         profile = ki6.getProfile()
                         text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
-                        ki6.sendMessage(to, text)                                
+                        ki6.sendMessage(to, text)
                         profile = ki7.getProfile()
                         text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki7.sendMessage(to, text)
