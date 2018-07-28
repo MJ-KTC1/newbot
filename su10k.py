@@ -1914,8 +1914,8 @@ def lineBot(op):
                 ki4.sendMessage(msg)
                 ki5.sendMessage(msg)
                 ki6.sendMessage(msg)
-                ki7.sendMessage(msg)   
-		ki8.sendMessage(msg)
+                ki7.sendMessage(msg)
+                ki8.sendMessage(msg)
                 ki9.sendMessage(msg)
                 ki10.sendMessage(msg)
 
