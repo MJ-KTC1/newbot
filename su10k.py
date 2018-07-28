@@ -1918,13 +1918,7 @@ def lineBot(op):
                 ki8.sendMessage(msg)
                 ki9.sendMessage(msg)
                 ki10.sendMessage(msg)
-
-            #VPS STUFF - VPS NEEDED TO RUN THIS COMMAND :)
-            elif msg.text in ["vps","kernel"]:
-                 if msg.from_ in admin:
-                     botKernel = subprocess.Popen(["uname","-svmo"], stdout=subprocess.PIPE).communicate()[0]
-                     line.sendText(msg.to, botKernel)
-                     print "[Command]Kernel executed"
+#~~~~~~~~~~~~~~~~~~จัดเรียงโดย[─•۞✟ℓℓஆՁゆຸ۞•─]~~~~~~~~~~~~~~~#
 
                 elif "Broadcastvoice " in msg.text:
                     bctxt = msg.text.replace("Bcvoice ", "")
