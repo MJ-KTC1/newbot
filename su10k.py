@@ -2584,7 +2584,7 @@ def lineBot(op):
                             ki4.leaveGroup(i) 
                             print ("Kicker Leave All group")
 
-                elif "myname: " in text.lower():
+                elif "ชื่อใหม่: " in text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
@@ -2594,7 +2594,7 @@ def lineBot(op):
                         line.sendMessage(msg.to,"Update to " + string)
                         print ("Update Name")
 
-                elif "upbio: " in msg.text.lower():
+                elif "ตัสใหม่: " in msg.text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
@@ -2604,26 +2604,44 @@ def lineBot(op):
                         line.sendMessage(msg.to,"Succes Update 👉 " + string)
                         print ("Update Bio Succes")
 
-                elif "nameall: " in text.lower():
+                elif "ชื่อคิก: " in text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
-                        profile_A = ki.getProfile()
-                        profile_B = kk.getProfile()
-                        profile_C = kc.getProfile()
-                        profile_D = ke.getProfile()                        
+                        profile_A = ki1.getProfile()
+                        profile_B = ki2.getProfile()
+                        profile_C = ki3.getProfile()
+                        profile_D = ki4.getProfile()
+                        profile_E = ki5.getProfile()
+                        profile_F = ki6.getProfile()
+                        profile_G = ki7.getProfile()
+                        profile_H = ki8.getProfile()
+                        profile_I = ki9.getProfile()
+                        profile_J = ki10.getProfile()
                         profile_A.displayName = string
                         profile_B.displayName = string
                         profile_C.displayName = string
-                        profile_D.displayName = string                        
+                        profile_D.displayName = string
+                        profile_E.displayName = string
+                        profile_F.displayName = string
+                        profile_G.displayName = string
+                        profile_H.displayName = string
+                        profile_I.displayName = string
+                        profile_J.displayName = string
                         ki.updateProfile(profile_A)
                         kk.updateProfile(profile_B)
                         kc.updateProfile(profile_C)
-                        ke.updateProfile(profile_D)                        
+                        ke.updateProfile(profile_D) 
+                        ki.updateProfile(profile_E)
+                        kk.updateProfile(profile_F)
+                        kc.updateProfile(profile_G)
+                        ke.updateProfile(profile_H) 
+                        ki.updateProfile(profile_I)
+                        kk.updateProfile(profile_J)
                         line.sendMessage(msg.to,"Update Name All Kicker to : " + string)
                         print ("Update Name All Kicker")
 
-                elif "bioall: " in text.lower():
+                elif "ตัสคิก: " in text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
