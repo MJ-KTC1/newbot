@@ -852,7 +852,7 @@ def lineBot(op):
                             line.cloneContactProfile(contact)
                             line.sendMessage(msg.to, "ก๊อปได้แล้ว  (◡‿◡✿) ")
                         except:
-                            line.sendMessage(msg.to, "ก๊อปไม่ได้เนื่องจากมีบางอย่างปกป้องอยู่  (◡‿◡✿) ")
+                            line.sendMessage(msg.to, "ก๊อปไม่ได้เนื่องจากมีบางอย่างไม่ปกติ  (◡‿◡✿) ")
                             
                 elif text.lower() == 'เลิกก็อปปี้':
                     try:
@@ -2594,18 +2594,36 @@ def lineBot(op):
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
-                        profile_A = ki.getProfile()
-                        profile_B = kk.getProfile()
-                        profile_C = kc.getProfile()
-                        profile_D = kc.getProfile()                        
+                        profile_A = ki1.getProfile()
+                        profile_B = ki2.getProfile()
+                        profile_C = ki3.getProfile()
+                        profile_D = ki4.getProfile()  
+                        profile_E = ki5.getProfile()
+                        profile_F = ki6.getProfile()
+                        profile_G = ki7.getProfile()
+                        profile_H = ki8.getProfile()  
+                        profile_I = ki9.getProfile()
+                        profile_J = ki10.getProfile()
                         profile_A.statusMessage = string
                         profile_B.statusMessage = string
                         profile_C.statusMessage = string
-                        profile_D.statusMessage = string                        
-                        ki.updateProfile(profile_A)
-                        kk.updateProfile(profile_B)
-                        kc.updateProfile(profile_C)
-                        ke.updateProfile(profile_D)                        
+                        profile_D.statusMessage = string
+                        profile_E.statusMessage = string
+                        profile_F.statusMessage = string
+                        profile_G.statusMessage = string
+                        profile_H.statusMessage = string
+                        profile_I.statusMessage = string
+                        profile_J.statusMessage = string
+                        ki1.updateProfile(profile_A)
+                        ki2.updateProfile(profile_B)
+                        ki3.updateProfile(profile_C)
+                        ki4.updateProfile(profile_D)
+                        ki5.updateProfile(profile_E)
+                        ki6.updateProfile(profile_F)
+                        ki7.updateProfile(profile_G)
+                        ki8.updateProfile(profile_H)
+                        ki9.updateProfile(profile_I)
+                        ki10.updateProfile(profile_J)
                         line.sendMessage(msg.to,"Update Bio All Kicker to : " + string)
                         print ("Update Bio All Kicker")
 
