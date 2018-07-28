@@ -850,9 +850,9 @@ def lineBot(op):
                             break
                         try:
                             line.cloneContactProfile(contact)
-                            line.sendMessage(msg.to, "😊😊")
+                            line.sendMessage(msg.to, "ก๊อปได้แล้ว  (◡‿◡✿) ")
                         except:
-                            line.sendMessage(msg.to, "😊😊")
+                            line.sendMessage(msg.to, "ก๊อปไม่ได้เนื่องจากมีบางอย่างปกป้องอยู่  (◡‿◡✿) ")
                             
                 elif text.lower() == 'เลิกก็อปปี้':
                     try:
@@ -2465,7 +2465,7 @@ def lineBot(op):
                            except:
                                ki4.sendMessage(msg.to,"Type👉 Limit Invite")                               
 
-                elif "Cleanse" in msg.text:
+                elif "อาบน้ำ" in msg.text:
                 	if msg.toType == 2:
                          _name = msg.text.replace("Cleanse","")
                          gs = line.getGroup(receiver)
@@ -2475,7 +2475,7 @@ def lineBot(op):
                              if _name in g.displayName:
                                  targets.append(g.mid)
                          if targets == []:
-                             line.sendMessage(receiver,"Not found.")
+                             line.sendMessage(receiver,"เกิดข้อผิดพลาดเป็นไปได้ว่าบันชีคุณบัค  (◡‿◡✿) ")
                          else:
                              for target in targets:
                              	if not target in Rfu:
@@ -2993,7 +2993,7 @@ def lineBot(op):
                    line.sendMessage(msg.to,"❥ข้อความออกล่าสุดคือ\n\n" + str(settings["KIEBOT2"]))                                                
 #====================================================
 #====================================================
-                elif text.lower() == 'zt':
+                elif text.lower() == 'ล่องหน':
                     gs = line.getGroup(to)
                     targets = []
                     for g in gs.members:
@@ -4465,10 +4465,16 @@ def lineBot(op):
                     pass
                 else:
                     line.sendMessage(op.param1,str(settings["message"]))
-                    ki.sendMessage(op.param1,str(settings["message"]))
-                    kk.sendMessage(op.param1,str(settings["message"]))
-                    kc.sendMessage(op.param1,str(settings["message"]))
-                    ke.sendMessage(op.param1,str(settings["message"]))                    
+                    ki1.sendMessage(op.param1,str(settings["message"]))
+                    ki2.sendMessage(op.param1,str(settings["message"]))
+                    ki3.sendMessage(op.param1,str(settings["message"]))
+                    ki4.sendMessage(op.param1,str(settings["message"])) 
+                    ki5.sendMessage(op.param1,str(settings["message"]))
+                    ki6.sendMessage(op.param1,str(settings["message"]))
+                    ki7.sendMessage(op.param1,str(settings["message"]))
+                    ki8.sendMessage(op.param1,str(settings["message"])) 
+                    ki9.sendMessage(op.param1,str(settings["message"]))
+                    ki10.sendMessage(op.param1,str(settings["message"]))
 
         if op.type == 11:
             if RfuProtect["linkprotect"] == True:
@@ -4511,10 +4517,16 @@ def lineBot(op):
                 to = receiver
                 if settings["autoRead"] == True:
                     line.sendChatChecked(to, msg_id)
-                    ki.sendChatChecked(to, msg_id)
-                    kk.sendChatChecked(to, msg_id)
-                    kc.sendChatChecked(to, msg_id)
-                    ke.sendChatChecked(to, msg_id)					
+                    ki1.sendChatChecked(to, msg_id)
+                    ki2.sendChatChecked(to, msg_id)
+                    ki3.sendChatChecked(to, msg_id)
+                    ki4.sendChatChecked(to, msg_id)
+                    ki5.sendChatChecked(to, msg_id)
+                    ki6.sendChatChecked(to, msg_id)
+                    ki7.sendChatChecked(to, msg_id)
+                    ki8.sendChatChecked(to, msg_id)
+                    ki9.sendChatChecked(to, msg_id)
+                    ki10.sendChatChecked(to, msg_id)    
                 if to in read["readPoint"]:
                     if sender not in read["ROM"][to]:
                         read["ROM"][to][sender] = True
