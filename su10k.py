@@ -1766,13 +1766,13 @@ def lineBot(op):
                             except:
                                 pass
                     print ("[Command]covergroup]")
-		elif ".รันแชท @" in msg.text:
+                elif ".รันแชท @" in msg.text:
                     _name = msg.text.replace(".รันแชท @","")
                     _nametarget = _name.rstrip(' ')
                     gs = line.getGroup(msg.to)
                     for g in gs.members:
                         if _nametarget == g.displayName:
-                           line.sendText(g.mid,"💞รักนะม๋าน้อย💞")
+                           line.sendText(g.mid,"555555555")
                            line.sendText(g.mid,"💞รักนะม๋าน้อย💞")
                            line.sendText(g.mid,"💞รักนะม๋าน้อย💞")
                            line.sendText(g.mid,"💞รักนะม๋าน้อย💞")
