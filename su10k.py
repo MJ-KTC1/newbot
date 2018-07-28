@@ -2612,34 +2612,34 @@ def lineBot(op):
                 elif text.lower() == "รายงาน":
                     if msg._from in Family:
                         profile = ki1.getProfile()
-                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ"
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki1.sendMessage(to, text)                                
                         profile = ki2.getProfile()
-                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ"
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki2.sendMessage(to, text)                                
                         profile = ki3.getProfile()
-                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ"
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki3.sendMessage(to, text)
                         profile = ki4.getProfile()                        
-                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ"
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki4.sendMessage(to, text)     
 			profile = ki5.getProfile()
-                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ"
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki5.sendMessage(to, text)                                
                         profile = ki6.getProfile()
-                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ"
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki6.sendMessage(to, text)                                
                         profile = ki7.getProfile()
-                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ"
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki7.sendMessage(to, text)
                         profile = ki8.getProfile()                        
-                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ"
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki8.sendMessage(to, text) 
 			profile = ki9.getProfile()
-                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ"
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki9.sendMessage(to, text)                                
                         profile = ki10.getProfile()
-                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ"
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki10.sendMessage(to, text) 
                         print ("Kicker Respon")
 
