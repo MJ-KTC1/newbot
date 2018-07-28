@@ -1901,23 +1901,6 @@ def lineBot(op):
                         line.createGroup("🐾ъମਫ਼ีีઈஇ ମู Ҩန❍🐾",[key])
                         line.sendText(msg,to,"🐾ъମਫ਼ีีઈஇ ମู Ҩန❍🐾")
 #==============================================================================#   
-#===============================================
-            elif msg.text in ["Allgift","All Gift","ของขวัญ"]:
-                msg.contentType = 9
-                msg.contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58',
-                                    'PRDTYPE': 'THEME',
-                                    'MSGTPL': '12'}
-                msg.text = None
-                ki1.sendMessage(msg)
-                ki2.sendMessage(msg)
-                ki3.sendMessage(msg)
-                ki4.sendMessage(msg)
-                ki5.sendMessage(msg)
-                ki6.sendMessage(msg)
-                ki7.sendMessage(msg)
-                ki8.sendMessage(msg)
-                ki9.sendMessage(msg)
-                ki10.sendMessage(msg)
 #~~~~~~~~~~~~~~~~~~จัดเรียงโดย[─•۞✟ℓℓஆՁゆຸ۞•─]~~~~~~~~~~~~~~~#
 
                 elif "Broadcastvoice " in msg.text:
