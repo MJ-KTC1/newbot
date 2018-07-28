@@ -2283,17 +2283,29 @@ def lineBot(op):
                         line.updateGroup(group)
                         invsend = 0
                         ticket = line.reissueGroupTicket(to)
-                        ki.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        ki1.acceptGroupInvitationByTicket(to,format(str(ticket)))
                         time.sleep(0.01)
-                        kk.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        ki2.acceptGroupInvitationByTicket(to,format(str(ticket)))
                         time.sleep(0.01)
-                        kc.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        ki3.acceptGroupInvitationByTicket(to,format(str(ticket)))
                         time.sleep(0.01)
-                        ke.acceptGroupInvitationByTicket(to,format(str(ticket)))
-                        time.sleep(0.01)                        
+                        ki4.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01) 
+			ki5.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki6.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki7.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki8.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01) 
+			ki9.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki10.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
                         group.preventedJoinByTicket = True
                         line.updateGroup(group)
-                        print ("Kicker Join")
+                        print ("คิกเก้อเข้าห้อง")
 
                 elif 'kick' in text.lower():
                        targets = []
@@ -2306,7 +2318,7 @@ def lineBot(op):
                                random.choice(Rfu).kickoutFromGroup(msg.to,[target])      
                                print ("Rfu kick User")
                            except:
-                               random.choice(Rfu).sendMessage(msg.to,"Limit kaka 😫")
+                               random.choice(Rfu).sendMessage(msg.to,"จัดการลบคนออกกลุ่มเรียบร้อยแล้วครับ 😫")
 
                 elif 'kill' in text.lower():
                        targets = []
@@ -2516,7 +2528,7 @@ def lineBot(op):
                         ki8.leaveGroup(msg.to)
                         ki9.leaveGroup(msg.to)
                         ki10.leaveGroup(msg.to)
-                        print ("Kicker Leave")
+                        print ("คิกเก้อออกจากกลุ่ม")
 
                 elif text.lower() == "leaveall":
                     if msg._from in Family:
