@@ -2732,16 +2732,9 @@ def lineBot(op):
                                     line.cancelGroupInvitation(msg.to,[target])
                                 except:
                                     pass       
-#===========≠==========================================#       
-                elif text.lower() == 'ลบรัน':
-                    gid = line.getGroupIdsInvited()
-                    start = time.time()
-                    for i in gid:
-                        line.rejectGroupInvitation(i)
-                    elapsed_time = time.time() - start
-                    line.sendMessage(to, "ลบรันเสร็จแล้วขอรับ")                    
-		line.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))								
-								
+#===========≠==========================================#
+
+#~~~~~~~~~~~~~~~~~~~เขียนโดย◇─•۞✟ℓℓஆՁゆຸ۞•─~~~~~~~~~~~~~~#					
                 elif "Allban" in msg.text:
                   if msg._from in Family:
                       if msg.toType == 2:
