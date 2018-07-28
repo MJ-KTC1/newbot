@@ -194,7 +194,7 @@ settings = {
     "pnharfbot": {},
     "pname": {},
     "pro_name": {},
-    "message":"คุณไม่สามารถเพิ่มเพื่อนได้/nเนื่องจากคุณไม่ได้รับอนุยาติจาก ─•۞✟ℓℓஆՁՃิ۞•─ /nขอบคุณที่แอดมา (◡‿◡✿) ",
+    "message":"คุณไม่สามารถเพิ่มเพื่อนได้/nเนื่องจากคุณไม่ได้รับอนุญาติจาก ─•۞✟ℓℓஆՁՃิ۞•─ /nขอบคุณที่แอดมา (◡‿◡✿) ",
     "comment":"Thanks for add me",
     "userAgent": [
         "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0",
@@ -905,6 +905,9 @@ def lineBot(op):
                 elif text.lower() == 'ดิสใหม่':
                             settings["changePicture"] = True
                             line.sendMessage(to, "Silahkan kirim gambarnya")
+                elif text.lower() == 'ดิสคิก1':
+                            settings["changePicture"] = True
+                            ki1.sendMessage(to, "Silahkan kirim gambarnya")
                 elif text.lower() == 'เปลี่ยนรูปกลุ่ม':
                             if msg.toType == 2:
                                 if to not in settings["changeGroupPicture"]:
