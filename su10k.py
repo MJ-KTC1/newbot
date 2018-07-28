@@ -347,85 +347,85 @@ def sendMessageWithMention(to, lineMID):
  
 def myhelp():
     myHelp = "✰「  SELFBOT 🌸ℓຫຼี้छՃิ🌸  」✰   " + "\n" \
-                  "❥「บัญชี」" + "\n" + \
-                  "❥「คำสั่ง1-5」วิทีใช้งานมี5คำสั่ง" + "\n" + \
-                  "❥「Languange」" + "\n" + \
+                  "🍭「บัญชี」" + "\n" + \
+                  "🍭「คำสั่ง1-5」วิทีใช้งานมี5คำสั่ง" + "\n" + \
+                  "🍭「Languange」" + "\n" + \
                   "🍭「ผู้สร้าง」[บุคคลเขียนบอท]" + "\n" + \
-                  "❥「คท」[คทเราเอง]" + "\n" + \
-                  "❥「มิส」[MIDเรา]" + "\n" + \
-                  "❥「ชื่อ」[ชื่อเรา]" + "\n" + \
-                  "❥「ตัส」[ตัสเรา]" + "\n" + \
-                  "❥「ดิส」[ดิสเรา]" + "\n" + \
-                  "❥「ปก」[ปกเรา]" + "\n" + \
-                  "❥「วีดีโอ」[วีดีโอเรา]" + "\n" + \
-                  "❥「มิส @」[MIDเพื่อน]" + "\n" + \
-                  "❥「ชื่อ @」[ชื่อเพื่อน]" + "\n" + \
-                  "❥「ตัส @」[ตัสเพื่อน]" + "\n" + \
-                  "❥「ดิส @」[ดิสเพื่อน]" + "\n" + \
-                  "❥「ปก @」[ปกเพื่อน]" + "\n" + \
-                  "❥「วีดีโอ @」[วีดีโอเพื่อน]" + "\n" + \
-                  "❥「Copy」" + "\n" + \
-                  "❥「Restore」" + "\n" + \
-                  "❥「Mimic on/off」" + "\n" + \
-                  "❥「MimicList」" + "\n" + \
-                  "❥「MimicAdd」" + "\n" + \
-                  "❥「MimicDel」" + "\n" + \
-                  "❥「Broadcastvoice」" + "\n" + \
-                  "❥「Cbroadcastvoice」" + "\n" + \
-                  "❥「Tag1」" + "\n"\
-                  "❥「Tag2」" + "\n"\
-                  "❥「speed」[เช็คความไวบอท]" + "\n"\
-                  "❥「sp」[เช็คความไวบอท]" + "\n"\
-                  "❥「ล่องหน」[ค้นหาคนไส่กันแทค]" + "\n"\
-                  "❥「จัด @」[เตะโดยแอดชื่อ]" + "\n"\
-                  "❥「รีบอท」" + "\n" + \
-                  "❥「ออน」" + "\n" + \
-                  "❥「แอด」[แอดนิ้นกลุ่ม]" + "\n" + \
-                  "❥「ไอดีกลุ่ม」" + "\n" + \
-                  "❥「ชื่อกลุ่ม」" + "\n" + \
-                  "❥「รูปกลุ่ม」" + "\n" + \
-                  "❥「บันชีกลุ่ม」" + "\n" + \
-                  "❥「GroupMemberList」" + "\n" + \
-                  "❥「กลุ่มทั้งหมด」[กลุ่มทั้งหมดที่เรามี]" + "\n" + \
-                  "❥「ลิ้ง」[ขอลิ้งกลุ่ม]" + "\n" + \
-                  "❥「ลิ้งเปิด/ปิด」[เปิดปิดลิ้ง]" + "\n" + \
-                  "❥「เปิดลิ้ง」[ขอลิ้งกลุ่ม]" + "\n" + \
-                  "❥「เพื่อน」" + "\n" + \
-                  "❥「รายการบล็อค」" + "\n" + \
-                  "❥「เพื่อน mid」" + "\n" + \
-                  "❥「Invite:gcreator」" + "\n" + \
-                  "❥「Spam on/off」" + "\n" + \
-                  "❥「Reject inv」" + "\n" + \
-                  "❥「Allban」" + "\n" + \
-                  "❥「กลุ่มทั้งหมด」" + "\n" + \
-                  "❥「เชคดำ」" + "\n" + \
-                  "❥「แทค」" + "\n" + \
+                  "🍭「คท」[คทเราเอง]" + "\n" + \
+                  "🍭「มิส」[MIDเรา]" + "\n" + \
+                  "🍭「ชื่อ」[ชื่อเรา]" + "\n" + \
+                  "🍭「ตัส」[ตัสเรา]" + "\n" + \
+                  "🍭「ดิส」[ดิสเรา]" + "\n" + \
+                  "🍭「ปก」[ปกเรา]" + "\n" + \
+                  "🍭「วีดีโอ」[วีดีโอเรา]" + "\n" + \
+                  "🍭「มิส @」[MIDเพื่อน]" + "\n" + \
+                  "🍭「ชื่อ @」[ชื่อเพื่อน]" + "\n" + \
+                  "🍭「ตัส @」[ตัสเพื่อน]" + "\n" + \
+                  "🍭「ดิส @」[ดิสเพื่อน]" + "\n" + \
+                  "🍭「ปก @」[ปกเพื่อน]" + "\n" + \
+                  "🍭「วีดีโอ @」[วีดีโอเพื่อน]" + "\n" + \
+                  "🍭「Copy」" + "\n" + \
+                  "🍭「Restore」" + "\n" + \
+                  "🍭「Mimic on/off」" + "\n" + \
+                  "🍭「MimicList」" + "\n" + \
+                  "🍭「MimicAdd」" + "\n" + \
+                  "🍭「MimicDel」" + "\n" + \
+                  "🍭「Broadcastvoice」" + "\n" + \
+                  "🍭「Cbroadcastvoice」" + "\n" + \
+                  "🍭「Tag1」" + "\n"\
+                  "🍭「Tag2」" + "\n"\
+                  "🍭「speed」[เช็คความไวบอท]" + "\n"\
+                  "🍭「sp」[เช็คความไวบอท]" + "\n"\
+                  "🍭「ล่องหน」[ค้นหาคนไส่กันแทค]" + "\n"\
+                  "🍭「จัด @」[เตะโดยแอดชื่อ]" + "\n"\
+                  "🍭「รีบอท」" + "\n" + \
+                  "🍭「ออน」" + "\n" + \
+                  "🍭「แอด」[แอดนิ้นกลุ่ม]" + "\n" + \
+                  "🍭「ไอดีกลุ่ม」" + "\n" + \
+                  "🍭「ชื่อกลุ่ม」" + "\n" + \
+                  "🍭「รูปกลุ่ม」" + "\n" + \
+                  "🍭「บันชีกลุ่ม」" + "\n" + \
+                  "🍭「GroupMemberList」" + "\n" + \
+                  "🍭「กลุ่มทั้งหมด」[กลุ่มทั้งหมดที่เรามี]" + "\n" + \
+                  "🍭「ลิ้ง」[ขอลิ้งกลุ่ม]" + "\n" + \
+                  "🍭「ลิ้งเปิด/ปิด」[เปิดปิดลิ้ง]" + "\n" + \
+                  "🍭「เปิดลิ้ง」[ขอลิ้งกลุ่ม]" + "\n" + \
+                  "🍭「เพื่อน」" + "\n" + \
+                  "🍭「รายการบล็อค」" + "\n" + \
+                  "🍭「เพื่อน mid」" + "\n" + \
+                  "🍭「Invite:gcreator」" + "\n" + \
+                  "🍭「Spam on/off」" + "\n" + \
+                  "🍭「Reject inv」" + "\n" + \
+                  "🍭「Allban」" + "\n" + \
+                  "🍭「กลุ่มทั้งหมด」" + "\n" + \
+                  "🍭「เชคดำ」" + "\n" + \
+                  "🍭「แทค」" + "\n" + \
                   "🍭「1แทค」" + "\n" + \
-                  "❥「Lurking on」" + "\n" + \
-                  "❥「Lurking off」" + "\n" + \
-                  "❥「Lurking reset」" + "\n" + \
-                  "❥「Lurking」" + "\n" + \
-                  "❥「Invite」" + "\n" + \
-                  "❥「uninstall」" + "\n" + \
-                  "❥「Kick」" + "\n" + \
-                  "❥「ดำ」" + "\n" + \
+                  "🍭「Lurking on」" + "\n" + \
+                  "🍭「Lurking off」" + "\n" + \
+                  "🍭「Lurking reset」" + "\n" + \
+                  "🍭「Lurking」" + "\n" + \
+                  "🍭「Invite」" + "\n" + \
+                  "🍭「uninstall」" + "\n" + \
+                  "🍭「Kick」" + "\n" + \
+                  "🍭「ดำ」" + "\n" + \
                   "🍭[ขาว]" + "\n" + \
-                  "❥「ล้างดำ」[แก้ไขคนที่ติดบันชีดำ]" + "\n" + \
-                  "❥「Instagram」" + "\n" + \
-                  "❥「Fotoig」" + "\n" + \
-                  "❥「ยูทูป」" + "\n" + \
-                  "❥「Music」" + "\n" + \
-                  "❥「Lyric」" + "\n" + \
-                  "❥「ScreenshootWebsite」" + "\n" + \
-                  "❥「Film:」" + "\n" + \
-                  "❥「Kalender」" + "\n" + \
-                  "❥「CheckDate」" + "\n" + \
-                  "❥「Textig」" + "\n" + \
-                  "❥「Wikipedia」" + "\n" + \
-                  "❥「Urban」" + "\n" + \
-                  "❥「Anime」" + "\n" + \
-                  "❥「รูป」" + "\n" + \
-                  "❥「Pornhub」" + "\n" + \
+                  "🍭「ล้างดำ」[แก้ไขคนที่ติดบันชีดำ]" + "\n" + \
+                  "🍭「Instagram」" + "\n" + \
+                  "🍭「Fotoig」" + "\n" + \
+                  "🍭「ยูทูป」" + "\n" + \
+                  "🍭「Music」" + "\n" + \
+                  "🍭「Lyric」" + "\n" + \
+                  "🍭「ScreenshootWebsite」" + "\n" + \
+                  "🍭「Film:」" + "\n" + \
+                  "🍭「Kalender」" + "\n" + \
+                  "🍭「CheckDate」" + "\n" + \
+                  "🍭「Textig」" + "\n" + \
+                  "🍭「Wikipedia」" + "\n" + \
+                  "🍭「Urban」" + "\n" + \
+                  "🍭「Anime」" + "\n" + \
+                  "🍭「รูป」" + "\n" + \
+                  "🍭「Pornhub」" + "\n" + \
                   "🍭[.bye @][ลบสมาชิคออกจากกลุ่ม]" + "\n" + \
                   "🍭[ข้อมูล @][ขอมูลเพื่อน]" + "\n" + \
                   "🍭[พูด ][สั่งไห้พูดตามเราพิม]" + "\n" + \
@@ -435,7 +435,7 @@ def myhelp():
                   "🍭「รายงาน」[เช็คบอท]" + "\n" + \
                   "🍭「บอท」[เชคบอท]" + "\n" + \
                   "🍭「」" + "\n" + \
-                  "❥════"
+                  "🍭════"
     return myHelp
 
     
@@ -2611,18 +2611,36 @@ def lineBot(op):
 
                 elif text.lower() == "รายงาน":
                     if msg._from in Family:
-                        profile = ki.getProfile()
-                        text = profile.displayName + "รายงานตัว\n"
-                        ki.sendMessage(to, text)                                
-                        profile = kk.getProfile()
-                        text = profile.displayName + "รายงานตัว\n"
-                        kk.sendMessage(to, text)                                
-                        profile = kc.getProfile()
-                        text = profile.displayName + "รายงานตัว\n"
-                        kc.sendMessage(to, text)
-                        profile = ke.getProfile()                        
-                        text = profile.displayName + "รายงานตัว\n"
-                        ke.sendMessage(to, text)                        
+                        profile = ki1.getProfile()
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ"
+                        ki1.sendMessage(to, text)                                
+                        profile = ki2.getProfile()
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ"
+                        ki2.sendMessage(to, text)                                
+                        profile = ki3.getProfile()
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ"
+                        ki3.sendMessage(to, text)
+                        profile = ki4.getProfile()                        
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ"
+                        ki4.sendMessage(to, text)     
+			profile = ki5.getProfile()
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ"
+                        ki5.sendMessage(to, text)                                
+                        profile = ki6.getProfile()
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ"
+                        ki6.sendMessage(to, text)                                
+                        profile = ki7.getProfile()
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ"
+                        ki7.sendMessage(to, text)
+                        profile = ki8.getProfile()                        
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ"
+                        ki8.sendMessage(to, text) 
+			profile = ki9.getProfile()
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ"
+                        ki9.sendMessage(to, text)                                
+                        profile = ki10.getProfile()
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ"
+                        ki10.sendMessage(to, text) 
                         print ("Kicker Respon")
 
                 elif msg.text in ["บอท"]:
