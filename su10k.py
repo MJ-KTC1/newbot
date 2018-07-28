@@ -2210,10 +2210,10 @@ def lineBot(op):
                         ginfo = line.getGroup(receiver)
                         try:
                             line.leaveGroup(receiver)
-                            ki.leaveGroup(receiver)
-                            kk.leaveGroup(receiver)
-                            kc.leaveGroup(receiver)
-                            ke.leaveGroup(receiver)							
+                            ki1.leaveGroup(receiver)
+                            ki2.leaveGroup(receiver)
+                            ki3.leaveGroup(receiver)
+                            ki4.leaveGroup(receiver)							
                         except:
                             pass
 
@@ -2603,7 +2603,19 @@ def lineBot(op):
                         line.updateProfile(profile_A)
                         line.sendMessage(msg.to,"Succes Update 👉 " + string)
                         print ("Update Bio Succes")
+#~~~~~~~~~~~~~~~~~ตัส~~เขียนโดย◇─•۞✟ℓℓஆՁゆຸ۞•─~~~~~~~~~~~~~~#
 
+                elif "ชื่อคิก1: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki1.getProfile()
+                        profile_A.displayName = string
+                        ki1.updateProfile(profile_A)
+                        ki1.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki1.sendMessage(msg.to,"ถูกใจข่อยหลายเด้อลูกพี่😊)
+                        print ("Update Name")
+#~~~~~~~~~~~~~~~~~~~เขียนโดย◇─•۞✟ℓℓஆՁゆຸ۞•─~~~~~~~~~~~~~~#
                 elif "ชื่อคิก: " in text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
