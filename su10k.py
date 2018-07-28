@@ -3046,7 +3046,7 @@ def lineBot(op):
                     gid = ki10.getGroupIdsInvited()
                     start = time.time()
                     for i in gid:
-                        ki1.rejectGroupInvitation(i)                    
+			ki1.rejectGroupInvitation(i)
 			ki2.rejectGroupInvitation(i)
 			ki3.rejectGroupInvitation(i)
 			ki4.rejectGroupInvitation(i)
