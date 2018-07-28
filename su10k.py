@@ -3613,7 +3613,7 @@ def lineBot(op):
                 ki6.leaveRoom(op.param1)
                 ki7.leaveRoom(op.param1)
                 ki8.leaveRoom(op.param1)
-		ki9.leaveRoom(op.param1)
+                ki9.leaveRoom(op.param1)
                 ki10.leaveRoom(op.param1)
         if op.type == 24:
             if settings['leaveRoom'] == True:
