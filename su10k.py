@@ -2732,8 +2732,44 @@ def lineBot(op):
                                     line.cancelGroupInvitation(msg.to,[target])
                                 except:
                                     pass       
-#===========≠==========================================#
-
+#===========≠=================เขียนโดย◇─•۞✟ℓℓஆՁゆຸ۞•─=========================#
+                elif text.lower() == 'ลบรันคิก':
+                    gid = ki1.getGroupIdsInvited()
+                    gid = ki2.getGroupIdsInvited()
+                    gid = ki3.getGroupIdsInvited()
+                    gid = ki4.getGroupIdsInvited()
+                    gid = ki5.getGroupIdsInvited()
+                    gid = ki6.getGroupIdsInvited()
+                    gid = ki7.getGroupIdsInvited() 
+                    gid = ki8.getGroupIdsInvited()
+                    gid = ki9.getGroupIdsInvited()
+                    gid = ki10.getGroupIdsInvited()
+                    start = time.time()
+                    for i in gid:
+                        ki1.rejectGroupInvitation(i)
+			ki2.rejectGroupInvitation(i)
+			ki3.rejectGroupInvitation(i)
+			ki4.rejectGroupInvitation(i)
+			ki5.rejectGroupInvitation(i)
+			ki6.rejectGroupInvitation(i)
+			ki7.rejectGroupInvitation(i)
+			ki8.rejectGroupInvitation(i)
+			ki9.rejectGroupInvitation(i)
+			ki10.rejectGroupInvitation(i)
+                    elapsed_time = time.time() - start
+                    line.sendMessage(to, "ลบรันคิกทั้งหมดเสร็จแล้วขอรับ")
+                    line.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))								
+			
+#===========≠===============เขียนโดย◇─•۞✟ℓℓஆՁゆຸ۞•─===========================#       
+                elif text.lower() == 'ลบรัน':
+                    gid = line.getGroupIdsInvited()
+                    start = time.time()
+                    for i in gid:
+                        line.rejectGroupInvitation(i)
+                    elapsed_time = time.time() - start
+                    line.sendMessage(to, "ลบรันเสร็จแล้วขอรับ")
+                    line.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))								
+			
 #~~~~~~~~~~~~~~~~~~~เขียนโดย◇─•۞✟ℓℓஆՁゆຸ۞•─~~~~~~~~~~~~~~#					
                 elif "Allban" in msg.text:
                   if msg._from in Family:
