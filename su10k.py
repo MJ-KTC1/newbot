@@ -195,7 +195,7 @@ settings = {
     "pname": {},
     "pro_name": {},
     "message":"คุณไม่สามารถเพิ่มเพื่อนได้/nเนื่องจากคุณไม่ได้รับอนุญาติจาก ─•۞✟ℓℓஆՁՃิ۞•─ /nขอบคุณที่แอดมา (◡‿◡✿) ",
-    "comment":"Thanks for add me",
+    "comment":"(◡‿◡✿)@ID.LINE [http://line.me/ti/p/p2nGSe0XoX] ",
     "userAgent": [
         "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0",
         "Mozilla/5.0 (X11; U; Linux amd64; rv:5.0) Gecko/20100101 Firefox/5.0 (Debian)",
@@ -447,11 +447,18 @@ def myhelp():
                   "🍭「.รันแชท @」[รันแชทโดยแอดชื่อ]" + "\n" + \
                   "🍭「.รัน: 」[รันโดยใช้ชื่อ]" + "\n" + \
                   "🍭「รันโทร」เชินโทรกลุ่ม" + "\n" + \
+                  "🍭「.gift」เราส่งของขวัญ" + "\n" + \
+                  "🍭「.gift @」ส่งของขวัญไปที่แทช" + "\n" + \
+                  "🍭「.giftall」คิกส่งของขวัญ" + "\n" + \
                   "🍭「」" + "\n" + \
+                  "🍭「」" + "\n" + \
+                  "🍭「」" + "\n" + \
+                  "🍭「」" + "\n" + \
+                  "🌧🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦" + "\n" + \
                   "۞~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~۞" + "\n" + \
-                  "🍭「─•۞✟ℓℓஆՁゆຸ۞•─」🍭" + "\n" + \
-                  "🍭「@ID.http://line.me/ti/p/p2nGSe0XoX」🍭" + "\n" + \
-                  "🍭════"
+                  "❄「─•۞✟ℓℓஆՁゆຸ۞•─」🍭" + "\n" + \
+                  "❄「@ID.http://line.me/ti/p/p2nGSe0XoX」🍭" + "\n" + \
+                  "❄════"
     return myHelp
 
     
@@ -912,7 +919,7 @@ def lineBot(op):
                             if msg.toType == 2:
                                 if to not in settings["changeGroupPicture"]:
                                     settings["changeGroupPicture"].append(to)
-                                line.sendMessage(to, "Silahkan kirim gambarnya")
+                                line.sendMessage(to, "เปลี่ยนรูปกลุ่มเรียบร้อย.")
 
 
 #==============================================
@@ -1454,6 +1461,22 @@ def lineBot(op):
                                         'MSGTPL': '1'}
                     msg.text = None
                     line.sendMessage(msg)
+                if msg.text.lower() == ".giftall":
+                    msg.contentType = 9
+                    msg.contentMetadata={'PRDID': '',
+                                        'PRDTYPE': 'THEME',
+                                        'MSGTPL': '1'}
+                    msg.text = None
+                    ki1.sendMessage(msg)
+                    ki2.sendMessage(msg)
+                    ki3.sendMessage(msg)
+                    ki4.sendMessage(msg)
+                    ki5.sendMessage(msg)
+                    ki6.sendMessage(msg)
+                    ki7.sendMessage(msg)
+                    ki8.sendMessage(msg)
+                    ki9.sendMessage(msg)
+                    ki10.sendMessage(msg)
                 if ".gift " in msg.text.lower():
                     red = re.compile(re.escape('.gift '),re.IGNORECASE)
                     themeid = red.sub('',msg.text)
