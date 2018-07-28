@@ -1,4 +1,4 @@
-# -*- By.SUSU -*-
+# -*- ─•۞✟ℓℓஆՁゆຸ۞•─ -*-
 from linepy import *
 from akad.ttypes import *
 from multiprocessing import Pool, Process
@@ -323,7 +323,7 @@ def restartBot():
     os.execl(python, python, *sys.argv)
     
 def logError(text):
-    line.log("[ แจ้งเตือน ] " + str(text))
+    line.log("[ ─•۞✟ℓℓஆՁゆຸ۞•─ ] " + str(text))
     time_ = datetime.now()
     with open("errorLog.txt","a") as error:
         error.write("\n[%s] %s" % (str(time), text))
@@ -423,6 +423,7 @@ def myhelp():
                   "❥「Anime」" + "\n" + \
                   "❥「รูป」" + "\n" + \
                   "❥「Pornhub」" + "\n" + \
+                  "🍭[.bye @][ลบสมาชิคออกจากกลุ่ม]"
                   "☆『พูด 』[สั่งไห้พูดตามเรา] "
                   "۞ ข้อมูล @[ขอมูลเพื่อน] "
                   "❥════"
@@ -3009,8 +3010,8 @@ def lineBot(op):
                             mi_d = contact.mid
                             line.sendContact(to, mi_d)
 #===========≠==========================================#
-                elif "Vk " in msg.text:
-                        vkick0 = msg.text.replace("Vk ","")
+                elif "จัด " in msg.text:
+                        vkick0 = msg.text.replace("จัด ","")
                         vkick1 = vkick0.rstrip()
                         vkick2 = vkick1.replace("@","")
                         vkick3 = vkick2.rstrip()
