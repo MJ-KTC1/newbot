@@ -386,9 +386,9 @@ def myhelp():
                   "❥「บันชีกลุ่ม」" + "\n" + \
                   "❥「GroupMemberList」" + "\n" + \
                   "❥「ข้อมูลกลุ่ม」" + "\n" + \
-                  "❥「Url」" + "\n" + \
-                  "❥「Link on/off」" + "\n" + \
-                  "❥「Gurl」" + "\n" + \
+                  "❥「ลิ้ง」[ขอลิ้งกลุ่ม]" + "\n" + \
+                  "❥「ลิ้งเปิด/ปิด」[เปิดปิดลิ้ง]" + "\n" + \
+                  "❥「เปิดลิ้ง」[ขอลิ้งกลุ่ม]" + "\n" + \
                   "❥「เพื่อน」" + "\n" + \
                   "❥「บันชีบล้อค」" + "\n" + \
                   "❥「เพื่อน mid」" + "\n" + \
@@ -424,6 +424,7 @@ def myhelp():
                   "❥「รูป」" + "\n" + \
                   "❥「Pornhub」" + "\n" + \
                   "☆『พูด 』[สั่งไห้พูดตามเรา] "
+                  "۞ ข้อมูล @[ขอมูลเพื่อน] "
                   "❥════"
     return myHelp
 
@@ -468,9 +469,10 @@ def helpkicker():
     "❥「Join on/off」" + "\n" + \
     "❥「leave on/off」" + "\n" + \
     "❥「read on/off」" + "\n" + \
-    "❥「Tag on/off」" + "\n" + \
+    "❥「แทคเปิด/ปิด」[เปิดข้อความแทค]" + "\n" + \
     "❥「Selfbot on/off」" + "\n" + \
-    "❥「Tag2 on/off」" + "\n" + \
+    "❥「แทค1เปิด/ปิด [เปิดข้อความแทคที่1]" + "\n" + \
+    "❥「แทค2เปิด/ปิด」[เปิดข้อความแทคที่2]" + "\n" + \
     "❥「Checksticker on/off」" + "\n" + \
     "❥「Sider on/off」" + "\n" + \
     "❥「ต้อนรับ on/off」" + "\n" + \
@@ -609,7 +611,7 @@ def lineBot(op):
                         grouplist = line.getGroupIdsJoined()
                         contactlist = line.getAllContactIds()
                         blockedlist = line.getBlockedContactIds()
-                        ret_ = "╔══[ ✯By.KIE✯ ]"
+                        ret_ = "╔══[─•۞✟ℓℓஆՁՃิ۞•─]"
                         ret_ += "\n╠۝ ชื่อ ═ {}".format(contact.displayName)
                         ret_ += "\n╠۝ กลุ่ม ═ {}".format(str(len(grouplist)))
                         ret_ += "\n╠۝ เพื่อน ═ {}".format(str(len(contactlist)))
@@ -624,7 +626,7 @@ def lineBot(op):
 #==============================================================================#
                 elif text.lower() == 'set':
                     try:
-                        ret_ = "╔═[ ❥BY.KIE]═══"
+                        ret_ = "╔═[─•۞✟ℓℓஆՁՃิ۞•─]═══"
                         if settings["contact"] == True: ret_ += "\n❥ 「อ่านคอนแทค」 ✔"
                         else: ret_ += "\n❥ 「อ่านคอนแทค」    ✘ "
                         if settings["autoAdd"] == True: ret_ += "\n❥ 「บล้อคออโต้」 ✔"
@@ -924,7 +926,7 @@ def lineBot(op):
                     group = line.getGroup(to)
                     GS = group.creator.mid
                     line.sendContact(to, GS)
-                    line.sendMessage(to, "Itu Pembuat Groupnya")
+                    line.sendMessage(to, "คนสร้างกลุ่ม")
                 elif text.lower() == 'ไอดีกลุ่ม':
                     gid = line.getGroup(to)
                     line.sendMessage(to, "ID GROUP \n" + gid.id)
@@ -935,13 +937,13 @@ def lineBot(op):
                 elif text.lower() == 'ชื่อกลุ่ม':
                     gid = line.getGroup(to)
                     line.sendMessage(to, "Name Group -> \n" + gid.name)
-                elif text.lower() == 'url':
+                elif text.lower() == 'ลิ้ง':
                     if msg.toType == 2:
                         group = line.getGroup(to)
                         if group.preventedJoinByTicket == False:
                             ticket = line.reissueGroupTicket(to)
                             line.sendMessage(to, "Link Qr Group\nhttps://line.me/R/ti/g/{}".format(str(ticket)))
-                elif text.lower() == 'link on':
+                elif text.lower() == 'ลิ้งเปิด':
                     if msg.toType == 2:
                         group = line.getGroup(to)
                         if group.preventedJoinByTicket == False:
@@ -950,7 +952,7 @@ def lineBot(op):
                             group.preventedJoinByTicket = False
                             line.updateGroup(group)
                             line.sendMessage(to, "Link Qr to open")
-                elif text.lower() == 'link off':
+                elif text.lower() == 'ลิ้งปิด':
                     if msg.toType == 2:
                         group = line.getGroup(to)
                         if group.preventedJoinByTicket == True:
@@ -1075,7 +1077,7 @@ def lineBot(op):
                             cnt = 0
                     line.sendMessage(msg.to,text[:-2])
                     cnt = 0				
-                elif "info " in msg.text.lower():
+                elif "ข้อมูล " in msg.text.lower():
                     spl = re.split("info ",msg.text,flags=re.IGNORECASE)
                     if spl[0] == "":
                         prov = eval(msg.contentMetadata["MENTION"])["MENTIONEES"]
@@ -2078,7 +2080,7 @@ def lineBot(op):
                         ret_ += "\n╚══[ จำนวนที่พบ {} ]".format(len(datas))
                         line.sendMessage(to, str(ret_))
 
-                elif msg.text in ["Cctv on"]:
+                elif msg.text in ["Cctv on","เปิดแสกน"]:
                     try:
                         del RfuCctv['point'][msg.to]
                         del RfuCctv['sidermem'][msg.to]
@@ -2088,13 +2090,13 @@ def lineBot(op):
                     RfuCctv['point'][msg.to] = msg.id
                     RfuCctv['sidermem'][msg.to] = ""
                     RfuCctv['cyduk'][msg.to]=True
-                    line.sendMessage(msg.to,"เปิดจับคนอ่านแล้ว")
-                elif msg.text in ["Cctv off"]:
+                    line.sendMessage(msg.to,"เปิดค้นหาคนแอบอ่านแล้ว")
+                elif msg.text in ["Cctv off","ปิดแสกน"]:
                     if msg.to in RfuCctv['point']:
                         RfuCctv['cyduk'][msg.to]=False
                         line.sendMessage(msg.to, RfuCctv['sidermem'][msg.to])
                     else:
-                        line.sendMessage(msg.to, "ปิดจับคนอ่านแล้ว")
+                        line.sendMessage(msg.to, "ปิดค้นหาคนแอบอ่านแล้ว")
 
                 elif text.lower() == 'selfbot off':
                     line.sendMessage(receiver, 'หยุดการทำงานเซลบอทเรียบร้อย')
@@ -2134,12 +2136,12 @@ def lineBot(op):
                     msgs+="\n═════════List FriendMid═════════\n\nTotal Friend : %i" % len(kontak)
                     line.sendMessage(receiver, msgs)
 
-                elif msg.text.lower() == 'gurl':
+                elif msg.text.lower() == 'เปิดลิ้ง':
                 	if msg.toType == 2:
                          g = line.getGroup(receiver)
                          line.updateGroup(g)
                          gurl = line.reissueGroupTicket(receiver)
-                         line.sendMessage(receiver,"╔══════════════┓\n╠❂line://ti/g/" + gurl + "\n╠\n╠❂Link Groupnya Tanpa Buka Qr\n╚══════════════┛")
+                         line.sendMessage(receiver,"╔══════════════┓\n╠❂line://ti/g/" + gurl + "\n╠\n╠❂ ลิ้ ง ข อ ง ก ลุ่ ม นี้ \n╚══════════════┛")
 
                 elif msg.text == "Pornhub":
                 	line.sendMessage(receiver,">nekopoi.host\n>sexvideobokep.com\n>memek.com\n>pornktube.com\n>faketaxi.com\n>videojorok.com\n>watchmygf.mobi\n>xnxx.com\n>pornhd.com\n>xvideos.com\n>vidz7.com\n>m.xhamster.com\n>xxmovies.pro\n>youporn.com\n>pornhub.com\n>youjizz.com\n>thumzilla.com\n>anyporn.com\n>brazzers.com\n>redtube.com\n>youporn.com")
@@ -2172,19 +2174,19 @@ def lineBot(op):
 
                 elif msg.text in ["Tagimage on","Tag2 on","แทค2เปิด","แทค2 เปิด","แทค2 off","แทค2off"]:
                         settings['potoMention'] = True
-                        line.sendMessage(msg.to,"Respon enabled.")
+                        line.sendMessage(msg.to,"แทค2เปิดแล้ว")
                 
                 elif msg.text in ["Tagimage off","Tag2 off","แทค2ปิด","แทค2 ปิด","แทค2 off","แทค2off"]:
                         settings['potoMention'] = False
-                        line.sendMessage(msg.to,"Respon disabled.")
+                        line.sendMessage(msg.to,"แทค2ปิดแล้ว")
 
                 elif msg.text in ["Respontag on","Tag on","My respon on","Respon:on","แทคเปิด","แทคon"]:
                     settings["detectMention"] = True
-                    line.sendMessage(msg.to,"AutoRespon enabled.")
+                    line.sendMessage(msg.to,"แทคทั้งหมดเปิดแล้ว..")
                 
                 elif msg.text in ["Respontag off","Tag off","My respon off","Respon:off","แทคปิด","แทคoff"]:
                     settings["detectMention"] = False
-                    line.sendMessage(msg.to,"Autorespon disabled.")
+                    line.sendMessage(msg.to,"แทคทั้งหมดปิดแล้ว..")
 
                 elif msg.text.lower().startswith("textig "):
                     sep = msg.text.split(" ")
