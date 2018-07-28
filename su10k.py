@@ -3609,7 +3609,7 @@ def lineBot(op):
                 ki2.leaveRoom(op.param1)
                 ki3.leaveRoom(op.param1)
                 ki4.leaveRoom(op.param1)
-		ki5.leaveRoom(op.param1)
+                ki5.leaveRoom(op.param1)
                 ki6.leaveRoom(op.param1)
                 ki7.leaveRoom(op.param1)
                 ki8.leaveRoom(op.param1)
