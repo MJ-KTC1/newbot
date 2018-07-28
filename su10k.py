@@ -2632,15 +2632,15 @@ def lineBot(op):
                         profile = ki7.getProfile()
                         text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki7.sendMessage(to, text)
-                        profile = ki8.getProfile()                        
+                        profile = ki8.getProfile()
                         text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
-                        ki8.sendMessage(to, text) 
-			profile = ki9.getProfile()
+                        ki8.sendMessage(to, text)                                
+                        profile = ki9.getProfile()
                         text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki9.sendMessage(to, text)                                
                         profile = ki10.getProfile()
                         text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
-                        ki10.sendMessage(to, text) 
+                        ki10.sendMessage(to, text)
                         print ("Kicker Respon")
 
                 elif msg.text in ["บอท"]:
