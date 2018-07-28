@@ -2644,10 +2644,16 @@ def lineBot(op):
                         print ("Kicker Respon")
 
                 elif msg.text in ["บอท"]:
-                    ki.sendMessage(msg.to,"✰ɢʜᴏsᴛ ᴛᴇᴀᴍ✰")
-                    kk.sendMessage(msg.to,"✰ɢʜᴏsᴛ ᴛᴇᴀᴍ✰2")
-                    kc.sendMessage(msg.to,"✰ɢʜᴏsᴛ ᴛᴇᴀᴍ✰3")
-                    ke.sendMessage(msg.to,"✰ɢʜᴏsᴛ ᴛᴇᴀᴍ✰4")    
+                    ki1.sendMessage(msg.to,"1(⊙_⊙)─•۞✟ℓℓஆՁゆຸ۞•─")
+                    ki2.sendMessage(msg.to,"2(⊙_⊙)─•۞✟ℓℓஆՁゆຸ۞•─")
+                    ki3.sendMessage(msg.to,"3(⊙_⊙)─•۞✟ℓℓஆՁゆຸ۞•─")
+                    ki4.sendMessage(msg.to,"4(⊙_⊙)─•۞✟ℓℓஆՁゆຸ۞•─")   
+                    ki5.sendMessage(msg.to,"5(⊙_⊙)─•۞✟ℓℓஆՁゆຸ۞•─")
+                    ki6.sendMessage(msg.to,"6(⊙_⊙)─•۞✟ℓℓஆՁゆຸ۞•─")
+                    ki7.sendMessage(msg.to,"5(⊙_⊙)─•۞✟ℓℓஆՁゆຸ۞•─")
+                    ki8.sendMessage(msg.to,"8(⊙_⊙)─•۞✟ℓℓஆՁゆຸ۞•─") 
+                    ki9.sendMessage(msg.to,"9(⊙_⊙)─•۞✟ℓℓஆՁゆຸ۞•─")
+                    ki10.sendMessage(msg.to,"10(⊙_⊙)─•۞✟ℓℓஆՁゆຸ۞•─")
                 elif msg.text.lower().startswith("bitcoin"):
                    search = msg.text.split("bitcoin")
                    with requests.session() as web:
