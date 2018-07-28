@@ -1901,6 +1901,56 @@ def lineBot(op):
                         line.createGroup("🐾ъମਫ਼ีีઈஇ ମู Ҩန❍🐾",[key])
                         line.sendText(msg,to,"🐾ъମਫ਼ีีઈஇ ମู Ҩန❍🐾")
 #==============================================================================#   
+#=================================================
+            elif msg.text == "นับ":
+                    cl.sendText(msg.to, "!โปรดรอ..กรุณาพิมพ์ อ่าน")
+                    try:
+                        del wait2['readPoint'][msg.to]
+                        del wait2['readMember'][msg.to]
+                    except:
+                           pass
+                    now2 = datetime.now()
+                    wait2['readPoint'][msg.to] = msg.id
+                    wait2['readMember'][msg.to] = ""
+                    wait2['setTime'][msg.to] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                    wait2['ROM'][msg.to] = {}
+                    print wait2
+            elif msg.text == "อ่าน":
+                    if msg.to in wait2['readPoint']:
+                        if wait2["ROM"][msg.to].items() == []:
+                            chiya = ""
+                        else:
+                            chiya = ""
+                            for rom in wait2["ROM"][msg.to].items():
+                                print rom
+                                chiya += rom[1] + "\n"
+                        cl.sendText(msg.to, "╔═══════════════%s\n╠════════════════\n%s╠═══════════════\n║Readig point creation:\n║ [%s]\n╚════════════════"  % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
+                    else:
+                        cl.sendText(msg.to, "Ketik Lurking dulu dudul Baru bilang result Point.")
+						
+#===============~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`~~`
+#===============================================
+            elif msg.text in ["Allgift","All Gift"]:
+                msg.contentType = 9
+                msg.contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58',
+                                    'PRDTYPE': 'THEME',
+                                    'MSGTPL': '12'}
+                msg.text = None
+                ki.sendMessage(msg)
+                kk.sendMessage(msg)
+                kc.sendMessage(msg)
+                ks.sendMessage(msg)
+                ka.sendMessage(msg)
+                ko.sendMessage(msg)
+                kj.sendMessage(msg)                
+
+            #VPS STUFF - VPS NEEDED TO RUN THIS COMMAND :)
+            elif msg.text in ["vps","kernel"]:
+                 if msg.from_ in admin:
+                     botKernel = subprocess.Popen(["uname","-svmo"], stdout=subprocess.PIPE).communicate()[0]
+                     cl.sendText(msg.to, botKernel)
+                     print "[Command]Kernel executed"
+
                 elif "Broadcastvoice " in msg.text:
                     bctxt = msg.text.replace("Bcvoice ", "")
                     bc = (".Bdw.. Ini adalah Broadcast.. Salam Owner ARDIAN PURNAMA.. by. RFU boot sekawan")
