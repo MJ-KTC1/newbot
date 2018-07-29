@@ -450,6 +450,12 @@ def myhelp():
                   "🍭「.gift」เราส่งของขวัญ" + "\n" + \
                   "🍭「.gift @」ส่งของขวัญไปที่แทช" + "\n" + \
                   "🍭「.giftall」คิกส่งของขวัญ" + "\n" + \
+                  "🍭「เปิดแสกน」เปิดหาคนแอบอ่าน" + "\n" + \
+                  "🍭「ปิดแสกน」ปิดหาคนแอบอ่าน" + "\n" + \
+                  "🍭「.เชินแอด」เชินเจ้าของกลุ่ม" + "\n" + \
+                  "🍭「」" + "\n" + \
+                  "🍭「」" + "\n" + \
+                  "🍭「」" + "\n" + \
                   "🍭「」" + "\n" + \
                   "🍭「」" + "\n" + \
                   "🍭「」" + "\n" + \
@@ -564,6 +570,50 @@ def lineBot(op):
 #        if op.type == 24:
 #            if settings["autoLeave"] == True:
 #                line.leaveRoom(op.param1)
+        if op.type == 24:
+            if settings["autoLeave"] == True:
+                line.leaveRoom(op.param1)
+                                     
+        if op.type == 25:
+            msg = op.message
+            if msg.contentType == 13:
+            	if settings["winvite"] == True:
+                     if msg._from in admin:
+                         _name = msg.contentMetadata["displayName"]
+                         invite = msg.contentMetadata["mid"]
+                         groups = line.getGroup(msg.to)
+                         pending = groups.invitee
+                         targets = []
+                         for s in groups.members:
+                             if _name in s.displayName:
+                                 line.sendText(msg.to,"-> " + _name + " \nทำการเชิญสำเร็จ")
+                                 break
+                             elif invite in settings["blacklist"]:
+                                 line.sendText(msg.to,"ขออภัย, " + _name + " บุคคนนี้อยู่ในรายการบัญชีดำ")
+                                 line.sendText(msg.to,"ใช้คำสั่ง!, \n➡ล้างดำ➡ดึง" )
+                                 break                             
+                             else:
+                                 targets.append(invite)
+                         if targets == []:
+                             pass
+                         else:
+                             for target in targets:
+                                 try:
+                                     line.findAndAddContactsByMid(target)
+                                     line.inviteIntoGroup(msg.to,[target])
+                                     line.sendText(msg.to,"เชิญคนนี้สำเร็จแล้ว : \n➡" + _name)
+                                     settings["winvite"] = False
+                                     break
+                                 except:
+                                     try:
+                                         line.findAndAddContactsByMid(invite)
+                                         line.inviteIntoGroup(op.param1,[invite])
+                                         settings["winvite"] = False
+                                     except:
+                                         line.sendText(msg.to,"ตรวจพบข้อผิดพลาดที่ไม่ทราบสาเหตุอาจเป็นได้ว่าบัญชีของคุณถูกแบนอยู่(◡‿◡✿) ")
+                                         settings["winvite"] = False
+                                         break
+						
         if op.type == 25:
             msg = op.message
             text = msg.text
@@ -1169,6 +1219,19 @@ def lineBot(op):
                             except:
                                 pass
                         line.sendText(msg.to,"สำเร็จแล้ว")	
+                elif msg.text.lower() == '.เชินแอด':
+                	if msg.toType == 2:                
+                           ginfo = line.getGroup(receiver)
+                           try:
+                               gcmid = ginfo.creator.mid
+                           except:
+                               gcmid = "Error"
+                           if settings["lang"] == "JP":
+                               line.inviteIntoGroup(receiver,[gcmid])
+                               line.sendMessage(receiver, "พิมพ์คำเชิญกลุ่ม")
+                           else:
+                               line.inviteIntoGroup(receiver,[gcmid])
+                               line.sendMessage(receiver, "ผู้สร้างกลุ่มอยู่ในแล้ว")
                 elif ".whois " in msg.text.lower():
                     spl = re.split(".whois ",msg.text,flags=re.IGNORECASE)
                     if spl[0] == "":
