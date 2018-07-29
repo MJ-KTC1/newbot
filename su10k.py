@@ -148,8 +148,8 @@ kiMID = ki9.getProfile().mid
 kkMID = ki10.getProfile().mid
 bot1 = line.getProfile().mid
 RfuBot=[lineMID,ki1MID,ki2MID,ki3MID,ki4MID,ki5MID,ki6MID,ki7MID,ki8MID,ki9MID,ki10MID]
-Family=["ud3a6bfda60a956cca0f58f2a14bae808",lineMID,kiMID,kkMID,kcMID,keMID]
-admin=['ud3a6bfda60a956cca0f58f2a14bae808',lineMID]
+Family=["ue32b11986d8e9e5cf70b642cf7ba88ff",lineMID,ki1MID,ki2MID,ki3MID,ki4MID,ki5MID,ki6MID,ki7MID,ki8MID,ki9MID,ki10MID,]
+admin=['ue32b11986d8e9e5cf70b642cf7ba88ff',lineMID]
 RfuFamily = RfuBot + Family
 
 protectname = []
@@ -748,7 +748,7 @@ def lineBot(op):
                     line.sendContact(to, lineMID)
                 elif text.lower() == 'ผู้สร้าง':
                     sendMessageWithMention(to, lineMID)
-                    line.sendContact(to, "ud3a6bfda60a956cca0f58f2a14bae808")
+                    line.sendContact(to, "ue32b11986d8e9e5cf70b642cf7ba88ff")
                 elif text.lower() == 'มิส':
                     line.sendMessage(msg.to,"[MID]\n" +  lineMID)
                 elif text.lower() == 'ชื่อ':
