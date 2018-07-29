@@ -453,7 +453,7 @@ def myhelp():
                   "🍭「เปิดแสกน」เปิดหาคนแอบอ่าน" + "\n" + \
                   "🍭「ปิดแสกน」ปิดหาคนแอบอ่าน" + "\n" + \
                   "🍭「.เชินแอด」เชินเจ้าของกลุ่ม" + "\n" + \
-                  "🍭「」" + "\n" + \
+                  "🍭「.invitecancel」ยกเลิกค้างเชินในกลุ่ม" + "\n" + \
                   "🍭「」" + "\n" + \
                   "🍭「」" + "\n" + \
                   "🍭「」" + "\n" + \
@@ -462,8 +462,8 @@ def myhelp():
                   "🍭「」" + "\n" + \
                   "🌧🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦" + "\n" + \
                   "۞~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~۞" + "\n" + \
-                  "❄「─•۞✟ℓℓஆՁゆຸ۞•─」🍭" + "\n" + \
-                  "❄「@ID.http://line.me/ti/p/p2nGSe0XoX」🍭" + "\n" + \
+                  "❄「─•۞✟ℓℓஆՁゆຸ۞•─」❄" + "\n" + \
+                  "❄「@ID. http://line.me/ti/p/p2nGSe0XoX  」❄" + "\n" + \
                   "❄════"
     return myHelp
 
@@ -588,24 +588,6 @@ def lineBot(op):
                 if text is None:
                     return
 #~~~~~~~~~~~~~~~~เขียนโดยนุจัง~~~~~~~~~~~~~~#
-                if "พูด " in msg.text.lower():
-                    spl = re.split("พูด ",msg.text,flags=re.IGNORECASE)
-                    if spl[0] == "":
-                        mts = spl[1]
-                        mtsl = mts.split()
-                        mtsTimeArg = len(mtsl) - 1
-                        mtsTime = mtsl[mtsTimeArg]
-                        del mtsl[mtsTimeArg]
-                        mtosay = " ".join(mtsl)
-                        global Rapid1To
-                        Rapid1To = msg.to
-                        RapidTime = mtsTime
-                        rmtosay = []
-                        for count in range(0,int(RapidTime)):
-                            rmtosay.insert(count,mtosay)
-                        p = Pool(20)
-                        p.map(Rapid1Say,rmtosay)
-                        p.close()
 #~~~~~~~~~~~~~~~~~~~เขียนโดย◇─•۞✟ℓℓஆՁゆຸ۞•─~~~~~~~~~~~~~~#
               
                 if text.lower() == 'คำสั่ง':
@@ -1383,22 +1365,7 @@ def lineBot(op):
                             line.acceptGroupInvitationByTicket(gid,ticket)
                         except Exception as e:
                             line.sendMessage(msg.to,str(e))	
-                elif msg.text.lower().startswith(".ctt "):
-                    try:
-                        text = msg.text.split(" ",1)[1]
-                        headers = {
-                        "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36"
-                        }
-                        data = {
-                        "q":text
-                        }
-                        conv = BeautifulSoup(requests.post("http://lullar-de-2.appspot.com/",headers=headers,data=data).content,"html.parser").find("span",attrs={"style":"font-size:40px"}).text
-                        if msg.toType != 0:
-                                ki2.sendMessage(msg.to,"Conversion:\n"+conv)
-                        else:
-                                ki2.sendMessage(msg.from_,"Conversion:\n"+conv)
-                    except Exception as e:
-                        print(e)						
+                					
                 elif msg.text.lower().startswith("pz:gac "):
                     pnum = re.split("pz:gac ",msg.text,flags=re.IGNORECASE)[1]
                     pnum = "66"+pnum[1:]
