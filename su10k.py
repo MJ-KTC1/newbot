@@ -27,49 +27,46 @@ line.log("Timeline Token : " + str(line.tl.channelAccessToken))
 
 ki1 = LINE('')
 ki1.log("Auth Token : " + str(ki1.authToken))
-ki1.log("Timeline Token : " + str(ki.tl.channelAccessToken))
+ki1.log("Timeline Token : " + str(ki1.tl.channelAccessToken))
 
 ki2 = LINE('')
 ki2.log("Auth Token : " + str(ki2.authToken))
-ki2.log("Timeline Token : " + str(kk.tl.channelAccessToken))
+ki2.log("Timeline Token : " + str(ki2.tl.channelAccessToken))
 
 ki3 = LINE('')
 ki3.log("Auth Token : " + str(ki3.authToken))
-ki3.log("Timeline Token : " + str(kc.tl.channelAccessToken))
+ki3.log("Timeline Token : " + str(ki3.tl.channelAccessToken))
 
 ki4 = LINE('')
 ki4.log("Auth Token : " + str(ki4.authToken))
-ki4.log("Timeline Token : " + str(ke.tl.channelAccessToken))
+ki4.log("Timeline Token : " + str(ki4.tl.channelAccessToken))
 
 
 ki5 = LINE('')
 ki5.log("Auth Token : " + str(ki5.authToken))
-ki5.log("Timeline Token : " + str(ki.tl.channelAccessToken))
+ki5.log("Timeline Token : " + str(ki5.tl.channelAccessToken))
 
 ki6 = LINE('')
 ki6.log("Auth Token : " + str(ki6.authToken))
-ki6.log("Timeline Token : " + str(kk.tl.channelAccessToken))
+ki6.log("Timeline Token : " + str(ki6.tl.channelAccessToken))
 
 ki7 = LINE('')
 ki7.log("Auth Token : " + str(ki7.authToken))
-ki7.log("Timeline Token : " + str(kc.tl.channelAccessToken))
+ki7.log("Timeline Token : " + str(ki7.tl.channelAccessToken))
 
 ki8 = LINE('')
 ki8.log("Auth Token : " + str(ki8.authToken))
-ki8.log("Timeline Token : " + str(ke.tl.channelAccessToken))
+ki8.log("Timeline Token : " + str(ki8.tl.channelAccessToken))
 
 
 ki9 = LINE('')
 ki9.log("Auth Token : " + str(ki9.authToken))
-ki9.log("Timeline Token : " + str(ki.tl.channelAccessToken))
+ki9.log("Timeline Token : " + str(ki9.tl.channelAccessToken))
 
-ki9 = LINE('')
-ki9.log("Auth Token : " + str(ki9.authToken))
-ki9.log("Timeline Token : " + str(kk.tl.channelAccessToken))
 
 ki10 = LINE('')
 ki10.log("Auth Token : " + str(ki10.authToken))
-ki10.log("Timeline Token : " + str(kc.tl.channelAccessToken))
+ki10.log("Timeline Token : " + str(ki10.tl.channelAccessToken))
 
 
 print ("Login Succes")
