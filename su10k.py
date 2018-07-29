@@ -1163,7 +1163,7 @@ def lineBot(op):
                             line.sendMessage(msg.to,subprocess.getoutput(spl[1]))
                         except:
                             pass	
-                elif msg.text.lower() == ".getjoined":
+                elif msg.text.lower() == "ไอดีกลุ่ม":
                     line.sendMessage(msg.to,"กรุณารอสักครู่ ใจเย็นๆ")
                     all = line.getGroupIdsJoined()
                     text = ""
@@ -1177,29 +1177,11 @@ def lineBot(op):
                             cnt = 0
                     line.sendMessage(msg.to,text[:-2])
                     cnt = 0				
-                elif "ข้อมูล " in msg.text.lower():
-                    spl = re.split("info ",msg.text,flags=re.IGNORECASE)
-                    if spl[0] == "":
-                        prov = eval(msg.contentMetadata["MENTION"])["MENTIONEES"]
-                        for i in range(len(prov)):
-                            uid = prov[i]["M"]
-                            userData = line.getContact(uid)
-                            try:
-                                line.sendImageWithUrl(msg.to,"http://dl.profile.line.naver.jp/"+userData.pictureStatus)
-                            except:
-                                pass
-                            line.sendMessage(msg.to,"ชื่อที่แสดง: "+userData.displayName)
-                            line.sendMessage(msg.to,"ข้อความสเตตัส:\n"+userData.statusMessage)
-                            line.sendMessage(msg.to,"ไอดีบัญชี: "+userData.mid)
-                            msg.contentType = 13
-                            msg.text = None
-                            msg.contentMetadata = {'mid': userData.mid}
-                            line.sendMessage(msg)
                 elif "|!" in msg.text:
                     spl = msg.text.split("|!")
                     if spl[len(spl)-1] == "":
                         line.sendMessage(msg.to,"กดที่นี่เพื่อเขย่าข้อความด้านบน:\nline://nv/chatMsg?chatId="+msg.to+"&messageId="+msg.id)	
-                elif ".denyall" in msg.text.lower():
+                elif ".ยกเลิกกลุ่ม" in msg.text.lower():
                     spl = re.split(".denyall",msg.text,flags=re.IGNORECASE)
                     if spl[0] == "":
                         spl[1] = spl[1].strip()
@@ -1232,18 +1214,7 @@ def lineBot(op):
                            else:
                                line.inviteIntoGroup(receiver,[gcmid])
                                line.sendMessage(receiver, "ผู้สร้างกลุ่มอยู่ในแล้ว")
-                elif ".whois " in msg.text.lower():
-                    spl = re.split(".whois ",msg.text,flags=re.IGNORECASE)
-                    if spl[0] == "":
-                        msg.contentType = 13
-                        msg.text = None
-                        msg.contentMetadata = {"mid":spl[1]}
-                        line.sendMessage(msg)
-                elif ".remove " in msg.text.lower():
-                    if msg.toType == 2:
-                        prov = eval(msg.contentMetadata["MENTION"])["MENTIONEES"]
-                        for i in range(len(prov)):
-                            random.choice(Exc).kickoutFromGroup(msg.to,[prov[i]["M"]])
+
                 elif ".bye " in msg.text.lower():
                     if msg.toType == 2:
                         prov = eval(msg.contentMetadata["MENTION"])["MENTIONEES"]
@@ -1437,24 +1408,15 @@ def lineBot(op):
                             line.sendMessage(msg)
                         except:
                             line.sendMessage(msg.to,"[[NO MENTION]]")
-                elif "tx " in msg.text.lower():
-                    spl = re.split(".tx ",msg.text,flags=re.IGNORECASE)
-                    if spl[0] == "":
-                        line.kedapkedip(msg.to,spl[1])
-                elif ".name " in msg.text.lower():
+         
+                elif ".ชื่อ " in msg.text.lower():
                     spl = re.split(".name ",msg.text,flags=re.IGNORECASE)
                     if spl[0] == "":
                         prof = line.getProfile()
                         prof.displayName = spl[1]
                         line.updateProfile(prof)
                         line.sendMessage(msg.to,"สำเร็จแล้ว")
-                elif ".nmx " in msg.text.lower():
-                    spl = re.split(".nmx ",msg.text,flags=re.IGNORECASE)
-                    if spl[0] == "":
-                        prof = line.getProfile()
-                        prof.displayName = line.nmxstring(spl[1])
-                        line.updateProfile(prof)
-                        line.sendMessage(msg.to,"สำเร็จแล้ว")
+         
                 elif ".join " in msg.text.lower():
                     spl = re.split(".join ",msg.text,flags=re.IGNORECASE)
                     if spl[0] == "":
@@ -1553,12 +1515,12 @@ def lineBot(op):
                 elif text.lower() == 'แทค':
                     group = line.getGroup(msg.to)
                     nama = [contact.mid for contact in group.members]
-                    k = len(nama)//100
+                    k = len(nama)//20
                     for a in range(k+1):
                         txt = ''
                         s=0
                         b=[]
-                        for i in group.members[a*100 : (a+1)*100]:
+                        for i in group.members[a*20 : (a+1)*20]:
                             b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
                             s += 7
                             txt += '@Alin \n'
@@ -1568,12 +1530,12 @@ def lineBot(op):
                 elif text.lower() == '1แทค':
                     group = line.getGroup(msg.to)
                     nama = [contact.mid for contact in group.members if contact.mid != lineMID]
-                    k = len(nama)//500
+                    k = len(nama)//20
                     for a in range(k+1):
                         txt = ''
                         s=0
                         b=[]
-                        for i in group.members[a*500 : (a+1)*500]:
+                        for i in group.members[a*20 : (a+1)*20]:
                             b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
                             s += 7
                             txt += '@Alin \n'
@@ -2022,65 +1984,7 @@ def lineBot(op):
 #==============================================================================#   
 #~~~~~~~~~~~~~~~~~~จัดเรียงโดย[─•۞✟ℓℓஆՁゆຸ۞•─]~~~~~~~~~~~~~~~#
 
-                elif "Broadcastvoice " in msg.text:
-                    bctxt = msg.text.replace("Bcvoice ", "")
-                    bc = (".Bdw.. Ini adalah Broadcast.. Salam Owner ARDIAN PURNAMA.. by. RFU boot sekawan")
-                    cb = (bctxt + bc)
-                    tts = gTTS(cb, lang='id', slow=False)
-                    tts.save('tts.mp3')
-                    n = line.getGroupIdsJoined()
-                    for manusia in n:
-                        line.sendAudio(manusia, 'tts.mp3')
-
-                elif "Cbroadcastvoice " in msg.text:
-                    bctxt = msg.text.replace("Cbcvoice ", "")
-                    bc = (".Bdw.. Ini adalah Broadcast.. Salam Owner ARDIAN PURNAMA.. by. RFU boot sekawan")
-                    cb = (bctxt + bc)
-                    tts = gTTS(cb, lang='id', slow=False)
-                    tts.save('tts.mp3')
-                    n = line.getAllContactIdsJoined()
-                    for manusia in n:
-                        line.sendAudio(manusia, 'tts.mp3')
-
-                elif "Wikipedia " in msg.text:
-                      try:
-                          wiki = msg.text.lower().replace("Wikipedia ","")
-                          wikipedia.set_lang("id")
-                          pesan="Title ("
-                          pesan+=wikipedia.page(wiki).title
-                          pesan+=")\n\n"
-                          pesan+=wikipedia.summary(wiki, sentences=1)
-                          pesan+="\n"
-                          pesan+=wikipedia.page(wiki).url
-                          line.sendMessage(msg.to, pesan)
-                      except:
-                              try:
-                                  pesan="Over Text Limit! Please Click link\n"
-                                  pesan+=wikipedia.page(wiki).url
-                                  line.sendText(msg.to, pesan)
-                              except Exception as e:
-                                  line.sendMessage(msg.to, str(e))
-
-                elif "Film:" in msg.text:
-                    proses = msg.text.split(":")
-                    get = msg.text.replace(proses[0] + ":","")
-                    getfilm = get.split()
-                    title = getfilm[0]
-                    tahun = getfilm[1]
-                    r = requests.get('http://www.omdbapi.com/?t='+title+'&y='+tahun+'&plot=full&apikey=4bdd1d70')
-                    start = time.time()
-                    data=r.text
-                    data=json.loads(data)
-                    hasil = "Informasi \n" +str(data["Title"])+ " (" +str(data["Year"])+ ")"
-                    hasil += "\n\n " +str(data["Plot"])
-                    hasil += "\n\nDirector : " +str(data["Director"])
-                    hasil += "\nActors   : " +str(data["Actors"])
-                    hasil += "\nRelease : " +str(data["Released"])
-                    hasil += "\nGenre    : " +str(data["Genre"])
-                    hasil += "\nRuntime   : " +str(data["Runtime"])
-                    path = data["Poster"]
-                    line.sendImageWithURL(msg.to, str(path))
-                    line.sendMessage(msg.to,hasil)
+              
 
                 elif text.lower() == 'kalender':
                     tz = pytz.timezone("Asia/Makassar")
@@ -2096,27 +2000,7 @@ def lineBot(op):
                         if bln == str(k): bln = bulan[k-1]
                     readTime = hasil + ", " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nJam : [ " + timeNow.strftime('%H:%M:%S') + " ]"
                     line.sendMessage(msg.to, readTime)                 
-                elif "screenshotwebsite" in msg.text.lower():
-                    sep = text.split(" ")
-                    query = text.replace(sep[0] + " ","")
-                    with requests.session() as web:
-                        r = web.get("http://rahandiapi.herokuapp.com/sswebAPI?key=betakey&link={}".format(urllib.parse.quote(query)))
-                        data = r.text
-                        data = json.loads(data)
-                        line.sendImageWithURL(to, data["result"])
-                elif "checkdate" in msg.text.lower():
-                    sep = msg.text.split(" ")
-                    tanggal = msg.text.replace(sep[0] + " ","")
-                    r=requests.get('https://script.google.com/macros/exec?service=AKfycbw7gKzP-WYV2F5mc9RaR7yE3Ve1yN91Tjs91hp_jHSE02dSv9w&nama=ervan&tanggal='+tanggal)
-                    data=r.text
-                    data=json.loads(data)
-                    ret_ = "╔══[ D A T E ]"
-                    ret_ += "\n╠ Date Of Birth : {}".format(str(data["data"]["lahir"]))
-                    ret_ += "\n╠ Age : {}".format(str(data["data"]["usia"]))
-                    ret_ += "\n╠ Birthday : {}".format(str(data["data"]["ultah"]))
-                    ret_ += "\n╠ Zodiak : {}".format(str(data["data"]["zodiak"]))
-                    ret_ += "\n╚══[ Success ]"
-                    line.sendMessage(to, str(ret_))
+
                 
                 elif "instagram" in msg.text.lower():
                     sep = text.split(" ")
@@ -2274,7 +2158,7 @@ def lineBot(op):
                          gurl = line.reissueGroupTicket(receiver)
                          line.sendMessage(receiver,"╔══════════════┓\n╠❂line://ti/g/" + gurl + "\n╠\n╠❂ ลิ้ ง ข อ ง ก ลุ่ ม นี้ \n╚══════════════┛")
 
-                elif msg.text == "Pornhub":
+                elif msg.text == "เวบโป๊":
                 	line.sendMessage(receiver,">nekopoi.host\n>sexvideobokep.com\n>memek.com\n>pornktube.com\n>faketaxi.com\n>videojorok.com\n>watchmygf.mobi\n>xnxx.com\n>pornhd.com\n>xvideos.com\n>vidz7.com\n>m.xhamster.com\n>xxmovies.pro\n>youporn.com\n>pornhub.com\n>youjizz.com\n>thumzilla.com\n>anyporn.com\n>brazzers.com\n>redtube.com\n>youporn.com")
 
                 elif msg.text.lower() == 'invite:gcreator':
