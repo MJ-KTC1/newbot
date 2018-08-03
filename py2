@@ -2177,7 +2177,7 @@ def lineBot(op):
                     t1 = "\xf4\x80\xb0\x82\xf4\x80\xb0\x82\xf4\x80\xb0\x82\xf4\x80\xb0\x82\xf4\x80\xa0\x81\xf4\x80\xa0\x81\xf4\x80\xa0\x81"
                     t2 = "\xf4\x80\x82\xb3\xf4\x8f\xbf\xbf"
                     line.sendMessage(msg.to, t1 + txt + t2)						
-                elif msg.text in ["1ลบสิริ"]:
+                elif msg.text in ["1สิริ"]:
                     if msg.toType == 2:
                         print("Kick Siri")
                         x = ki1.getGroup(msg.to)
@@ -2191,7 +2191,7 @@ def lineBot(op):
                                 except:
                                     pass
 										
-                elif msg.text in ["2ลบสิริ"]:
+                elif msg.text in ["2สิริ"]:
                     if msg.toType == 2:
                         print("Kick Siri")
                         x = ki2.getGroup(msg.to)
@@ -2204,7 +2204,7 @@ def lineBot(op):
                                     k2.kickoutFromGroup(msg.to,[target])
                                 except:
                                     pass
-                elif msg.text in ["3ลบสิริ"]:
+                elif msg.text in ["3สิริ"]:
                     if msg.toType == 2:
                         print("Kick Siri")
                         x = ki3.getGroup(msg.to)
@@ -2217,7 +2217,7 @@ def lineBot(op):
                                     ki3.kickoutFromGroup(msg.to,[target])
                                 except:
                                     pass
-                elif msg.text in ["4ลบสิริ"]:
+                elif msg.text in ["4สิริ"]:
                     if msg.toType == 2:
                         print("Kick Siri")
                         x = ki4.getGroup(msg.to)
@@ -2253,7 +2253,7 @@ def lineBot(op):
                     line.sendMessage(msg.to,"ทำการลบัญชีดำทั้งหมดเรียร้อย")
                     print ("Clear Ban")
 
-                elif text.lower() == "มาหอย":
+                elif text.lower() == "All":
                     if msg.toType == 2:
                         group = line.getGroup(to)
                         group.preventedJoinByTicket = False
@@ -2493,7 +2493,7 @@ def lineBot(op):
                                 pass
                                 print ("Remove Chat Kicker")
 
-                elif text.lower() == "หนีหอย":
+                elif text.lower() == "Bye":
                     if msg._from in Family:
                         ki1.leaveGroup(msg.to)
                         ki2.leaveGroup(msg.to)
@@ -2538,7 +2538,7 @@ def lineBot(op):
                         print ("Update Bio Succes")
 #~~~~~~~~~~~~~~~~~ตัส~~เขียนโดย◇─•۞✟ℓℓஆՁゆຸ۞•─~~~~~~~~~~~~~~#
 
-                elif "ชื่อคิก1: " in text.lower():
+                elif "1ชื่อ: " in text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
@@ -2550,7 +2550,7 @@ def lineBot(op):
                         print ("Update Name")
 			
 
-                elif "ชื่อคิก2: " in text.lower():
+                elif "2ชื่อ: " in text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
@@ -2562,7 +2562,7 @@ def lineBot(op):
                         print ("Update Name")
 			
 
-                elif "ชื่อคิก3: " in text.lower():
+                elif "3ชื่อ: " in text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
@@ -2574,7 +2574,7 @@ def lineBot(op):
                         print ("Update Name")
 			
 
-                elif "ชื่อคิก4: " in text.lower():
+                elif "4ชื่อ: " in text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
@@ -2586,7 +2586,7 @@ def lineBot(op):
                         print ("Update Name")
 			
 
-                elif "ชื่อคิก5: " in text.lower():
+                elif "5ชื่อ: " in text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
@@ -2598,7 +2598,7 @@ def lineBot(op):
                         print ("Update Name")
 
 
-                elif "ชื่อคิก6: " in text.lower():
+                elif "6ชื่อ: " in text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
@@ -2610,7 +2610,7 @@ def lineBot(op):
                         print ("Update Name")
 			
 
-                elif "ชื่อคิก7: " in text.lower():
+                elif "7ชื่อ: " in text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
@@ -2622,7 +2622,7 @@ def lineBot(op):
                         print ("Update Name")
 			
 
-                elif "ชื่อคิก8: " in text.lower():
+                elif "8ชื่อ: " in text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
@@ -2634,7 +2634,7 @@ def lineBot(op):
                         print ("Update Name")
 			
 
-                elif "ชื่อคิก9: " in text.lower():
+                elif "9ชื่อ: " in text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
@@ -2646,7 +2646,7 @@ def lineBot(op):
                         print ("Update Name")
 			
 
-                elif "ชื่อคิก10: " in text.lower():
+                elif "10ชื่อ: " in text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
