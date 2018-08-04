@@ -361,7 +361,7 @@ def lineBot(op):
                 elif text.lower() == 'about':
                     try:
                         arr = []
-                        owner = "ud827b95f8468c46e30cf9bf5dd35e8e7"
+                        owner = "ue32b11986d8e9e5cf70b642cf7ba88ff"
                         creator = unk.getContact(owner)
                         contact = unk.getContact(unkMID)
                         grouplist = unk.getGroupIdsJoined()
