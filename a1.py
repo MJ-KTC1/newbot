@@ -11,66 +11,12 @@ from gtts import gTTS
 from googletrans import Translator
 #==============================================================================#
 botStart = time.time()
-#==============================================================================#
-#line = LINE()
-#line = LINE("เมล","พาส")
-line = LINE()
-line.log("Auth Token : " + str(line.authToken))
-line.log("Timeline Token : " + str(line.tl.channelAccessToken))
-
-#ki = LINE('')
-#ki.log("Auth Token : " + str(ki.authToken))
-#ki.log("Timeline Token : " + str(ki.tl.channelAccessToken))
-
-#kk = LINE('')
-#kk.log("Auth Token : " + str(kk.authToken))
-#kk.log("Timeline Token : " + str(kk.tl.channelAccessToken))
-
-#kc = LINE('')
-#kc.log("Auth Token : " + str(kc.authToken))
-#kc.log("Timeline Token : " + str(kc.tl.channelAccessToken))
-
-#ke = LINE('')
-#ke.log("Auth Token : " + str(ke.authToken))
-#ke.log("Timeline Token : " + str(ke.tl.channelAccessToken))
-
-#km = LINE('')
-#km.log("Auth Token : " + str(ke.authToken))
-#km.log("Timeline Token : " + str(ke.tl.channelAccessToken))
-
-
+#=======================ระบบล็อคอินโดย[༄۞ꪶꪶꪣꪫꪊุ۞࿐]=======================================================#
+#~~~~~~~~~~~~~~~~~~~~~~~ระบบล็อคอินโดย[༄۞ꪶꪶꪣꪫꪊุ۞࿐]~~~~~~~~~~~~~~~~~#
 print ("Login Succes")
+#~~~~~~~~~~~~~~~~~~~~~~ระบบMIDโดย[༄۞ꪶꪶꪣꪫꪊุ۞࿐]~~~~~~~~~~~~~~~#
+#~~~~~~~~~~~~~~~~~~~~~~ระบบoepollโดย[༄۞ꪶꪶꪣꪫꪊุ۞࿐]~~~~~~~~~~~~~~#
 
-lineMID = line.profile.mid
-lineProfile = line.getProfile()
-lineSettings = line.getSettings()
-
-#kiMID = ki.profile.mid
-#kiProfile = ki.getProfile()
-#kiSettings = ki.getSettings()
-
-#kkMID = kk.profile.mid
-#kkProfile = kk.getProfile()
-#kkSettings = kk.getSettings()
-
-#kcMID = kc.profile.mid
-#kcProfile = kc.getProfile()
-#kcSettings = kc.getSettings()
-
-#keMID = kc.profile.mid
-#keProfile = kc.getProfile()
-#keSettings = kc.getSettings()
-
-#kmMID = km.profile.mid
-#kmProfile = km.getProfile()
-#kmSettings = km.getSettings()
-
-#oepoll = OEPoll(km)
-#oepoll = OEPoll(ke)
-#oepoll = OEPoll(kc)
-#oepoll = OEPoll(kk)
-#oepoll = OEPoll(ki)
-oepoll = OEPoll(line)
 readOpen = codecs.open("read.json","r","utf-8")
 settingsOpen = codecs.open("temp.json","r","utf-8")
 read = json.load(readOpen)
@@ -138,9 +84,9 @@ settings = {
     "changePictureProfile":False,
     "unsendMessage": False,
     "autoJoinTicket": False,
-    "welcome":"🙏สวีสดีครับคนมาใหม่🙏",
-    "kick":"😱อุ๊ต๊ะ😱",
-    "bye":"🙌บาย..",
+    "welcome":"ตั้งข้อความต้อนรับ",
+    "kick":"ตั้งข้อความเตะ",
+    "bye":"ตั้งข้อความออก",
     "Respontag":"😳",
     "eror":"คุณใช้คำสั่งผิด กรุณาศึกษาวิธีใช้ หรือสอบถามกับผู้สร้าง โดยพิมคำสั่ง *.ผส*เพื่อแสดง คท ของผู้สร้าง",
     "spam":{},
@@ -149,43 +95,11 @@ settings = {
     "pnharfbot": {},
     "pname": {},
     "pro_name": {},
-    "message1":"รับแก้ไฟล์+เพิ่มไฟล์+แก้ภาษา\n💝ราคาดูที่หน้างาน💝\n👉มีบริการให้เช่าบอทSAMURAI\nราคา300บาทต่อเดือน💖\n#เพิ่มคิกเกอร์ตัวละ100👌\n🎀สนใจรีบทัก..บอทpython3ฟังชั่นล้นหลาม🎁กำลังรอให้คุณเป็นเจ้าของ\n(ผมจะอยู่ที่ห้องนี้แค่15นาทีนะจ๊ะ)\nselfbot by:\n╔══════════════┓\n╠™❍✯͜͡RED™SAMURAI✯͜͡❂➣ \n╚══════════════┛",
+    "message1":"ตั้งข้อความ",
     "message":"บัญชีนี้ถูกป้องกันโดย Selfbot By ™❍✯͜͡RED™SAMURI✯͜͡❂➣ระบบได้ทำการบล็อคคุณอัตโนมัติเนื่องจากคุณยังไม่ได้ยืนยันตัวตนกับผู้สร้างบอท\nสามารถยืนตัวตนได้ง่ายโดยการพิม unblockกับ™❍✯͜͡RED™SAMURI✯͜͡❂➣ระบบจะทำการปลดบล็อคท่านโดยอัตโนมัต",
-    "comment":"""🎋RED BOT LINE THAILAND🎋
-    ─┅═✥👊ᵀᴴᴬᴵᴸᴬᴺᴰ👊✥═┅─ 
-  💀[RED SAMURAI SELFBOT]💀 
-🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁
-🎀รับแก้ไฟล์+เพิ่มไฟล์+แก้ภาษา
-💝ราคาดูที่หน้างาน
-📌มีบริการให้เช่าเซลบอท SAMURAI 
-📌ร่างครึ่งคนครึ่งบอท
-📌ราคาว่ากันตามคุณภาพนะครับ
-📌ราคา300บาทต่อเดือน (ถูกมาก..)
-📌เพิ่มคิกเกอร์ตัวละ100👌
-👉บินได้ครับ
-👉รันได้ครับ
-👉ป้องกันกลุ่มเจอบินได้
-👉แอบดูคนอ่านได้
-👉แทคได้
-👉รันแชทได้
-👉ลบแชทได้
-👉กันรัน/ลบรันได้
-👉ตั้งปฏิเสธกลุ่มเชิญตามจำนวนสมาชิกได้
-👉เล่นเซลในแชทสตได้
-👉ตั้งข้อความคนเข้าคนออกได้
-👉ตั้งข้อความคนลบสมาชิกได้
-👉ตั้งข้อความคนแอดได้
-👉สมารถเรียกดูการตั้งค่าข้อความได้ทั้งหมด
-🍷มีความสามารถอีกเยอะดูเอาระกัน🍷
-🎀สนใจรีบทัก🎀
-🎉บอทpython3ฟังชั่นล้นหลาม คุณภาพแน่นปึ๊ก
-🎁กำลังรอให้คุณเป็นเจ้าของ....
-🎋(สนใจรีบโทร📲0946345913📞)
-📌หรือจิ้มที่นี่👇👇👇👇👇
-https://line.me/ti/p/samuri5
-https://line.me/ti/p/redsamuri7
-คุณจะได้เป็นเจ้าของ เซลบอทคุณภาพดีก่อนใครๆ
-(ทักก่อนจิ้ม...ไม่งั้นโดนออโต้บล็อคนะจ๊ะ)
+    "comment":"""
+
+
 selfbot by:
 ╔══════════════┓
 ╠™❍✯͜͡RED™SAMURAI✯͜͡❂➣ 
@@ -967,7 +881,7 @@ def lineBot(op):
                     helpKickker = helpkicker()
                     line.sendMessage(to, str(helpKicker))
 #==============================================================================#
-                elif text.lower() == 'สปีด':
+                elif text.lower() == 'สปีดบอท':
                     start = time.time()
                     line.sendMessage(to, "กำลังทดสอบ")
                     elapsed_time = time.time() - start
@@ -2262,66 +2176,8 @@ def lineBot(op):
                     ret_ += "\n╚══[ Success ]"
                     line.sendMessage(to, str(ret_))
                 
-                elif ".ไอจี " in msg.text.lower():
-                    sep = text.split(" ")
-                    search = text.replace(sep[0] + " ","")
-                    with requests.session() as web:
-                        web.headers["User-Agent"] = random.choice(settings["userAgent"])
-                        r = web.get("https://www.instagram.com/search?q={}".format(urllib.parse.quote(search)))
-                        try:
-                            data = json.loads(r.text)
-                            ret_ = "╔══[ Profile Instagram ]"
-                            ret_ += "\n╠ Nama : {}".format(str(data["user"]["full_name"]))
-                            ret_ += "\n╠ Username : {}".format(str(data["user"]["username"]))
-                            ret_ += "\n╠ Bio : {}".format(str(data["user"]["biography"]))
-                            ret_ += "\n╠ Pengikut : {}".format(format_number(data["user"]["followed_by"]["count"]))
-                            ret_ += "\n╠ Diikuti : {}".format(format_number(data["user"]["follows"]["count"]))
-                            if data["user"]["is_verified"] == True:
-                                ret_ += "\n╠ Verifikasi : Sudah"
-                            else:
-                                ret_ += "\n╠ Verifikasi : Belum"
-                            if data["user"]["is_private"] == True:
-                                ret_ += "\n╠ Akun Pribadi : Iya"
-                            else:
-                                ret_ += "\n╠ Akun Pribadi : Tidak"
-                            ret_ += "\n╠ จำนวน Post : {}".format(format_number(data["user"]["media"]["count"]))
-                            ret_ += "\n╚══[ https://www.instagram.com/{} ]".format(search)
-                            path = data["user"]["profile_pic_url_hd"]
-                            line.sendImageWithURL(to, str(path))
-                            line.sendMessage(to, str(ret_))
-                        except:
-                            line.sendMessage(to, "Pengguna tidak ditemukan")
-                elif ".รูปไอจี " in msg.text.lower():
-                    separate = msg.text.split(" ")
-                    user = msg.text.replace(separate[0] + " ","")
-                    profile = "https://www.instagram.com/" + user
-                    with requests.session() as x:
-                        x.headers['user-agent'] = 'Mozilla/5.0'
-                        end_cursor = ''
-                        for count in range(1):
-                            print(('send foto : ', count))
-                            r = x.get(profile, params={'max_id': end_cursor})                        
-                            data = re.search(r'window._sharedData = (\{.+?});</script>', r.text).group(1)
-                            j    = json.loads(data)                        
-                            for node in j['entry_data']['ProfilePage'][0]['user']['media']['nodes']: 
-                                page = 'https://www.instagram.com/p/' + node['code']
-                                r = x.get(page)
-                                print((node['display_src']))
-                                line.sendImageWithURL(msg.to,node['display_src'])
-                elif ".รูปภาพ " in msg.text.lower():
-                    separate = msg.text.split(" ")
-                    search = msg.text.replace(separate[0] + " ","")
-                    with requests.session() as web:
-                        web.headers["User-Agent"] = random.choice(settings["userAgent"])
-                        r = web.get("http://rahandiapi.herokuapp.com/imageapi?key=betakey&q={}".format(urllib.parse.quote(search)))
-                        data = r.text
-                        data = json.loads(data)
-                        if data["result"] != []:
-                            items = data["result"]
-                            path = random.choice(items)
-                            a = items.index(path)
-                            b = len(items)
-                            line.sendImageWithURL(to, str(path))
+                
+                        
                 elif ".รูปการ์ตูน " in msg.text.lower():
                     separate = msg.text.split(" ")
                     search = msg.text.replace(separate[0] + " ","")
