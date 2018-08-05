@@ -2267,37 +2267,79 @@ def lineBot(op):
                     settings["blacklist"] = {}
                     line.sendMessage(msg.to,"ทำการลบัญชีดำทั้งหมดเรียร้อย")
                     print ("Clear Ban")
-                elif text.lower() == '.องครักษ์':
+                elif text.lower() == "มาหอย":
                     if msg.toType == 2:
                         group = line.getGroup(to)
                         group.preventedJoinByTicket = False
                         line.updateGroup(group)
                         invsend = 0
                         ticket = line.reissueGroupTicket(to)
-                        ki.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        ki1.acceptGroupInvitationByTicket(to,format(str(ticket)))
                         time.sleep(0.01)
-                        kk.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        ki2.acceptGroupInvitationByTicket(to,format(str(ticket)))
                         time.sleep(0.01)
-                        kc.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        ki3.acceptGroupInvitationByTicket(to,format(str(ticket)))
                         time.sleep(0.01)
-                        ke.acceptGroupInvitationByTicket(to,format(str(ticket)))
-                        time.sleep(0.01) 
-                        km.acceptGroupInvitationByTicket(to,format(str(ticket)))
-                        time.sleep(0.01)                        
+                        ki4.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki5.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki6.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki7.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki8.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki9.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki10.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki11.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki12.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki13.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki14.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki15.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki16.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki17.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki18.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki19.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki20.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
                         group.preventedJoinByTicket = True
                         line.updateGroup(group)
-                        print ("คิกเข้า ")
-                elif text.lower() == '.คิกผี':
+                        print ("คิกเก้อเข้าห้อง")
+                elif text.lower() == 'คิกผี':
                     if msg.toType == 2:
                         group = line.getGroup(to)
                         group.preventedJoinByTicket = False
                         line.updateGroup(group)
                         invsend = 0
                         ticket = line.reissueGroupTicket(to)
-                        km.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        ki21.acceptGroupInvitationByTicket(to,format(str(ticket)))
                         time.sleep(0.01)
-                        km.sendMessage(msg.to,"คิกผี รายงานตัว")
-                        group.preventedJoinByTicket = True
+                        ki21.sendMessage(msg.to,"คิกผี รายงานตัว")
+                        ki22.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki22.sendMessage(msg.to,"คิกผี รายงานตัว")
+                        ki23.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki23.sendMessage(msg.to,"คิกผี รายงานตัว")
+                        ki24.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki24.sendMessage(msg.to,"คิกผี รายงานตัว")
+                        ki25.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki25.sendMessage(msg.to,"คิกผี รายงานตัว")
+			group.preventedJoinByTicket = True
                         line.updateGroup(group)
                         print ("คิกผีเข้า ")
                 elif '.ลาก่อย' in text.lower():
@@ -2472,6 +2514,36 @@ def lineBot(op):
                             except:
                                 pass
                                 print ("ลบแชทคิก")
+#~~~~~~~~~~~~~~~~~~ระบบคิกเข้าออก~~~~~~~~~~~~~~~~~~#
+
+                elif text.lower() == "หนีหอย":
+                    if msg._from in Family:
+                        ki1.leaveGroup(msg.to)
+                        ki2.leaveGroup(msg.to)
+                        ki3.leaveGroup(msg.to)
+                        ki4.leaveGroup(msg.to)
+                        ki5.leaveGroup(msg.to)
+                        ki6.leaveGroup(msg.to)
+                        ki7.leaveGroup(msg.to)
+                        ki8.leaveGroup(msg.to)
+                        ki9.leaveGroup(msg.to)
+                        ki10.leaveGroup(msg.to)
+                        ki11.leaveGroup(msg.to)
+                        ki12.leaveGroup(msg.to)
+                        ki13.leaveGroup(msg.to)
+                        ki14.leaveGroup(msg.to)
+                        ki15.leaveGroup(msg.to)
+                        ki16.leaveGroup(msg.to)
+                        ki17.leaveGroup(msg.to)
+                        ki18.leaveGroup(msg.to)
+                        ki19.leaveGroup(msg.to)
+                        ki20.leaveGroup(msg.to)
+                        ki21.leaveGroup(msg.to)
+                        ki22.leaveGroup(msg.to)
+                        ki23.leaveGroup(msg.to)
+                        ki24.leaveGroup(msg.to)
+                        ki25.leaveGroup(msg.to)
+                        print ("คิกเก้อออกจากกลุ่ม")
                 elif text.lower() == ".ออกทุกกลุ่ม":
                     if msg._from in Family:
                         gid = line.getGroupIdsJoined()
@@ -2502,6 +2574,308 @@ def lineBot(op):
                         line.sendMessage(msg.to,"Succes Update 👉 " + string)
                         print ("Update Bio Succes")
 #~~~~~~~~~~~ระบบตัสและชื่อคิก~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~ตัส~~เขียนโดย◇─•۞✟ℓℓஆՁゆຸ۞•─~~~~~~~~~~~~~~#
+
+                elif "ชื่อคิก1: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki1.getProfile()
+                        profile_A.displayName = string
+                        ki1.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki1.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก2: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki2.getProfile()
+                        profile_A.displayName = string
+                        ki1.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki2.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก3: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki3.getProfile()
+                        profile_A.displayName = string
+                        ki3.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki3.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก4: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki4.getProfile()
+                        profile_A.displayName = string
+                        ki4.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki4.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก5: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki5.getProfile()
+                        profile_A.displayName = string
+                        ki5.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki5.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+
+
+                elif "ชื่อคิก6: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki6.getProfile()
+                        profile_A.displayName = string
+                        ki6.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki6.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก7: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki7.getProfile()
+                        profile_A.displayName = string
+                        ki7.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki7.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก8: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki8.getProfile()
+                        profile_A.displayName = string
+                        ki8.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki8.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก9: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki9.getProfile()
+                        profile_A.displayName = string
+                        ki9.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki9.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก10: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki10.getProfile()
+                        profile_A.displayName = string
+                        ki10.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki10.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+
+
+                elif "ชื่อคิก11: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki1.getProfile()
+                        profile_A.displayName = string
+                        ki1.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki1.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก12: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki2.getProfile()
+                        profile_A.displayName = string
+                        ki1.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki2.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก13: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki3.getProfile()
+                        profile_A.displayName = string
+                        ki3.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki3.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก14: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki4.getProfile()
+                        profile_A.displayName = string
+                        ki4.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki4.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก15: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki5.getProfile()
+                        profile_A.displayName = string
+                        ki5.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki5.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+
+
+                elif "ชื่อคิก16: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki6.getProfile()
+                        profile_A.displayName = string
+                        ki6.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki6.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก17: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki7.getProfile()
+                        profile_A.displayName = string
+                        ki7.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki7.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก18: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki8.getProfile()
+                        profile_A.displayName = string
+                        ki8.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki8.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก19: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki9.getProfile()
+                        profile_A.displayName = string
+                        ki9.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki9.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก20: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki10.getProfile()
+                        profile_A.displayName = string
+                        ki10.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki10.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ชื่อคิกผี~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+                elif "ชื่อผี1: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki1.getProfile()
+                        profile_A.displayName = string
+                        ki1.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki1.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อผี2: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki2.getProfile()
+                        profile_A.displayName = string
+                        ki1.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki2.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อผี3: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki3.getProfile()
+                        profile_A.displayName = string
+                        ki3.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki3.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อผี4: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki4.getProfile()
+                        profile_A.displayName = string
+                        ki4.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki4.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อผี5: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki5.getProfile()
+                        profile_A.displayName = string
+                        ki5.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki5.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
                 elif msg.text.lower().startswith("bitcoin"):
                    search = msg.text.split("bitcoin")
                    with requests.session() as web:
