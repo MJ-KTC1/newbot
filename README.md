@@ -1,7 +1,6 @@
- ༄۞ꪶꪶꪣꪫꪊุ۞࿐ 
 
-แค่แมวก็ชอบร้อง
-แค่มองก็ชอบแล้ว.. จ่ะ
+.❄「༄۞ꪶꪶꪣꪫꪊุ۞࿐」❄
 
-❄「@ID.LINE. 🎸❄️
-http://line.me/ti/p/p-nunu_kap123 」
+❄「 @ ID.LINE 🎸❄️
+
+http://line.me/ti/p/p-nunu_kap123」
