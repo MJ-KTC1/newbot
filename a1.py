@@ -1264,7 +1264,7 @@ def lineBot(op):
                         settings["Ghost"] = False
                         line.sendText(msg.to,"ปิดระบบเรียกคิกผีเรียบร้อย..(´⊙ω⊙`)")
                         
-                elif msg.text in ["Allprotect on",".เปิดกทม"]:
+                elif msg.text in ["Allprotect on",".เปิดกัน"]:
                         settings["kickMention"] = True
                         settings["Aip"] = True
                         settings["Ghost"] = True
@@ -1276,7 +1276,7 @@ def lineBot(op):
                         RfuProtect["Protectjoin"] = True
                         line.sendText(msg.to,"การตั้งค่าชุดรักษาความปลอดภัยทั้งหมด เปิด👌")
 						
-                elif msg.text in ["Allprotect off",".ปิดกทม"]:
+                elif msg.text in ["Allprotect off",".ปิดกัน"]:
                         settings["kickMention"] = False
                         settings["Ghost"] = False
                         settings["Aip"] = False
@@ -1557,295 +1557,19 @@ def lineBot(op):
                     spl = msg.text.split("รับแก้ไฟล์+เพิ่มไฟล์+แก้ภาษา\n💝ราคาดูที่หน้างาน💝\n👉มีบริการให้เช่าบอทSAMURAI\nราคา300บาทต่อเดือน💖\n#เพิ่มคิกเกอร์ตัวละ100👌\n🎀สนใจรีบทัก..บอทpython3ฟังชั่นล้นหลาม🎁กำลังรอให้คุณเป็นเจ้าของ\n(ผมจะอยู่ที่ห้องนี้แค่15นาทีนะจ๊ะ)\nselfbot by:\n╔══════════════┓\n╠™❍✯͜͡RED™SAMURAI✯͜͡❂➣ \n╚══════════════┛")
                     if spl[len(spl)-1] == "":
                         line.sendText(msg.to,"กดที่นี่เพื่อเขย่าข้อความด้านบน:\nline://nv/chatMsg?chatId="+msg.to+"&messageId="+msg.id)
-                elif ".รัน @" in msg.text:
-                    print ("[Command]covergroup")
-                    _name = msg.text.replace(".รัน @","")
-                    _nametarget = _name.rstrip('  ')
-                    gs = line.getGroup(msg.to)
-                    targets = []
-                    for g in gs.members:
-                        if _nametarget == g.displayName:
-                            targets.append(g.mid)
-                    if targets == []:
-                        line.sendText(msg.to,"Contact not found")
-                    else:
-                        for target in targets:
-                            try:
-                               thisgroup = line.getGroups([msg.to])
-                               Mids = [target for contact in thisgroup[0].members]
-                               mi_d = Mids[:33]
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               ki.createGroup("RED SAMURI Group",mi_d)
-                               ki.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               ke.createGroup("RED SAMURI Group",mi_d)
-                               ke.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               kk.createGroup("RED SAMURI Group",mi_d)
-                               kk.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               kcc.createGroup("RED SAMURI Group",mi_d)
-                               kc.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               ki.createGroup("RED SAMURI Group",mi_d)
-                               ki.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               ke.createGroup("RED SAMURI Group",mi_d)
-                               ke.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               kk.createGroup("RED SAMURI Group",mi_d)
-                               kk.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               kcc.createGroup("RED SAMURI Group",mi_d)
-                               kc.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.createGroup("RED SAMURI Group",mi_d)
-                               line.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               ki.createGroup("RED SAMURI Group",mi_d)
-                               ki.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               ke.createGroup("RED SAMURI Group",mi_d)
-                               ke.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               kk.createGroup("RED SAMURI Group",mi_d)
-                               kk.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               kcc.createGroup("RED SAMURI Group",mi_d)
-                               kc.sendText(msg.to,"🏂⛷️[จะออกไปแตะขอบฟ้า]")
-                               line.sendText(msg.to,"เรียบร้อย")
-                            except:
-                                pass
-                    print ("[Command]covergroup]")
-                elif ".รันแชท @" in msg.text:
-                    _name = msg.text.replace(".รันแชท @","")
-                    _nametarget = _name.rstrip(' ')
-                    gs = line.getGroup(msg.to)
-                    for g in gs.members:
-                        if _nametarget == g.displayName:
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(g.mid,"RED SAMURI") 
-                           line.sendText(g.mid,"RED SAMURI")
-                           line.sendText(msg.to, "Done")
-                           print (" Spammed !")
-                elif ".รัน: " in msg.text.lower():
-                        key = msg.text[-33:]
-                        line.findAndAddContactsByMid(key)                   
-                        contact = line.getContact(key)
-                        line.createGroup("RED SAMURAI Group",[key])
-                        line.sendText(msg,to,"┌∩┐(◣_◢)┌∩┐")
+			
+			
+			
+                    
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+               
 
                 elif ".ไม่รับเชิญ " in msg.text.lower():
                     spl = re.split(".ไม่รับเชิญ ",msg.text,flags=re.IGNORECASE)
@@ -2748,16 +2472,6 @@ def lineBot(op):
                             except:
                                 pass
                                 print ("ลบแชทคิก")
-
-                elif text.lower() == ".ถอนกำลัง":
-                    if msg._from in Family:
-                        ki.leaveGroup(msg.to)
-                        kk.leaveGroup(msg.to)
-                        kc.leaveGroup(msg.to)
-                        ke.leaveGroup(msg.to)
-                        km.leaveGroup(msg.to)
-                        print ("Kicker Leave")
-
                 elif text.lower() == ".ออกทุกกลุ่ม":
                     if msg._from in Family:
                         gid = line.getGroupIdsJoined()
@@ -2787,68 +2501,7 @@ def lineBot(op):
                         line.updateProfile(profile_A)
                         line.sendMessage(msg.to,"Succes Update 👉 " + string)
                         print ("Update Bio Succes")
-                elif ".ชื่อคิก: " in text.lower():
-                    if msg._from in Family:
-                        proses = text.split(": ")
-                        string = text.replace(proses[0] + ": ","")
-                        profile_A = ki.getProfile()
-                        profile_B = kk.getProfile()
-                        profile_C = kc.getProfile()
-                        profile_D = ke.getProfile()
-                        profile_E = km.getProfile()
-                        profile_A.displayName = string
-                        profile_B.displayName = string
-                        profile_C.displayName = string
-                        profile_D.displayName = string
-                        profile_E.displayName = string
-                        ki.updateProfile(profile_A)
-                        kk.updateProfile(profile_B)
-                        kc.updateProfile(profile_C)
-                        ke.updateProfile(profile_D)
-                        ke.updateProfile(profile_D)
-                        line.sendMessage(msg.to,"คุณได้เปลี่ยนชื่อคลิ้กเกอร์ เป็น   " + string)
-                        print ("Update Name All Kicker")
-
-                elif ".ตัสคิก: " in text.lower():
-                    if msg._from in Family:
-                        proses = text.split(": ")
-                        string = text.replace(proses[0] + ": ","")
-                        profile_A = ki.getProfile()
-                        profile_B = kk.getProfile()
-                        profile_C = kc.getProfile()
-                        profile_D = kc.getProfile()
-                        profile_E = km.getProfile()                        
-                        profile_A.statusMessage = string
-                        profile_B.statusMessage = string
-                        profile_C.statusMessage = string
-                        profile_D.statusMessage = string
-                        profile_E.statusMessage = string                        
-                        ki.updateProfile(profile_A)
-                        kk.updateProfile(profile_B)
-                        kc.updateProfile(profile_C)
-                        ke.updateProfile(profile_D)
-                        km.updateProfile(profile_D)                        
-                        line.sendMessage(msg.to,"Update Bio All Kicker to : " + string)
-                        print ("Update Bio All Kicker")
-
-                elif text.lower() == ".เช็คชื่อ":
-                    if msg._from in Family:
-                        profile = ki.getProfile()
-                        text = profile.displayName + " รายงานตัว"
-                        ki.sendMessage(to, text)                                
-                        profile = kk.getProfile()
-                        text = profile.displayName + " รายงานตัว"
-                        kk.sendMessage(to, text)                                
-                        profile = kc.getProfile()
-                        text = profile.displayName + " รายงานตัว"
-                        kc.sendMessage(to, text)
-                        profile = ke.getProfile()                        
-                        text = profile.displayName + " รายงานตัว"
-                        ke.sendMessage(to, text)
-                        profile = km.getProfile()                        
-                        text = profile.displayName + " รายงานตัว"
-                        km.sendMessage(to, text)                     
-                        print ("เช็คชื่อคิก")
+#~~~~~~~~~~~ระบบตัสและชื่อคิก~~~~~~~~~~~~~
                 elif msg.text.lower().startswith("bitcoin"):
                    search = msg.text.split("bitcoin")
                    with requests.session() as web:
