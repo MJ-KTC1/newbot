@@ -2342,8 +2342,7 @@ def lineBot(op):
                         ki24.sendMessage(msg.to,"คิกผี รายงานตัว")
                         ki25.acceptGroupInvitationByTicket(to,format(str(ticket)))
                         time.sleep(0.01)
-                        ki25.sendMessage(msg.to,"คิกผี รายงานตัว")
-			group.preventedJoinByTicket = True
+                        group.preventedJoinByTicket = True
                         line.updateGroup(group)
                         print ("คิกผีเข้า ")
                 elif '.ลาก่อย' in text.lower():
