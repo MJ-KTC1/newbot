@@ -12,11 +12,15 @@ from googletrans import Translator
 #==============================================================================#
 botStart = time.time()
 #=======================ระบบล็อคอินโดย[༄۞ꪶꪶꪣꪫꪊุ۞࿐]=======================================================#
+line = LINE()
 #~~~~~~~~~~~~~~~~~~~~~~~ระบบล็อคอินโดย[༄۞ꪶꪶꪣꪫꪊุ۞࿐]~~~~~~~~~~~~~~~~~#
 print ("Login Succes")
 #~~~~~~~~~~~~~~~~~~~~~~ระบบMIDโดย[༄۞ꪶꪶꪣꪫꪊุ۞࿐]~~~~~~~~~~~~~~~#
+lineMID = line.profile.mid
+lineProfile = line.getProfile()
+lineSettings = line.getSettings()
 #~~~~~~~~~~~~~~~~~~~~~~ระบบoepollโดย[༄۞ꪶꪶꪣꪫꪊุ۞࿐]~~~~~~~~~~~~~~#
-
+oepoll = OEPoll(line)
 readOpen = codecs.open("read.json","r","utf-8")
 settingsOpen = codecs.open("temp.json","r","utf-8")
 read = json.load(readOpen)
