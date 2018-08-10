@@ -558,11 +558,11 @@ def lineBot(op):
       #      print ("[ 24 ] ออกแชทรวมแล้ว")
           #  if settings["autoLeave"] == True:
              #   line.leaveRoom(op.param1)
-       # if op.type == 25:
-           # msg = op.message           
-            #if msg.contentType == 13:
-               # if settings["contact"] == True:
-                    #msg.contentType = 0
+        if op.type == 25:
+            msg = op.message           
+            if msg.contentType == 13:
+                if settings["contact"] == True:
+                    msg.contentType = 0
                     if 'displayName' in msg.contentMetadata:
                         contact = line.getContact(msg.contentMetadata["mid"])
                         try:
