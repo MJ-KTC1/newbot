@@ -2398,32 +2398,45 @@ def lineBot(op):
                         gMembMids = [contact.mid for contact in group.invitee]
                         for i in gMembMids:
                             random.choice(Rfu).cancelGroupInvitation(msg.to,[i])
+
 #=============COMMAND KICKER===========================#
-                elif msg.text in [".ล้างดำ"]:
+                elif msg.text in ["ล้างดำ"]:
                     settings["blacklist"] = {}
                     line.sendMessage(msg.to,"ทำการลบัญชีดำทั้งหมดเรียร้อย")
                     print ("Clear Ban")
-                elif text.lower() == '.องครักษ์':
+
+                elif text.lower() == "มาหอย":
                     if msg.toType == 2:
                         group = line.getGroup(to)
                         group.preventedJoinByTicket = False
                         line.updateGroup(group)
                         invsend = 0
                         ticket = line.reissueGroupTicket(to)
-                        ki.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        ki1.acceptGroupInvitationByTicket(to,format(str(ticket)))
                         time.sleep(0.01)
-                        kk.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        ki2.acceptGroupInvitationByTicket(to,format(str(ticket)))
                         time.sleep(0.01)
-                        kc.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        ki3.acceptGroupInvitationByTicket(to,format(str(ticket)))
                         time.sleep(0.01)
-                        ke.acceptGroupInvitationByTicket(to,format(str(ticket)))
-                        time.sleep(0.01) 
-                        km.acceptGroupInvitationByTicket(to,format(str(ticket)))
-                        time.sleep(0.01)                        
+                        ki4.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki5.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki6.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki7.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki8.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki9.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
+                        ki10.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                        time.sleep(0.01)
                         group.preventedJoinByTicket = True
                         line.updateGroup(group)
-                        print ("คิกเข้า ")
-                elif text.lower() == '.คิกผี':
+                        print ("คิกเก้อเข้าห้อง")
+
+                elif text.lower() == 'คิกผี':
                     if msg.toType == 2:
                         group = line.getGroup(to)
                         group.preventedJoinByTicket = False
@@ -2436,7 +2449,8 @@ def lineBot(op):
                         group.preventedJoinByTicket = True
                         line.updateGroup(group)
                         print ("คิกผีเข้า ")
-                elif '.ลาก่อย' in text.lower():
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                elif 'จัด ' in text.lower():
                        targets = []
                        key = eval(msg.contentMetadata["MENTION"])
                        key["MENTIONEES"] [0] ["M"]
@@ -2448,73 +2462,8 @@ def lineBot(op):
                                print ("Rfu kick User")
                            except:
                                random.choice(Rfu).sendMessage(msg.to,"Limit kaka 😫")
-
-                elif '.สอย' in text.lower():
-                       targets = []
-                       key = eval(msg.contentMetadata["MENTION"])
-                       key["MENTIONEES"] [0] ["M"]
-                       for x in key["MENTIONEES"]:
-                           targets.append(x["M"])
-                       for target in targets:
-                           try:
-                               line.kickoutFromGroup(msg.to,[target])             
-                               print ("Sb Kick User")
-                           except:
-                               line.sendMessage(msg.to,"Limit kaka 😫")                               
-
-                elif '.1หวด ' in text.lower():
-                       targets = []
-                       key = eval(msg.contentMetadata["MENTION"])
-                       key["MENTIONEES"] [0] ["M"]
-                       for x in key["MENTIONEES"]:
-                           targets.append(x["M"])
-                       for target in targets:
-                           try:
-                               ki.kickoutFromGroup(msg.to,[target])           
-                               print ("คิก1เตะ")
-                           except:
-                               ki.sendMessage(msg.to,"จำกัด")                               
-
-                elif '.2หวด ' in text.lower():
-                       targets = []
-                       key = eval(msg.contentMetadata["MENTION"])
-                       key["MENTIONEES"] [0] ["M"]
-                       for x in key["MENTIONEES"]:
-                           targets.append(x["M"])
-                       for target in targets:
-                           try:
-                               kk.kickoutFromGroup(msg.to,[target])
-                               print ("คิก2เตะ")
-                           except:
-                               kk.sendMessage(msg.to,"จำกัด")                              
-
-                elif '.3หวด ' in text.lower():
-                       targets = []
-                       key = eval(msg.contentMetadata["MENTION"])
-                       key["MENTIONEES"] [0] ["M"]
-                       for x in key["MENTIONEES"]:
-                           targets.append(x["M"])
-                       for target in targets:
-                           try:
-                               kc.kickoutFromGroup(msg.to,[target])
-                               print ("คิก3เตะ")
-                           except:
-                               kc.sendMessage(msg.to,"จำกัด")
-                               
-                elif '.4หวด ' in text.lower():
-                       targets = []
-                       key = eval(msg.contentMetadata["MENTION"])
-                       key["MENTIONEES"] [0] ["M"]
-                       for x in key["MENTIONEES"]:
-                           targets.append(x["M"])
-                       for target in targets:
-                           try:
-                               ke.kickoutFromGroup(msg.to,[target])
-                               print ("คิก4เตะ")
-                           except:
-                               ke.sendMessage(msg.to,"จำกัด")
-                               
-                elif '.5หวด ' in text.lower():
+              
+                elif 'ผีจัด ' in text.lower():
                        targets = []
                        key = eval(msg.contentMetadata["MENTION"])
                        key["MENTIONEES"] [0] ["M"]
@@ -2529,7 +2478,7 @@ def lineBot(op):
                                km.sendMessage(msg.to,"จำกัด")
 
 
-                elif '.เชิญ' in text.lower():
+                elif 'เชิญ' in text.lower():
                        targets = []
                        key = eval(msg.contentMetadata["MENTION"])
                        key["MENTIONEES"] [0] ["M"]
@@ -2542,9 +2491,9 @@ def lineBot(op):
                            except:
                                line.sendMessage(msg.to,"จำกัด การเชิญ")
 
-                elif ".ปวดตับ" in msg.text:
+                elif "ล้างห้อง" in msg.text:
                 	if msg.toType == 2:
-                         _name = msg.text.replace("ปวดตับ","")
+                         _name = msg.text.replace("ล้างห้อง","")
                          gs = line.getGroup(receiver)
                          line.sendMessage(receiver,"Just some casual cleansing ô")
                          targets = []
@@ -2557,7 +2506,7 @@ def lineBot(op):
                              for target in targets:
                              	if not target in Rfu:
                                      try:
-                                         klist=[line,ki,kk,kc,ke,km]
+                                         klist=[line,ki1,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,ki10,km]
                                          kicker=random.choice(klist)
                                          kicker.kickoutFromGroup(receiver,[target])
                                          print((receiver,[g.mid]))
@@ -2565,7 +2514,7 @@ def lineBot(op):
                                          line.sendMessage(receiver,"ลบสมาชิกในกลุ่มออกหมดแล้ว")
                                          print ("Cleanse Group")
 
-                elif msg.text in [".ไล่ดำ"]:
+                elif msg.text in ["ไล่ดำ"]:
                 	if msg.toType == 2:
                          group = line.getGroup(receiver)
                          gMembMids = [contact.mid for contact in group.members]
@@ -2577,14 +2526,14 @@ def lineBot(op):
                          else:
                              for jj in matched_list:
                                  try:
-                                     klist=[line,ki,kk,kc,ke,km]
+                                     klist=[line,ki1,ki2,ki3,ki4,ki5,ik6,ki7,ki8,ki9,ki10,km]
                                      kicker=random.choice(klist)
                                      kicker.kickoutFromGroup(receiver,[jj])
                                      print((receiver,[jj]))
                                  except:
                                      line.sendMessage(receiver,"เตะกุเตะกลับ")
                                      print ("ไล่เตะดำ")
-                elif text.lower() == ".ลบแชท":
+                elif text.lower() == "ลบแชท":
                         if msg._from in lineMID:
                             try:
                                 line.removeAllMessages(op.param2)
@@ -2592,33 +2541,42 @@ def lineBot(op):
                             except:
                                 pass
                                 print ("ลบแชทเซล")
-                elif text.lower() == ".ลบแชทคิก":
+
+                elif text.lower() == "ลบแชทคิก":
                         if msg._from in Family:
                             try:
-                                ki.removeAllMessages(op.param2)
-                                kk.removeAllMessages(op.param2)
-                                kc.removeAllMessages(op.param2)
-                                ke.removeAllMessages(op.param2)
-                                km.removeAllMessages(op.param2)                                
-                                ki.sendMessage(msg.to,"ลบทุกการแชทเรียบร้อย")
-                                ke.sendMessage(msg.to,"ลบทุกการแชทเรียบร้อย")
-                                kk.sendMessage(msg.to,"ลบทุกการแชทเรียบร้อย")
-                                kc.sendMessage(msg.to,"ลบทุกการแชทเรียบร้อย")
-                                km.sendMessage(msg.to,"ลบทุกการแชทเรียบร้อย")
+                                ki1.removeAllMessages(op.param2)
+                                ki2.removeAllMessages(op.param2)
+                                ki3.removeAllMessages(op.param2)
+                                ki4.removeAllMessages(op.param2)
+                                ki5.removeAllMessages(op.param2)
+                                ki6.removeAllMessages(op.param2)
+                                ki7.removeAllMessages(op.param2)
+                                ki8.removeAllMessages(op.param2)
+                                ki9.removeAllMessages(op.param2)
+                                ki10.removeAllMessages(op.param2)
+                                km.removeAllMessages(op.param2) 
+                                ki1.sendMessage(msg.to,"ทำการลบแชทคิกเก้อทั้งหมดเรียบร้อยแล้ว...")
                             except:
                                 pass
-                                print ("ลบแชทคิก")
+                                print ("Remove Chat Kicker")
 
-                elif text.lower() == ".ถอนกำลัง":
+                elif text.lower() == "กลับบ้าน":
                     if msg._from in Family:
-                        ki.leaveGroup(msg.to)
-                        kk.leaveGroup(msg.to)
-                        kc.leaveGroup(msg.to)
-                        ke.leaveGroup(msg.to)
+                        ki1.leaveGroup(msg.to)
+                        ki2.leaveGroup(msg.to)
+                        ki3.leaveGroup(msg.to)
+                        ki4.leaveGroup(msg.to)
+                        ki5.leaveGroup(msg.to)
+                        ki6.leaveGroup(msg.to)
+                        ki7.leaveGroup(msg.to)
+                        ki8.leaveGroup(msg.to)
+                        ki9.leaveGroup(msg.to)
+                        ki10.leaveGroup(msg.to)
                         km.leaveGroup(msg.to)
                         print ("Kicker Leave")
 
-                elif text.lower() == ".ออกทุกกลุ่ม":
+                elif text.lower() == "ออกทุกกลุ่ม":
                     if msg._from in Family:
                         gid = line.getGroupIdsJoined()
                         for i in gid:
@@ -2628,7 +2586,7 @@ def lineBot(op):
                             ke.leaveGroup(i)
                             km.leaveGroup(i)
                             print ("คิกออกทุกกลุ่ม")
-                elif ".ชื่อ: " in text.lower():
+                elif "ชื่อ: " in text.lower():
                     if msg._from in Family:
                         proses = text.split(":")
                         string = text.replace(proses[0] + ": ","")
@@ -2638,7 +2596,7 @@ def lineBot(op):
                         line.sendMessage(msg.to,"Update to " + string)
                         print ("Update Name")
 
-                elif ".ตัส: " in msg.text.lower():
+                elif "ตัส: " in msg.text.lower():
                     if msg._from in Family:
                         proses = text.split(":")
                         string = text.replace(proses[0] + ": ","")
@@ -2647,68 +2605,213 @@ def lineBot(op):
                         line.updateProfile(profile_A)
                         line.sendMessage(msg.to,"Succes Update 👉 " + string)
                         print ("Update Bio Succes")
-                elif ".ชื่อคิก: " in text.lower():
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~ตัส~~เขียนโดย◇─•۞✟ℓℓஆՁゆຸ۞•─~~~~~~~~~~~~~~#
+                elif "ชื่อคิก1: " in text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
-                        profile_A = ki.getProfile()
-                        profile_B = kk.getProfile()
-                        profile_C = kc.getProfile()
-                        profile_D = ke.getProfile()
-                        profile_E = km.getProfile()
+                        profile_A = ki1.getProfile()
                         profile_A.displayName = string
-                        profile_B.displayName = string
-                        profile_C.displayName = string
-                        profile_D.displayName = string
-                        profile_E.displayName = string
-                        ki.updateProfile(profile_A)
-                        kk.updateProfile(profile_B)
-                        kc.updateProfile(profile_C)
-                        ke.updateProfile(profile_D)
-                        ke.updateProfile(profile_D)
-                        line.sendMessage(msg.to,"คุณได้เปลี่ยนชื่อคลิ้กเกอร์ เป็น   " + string)
-                        print ("Update Name All Kicker")
+                        ki1.updateProfile(profile_A)
+                        ki1.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki1.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
 
-                elif ".ตัสคิก: " in text.lower():
+                elif "ชื่อคิก2: " in text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
-                        profile_A = ki.getProfile()
-                        profile_B = kk.getProfile()
-                        profile_C = kc.getProfile()
-                        profile_D = kc.getProfile()
-                        profile_E = km.getProfile()                        
+                        profile_A = ki2.getProfile()
+                        profile_A.displayName = string
+                        ki2.updateProfile(profile_A)
+                        ki2.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki2.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก3: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki3.getProfile()
+                        profile_A.displayName = string
+                        ki3.updateProfile(profile_A)
+                        ki3.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki3.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก4: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki4.getProfile()
+                        profile_A.displayName = string
+                        ki4.updateProfile(profile_A)
+                        ki4.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki4.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก5: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki5.getProfile()
+                        profile_A.displayName = string
+                        ki5.updateProfile(profile_A)
+                        ki5.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki5.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+
+
+                elif "ชื่อคิก6: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki6.getProfile()
+                        profile_A.displayName = string
+                        ki6.updateProfile(profile_A)
+                        ki6.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki6.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก7: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki7.getProfile()
+                        profile_A.displayName = string
+                        ki7.updateProfile(profile_A)
+                        ki7.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki7.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก8: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki8.getProfile()
+                        profile_A.displayName = string
+                        ki8.updateProfile(profile_A)
+                        ki8.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki8.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก9: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki9.getProfile()
+                        profile_A.displayName = string
+                        ki9.updateProfile(profile_A)
+                        ki9.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki9.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+			
+
+                elif "ชื่อคิก10: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki10.getProfile()
+                        profile_A.displayName = string
+                        ki10.updateProfile(profile_A)
+                        ki10.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        ki10.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                elif "ตัสคิก: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = ki1.getProfile()
+                        profile_B = ki2.getProfile()
+                        profile_C = ki3.getProfile()
+                        profile_D = ki4.getProfile()  
+                        profile_E = ki5.getProfile()
+                        profile_F = ki6.getProfile()
+                        profile_G = ki7.getProfile()
+                        profile_H = ki8.getProfile()  
+                        profile_I = ki9.getProfile()
+                        profile_J = ki10.getProfile()
                         profile_A.statusMessage = string
                         profile_B.statusMessage = string
                         profile_C.statusMessage = string
                         profile_D.statusMessage = string
-                        profile_E.statusMessage = string                        
-                        ki.updateProfile(profile_A)
-                        kk.updateProfile(profile_B)
-                        kc.updateProfile(profile_C)
-                        ke.updateProfile(profile_D)
-                        km.updateProfile(profile_D)                        
+                        profile_E.statusMessage = string
+                        profile_F.statusMessage = string
+                        profile_G.statusMessage = string
+                        profile_H.statusMessage = string
+                        profile_I.statusMessage = string
+                        profile_J.statusMessage = string
+                        ki1.updateProfile(profile_A)
+                        ki2.updateProfile(profile_B)
+                        ki3.updateProfile(profile_C)
+                        ki4.updateProfile(profile_D)
+                        ki5.updateProfile(profile_E)
+                        ki6.updateProfile(profile_F)
+                        ki7.updateProfile(profile_G)
+                        ki8.updateProfile(profile_H)
+                        ki9.updateProfile(profile_I)
+                        ki10.updateProfile(profile_J)
                         line.sendMessage(msg.to,"Update Bio All Kicker to : " + string)
                         print ("Update Bio All Kicker")
-
-                elif text.lower() == ".เช็คชื่อ":
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                elif text.lower() == "รายงาน":
                     if msg._from in Family:
-                        profile = ki.getProfile()
-                        text = profile.displayName + " รายงานตัว"
-                        ki.sendMessage(to, text)                                
-                        profile = kk.getProfile()
-                        text = profile.displayName + " รายงานตัว"
-                        kk.sendMessage(to, text)                                
-                        profile = kc.getProfile()
-                        text = profile.displayName + " รายงานตัว"
-                        kc.sendMessage(to, text)
-                        profile = ke.getProfile()                        
-                        text = profile.displayName + " รายงานตัว"
-                        ke.sendMessage(to, text)
+                        profile = ki1.getProfile()
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
+                        ki1.sendMessage(to, text)                                
+                        profile = ki2.getProfile()
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
+                        ki2.sendMessage(to, text)                                
+                        profile = ki3.getProfile()
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
+                        ki3.sendMessage(to, text)
+                        profile = ki4.getProfile()
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
+                        ki4.sendMessage(to, text)                                
+                        profile = ki5.getProfile()
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
+                        ki5.sendMessage(to, text)                                
+                        profile = ki6.getProfile()
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
+                        ki6.sendMessage(to, text)
+                        profile = ki7.getProfile()
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
+                        ki7.sendMessage(to, text)
+                        profile = ki8.getProfile()
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
+                        ki8.sendMessage(to, text)                                
+                        profile = ki9.getProfile()
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
+                        ki9.sendMessage(to, text)                                
+                        profile = ki10.getProfile()
+                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
+                        ki10.sendMessage(to, text)
                         profile = km.getProfile()                        
                         text = profile.displayName + " รายงานตัว"
                         km.sendMessage(to, text)                     
                         print ("เช็คชื่อคิก")
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                elif msg.text in ["บอท"]:
+                    ki1.sendMessage(msg.to,"1(⊙_⊙)")
+                    ki2.sendMessage(msg.to,"2(⊙_⊙)")
+                    ki3.sendMessage(msg.to,"3(⊙_⊙)")
+                    ki4.sendMessage(msg.to,"4(⊙_⊙)")   
+                    ki5.sendMessage(msg.to,"5(⊙_⊙)")
+                    ki6.sendMessage(msg.to,"6(⊙_⊙)")
+                    ki7.sendMessage(msg.to,"5(⊙_⊙)")
+                    ki8.sendMessage(msg.to,"8(⊙_⊙)") 
+                    ki9.sendMessage(msg.to,"9(⊙_⊙)")
+                    ki10.sendMessage(msg.to,"10(⊙_⊙)")
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•
                 elif msg.text.lower().startswith("bitcoin"):
                    search = msg.text.split("bitcoin")
                    with requests.session() as web:
@@ -2724,7 +2827,7 @@ def lineBot(op):
                        hasil += "\nCheap : " +str(data["low"])               
                        line.sendMessage(to, str(hasil))
 #=============COMMAND PROTECT=========================#
-                elif msg.text.lower() == '.เปิดกัน':
+                elif msg.text.lower() == 'เปิดกัน':
                     if RfuProtect["protect"] == True:
                         if settings["lang"] == "JP":
                             line.sendMessage(msg.to,"เปิดป้องกัน   ")
@@ -2737,7 +2840,7 @@ def lineBot(op):
                         else:
                             line.sendMessage(msg.to,"เปิดป้องกัน   ")
 
-                elif msg.text.lower() == '.ปิดกัน':
+                elif msg.text.lower() == 'ปิดกัน':
                     if RfuProtect["protect"] == False:
                         if settings["lang"] == "JP":
                             line.sendMessage(msg.to,"ปิดป้องกัน   ")
@@ -2750,7 +2853,7 @@ def lineBot(op):
                         else:
                             line.sendMessage(msg.to,"ปิดป้องกัน   ")
 
-                elif msg.text.lower() == '.กันยก':
+                elif msg.text.lower() == 'กันยก':
                     if RfuProtect["cancelprotect"] == True:
                         if settings["lang"] == "JP":
                             line.sendMessage(msg.to,"เปิดป้องกันยกเลิกเชิญ   ")
@@ -2763,7 +2866,7 @@ def lineBot(op):
                         else:
                             line.sendMessage(msg.to,"เปิดป้องกันยกเลิกเชิญ   ")
 
-                elif msg.text.lower() == '.ปิดกันยก':
+                elif msg.text.lower() == 'ปิดกันยก':
                     if RfuProtect["cancelprotect"] == False:
                         if settings["lang"] == "JP":
                             line.sendMessage(msg.to,"ปิดป้องกันยกเลิกเชิญ   ")
@@ -2776,7 +2879,7 @@ def lineBot(op):
                         else:
                             line.sendMessage(msg.to,"ปิดป้องกันยกเลิกเชิญ   ")
 
-                elif msg.text.lower() == '.กันเชิญ':
+                elif msg.text.lower() == 'กันเชิญ':
                     if RfuProtect["inviteprotect"] == True:
                         if settings["lang"] == "JP":
                             line.sendMessage(msg.to,"เปิดป้องกันยกเชิญ   ")
@@ -2789,7 +2892,7 @@ def lineBot(op):
                         else:
                             line.sendMessage(msg.to,"เปิดป้องกันยกเชิญ   ")
 
-                elif msg.text.lower() == '.ปิดกันเชิญ':
+                elif msg.text.lower() == 'ปิดกันเชิญ':
                     if RfuProtect["inviteprotect"] == False:
                         if settings["lang"] == "JP":
                             line.sendMessage(msg.to,"ปิดป้องกันยกเชิญ   ")
@@ -2802,7 +2905,7 @@ def lineBot(op):
                         else:
                             line.sendMessage(msg.to,"ปิดป้องกันยกเชิญ   ")
 
-                elif msg.text.lower() == '.กันลิ้ง':
+                elif msg.text.lower() == 'กันลิ้ง':
                     if RfuProtect["linkprotect"] == True:
                         if settings["lang"] == "JP":
                             line.sendMessage(msg.to,"เปิดป้องกันลิ้ง   ")
@@ -2815,7 +2918,7 @@ def lineBot(op):
                         else:
                             line.sendMessage(msg.to,"เปิดป้องกันลิ้ง   ")
 
-                elif msg.text.lower() == '.ปิดกันลิ้ง':
+                elif msg.text.lower() == 'ปิดกันลิ้ง':
                     if RfuProtect["linkprotect"] == False:
                         if settings["lang"] == "JP":
                             line.sendMessage(msg.to,"ปิดป้องกันลิ้ง   ")
@@ -2828,7 +2931,7 @@ def lineBot(op):
                         else:
                             line.sendMessage(msg.to,"ปิดป้องกันลิ้ง   ")
 
-                elif msg.text.lower() == '.กันกลุ่ม':
+                elif msg.text.lower() == 'กันกลุ่ม':
                     if RfuProtect["Protectguest"] == True:
                         if settings["lang"] == "JP":
                             line.sendMessage(msg.to,"เปิดป้องกันสมาชิก   ")
@@ -2841,7 +2944,7 @@ def lineBot(op):
                         else:
                             line.sendMessage(msg.to,"เปิดป้องกันสมาชิก   ")
 
-                elif msg.text.lower() == '.ปิดกันกลุ่ม':
+                elif msg.text.lower() == 'ปิดกันกลุ่ม':
                     if RfuProtect["Protectguest"] == False:
                         if settings["lang"] == "JP":
                             line.sendMessage(msg.to,"ปิดป้องกันสมาชิก   ")
@@ -2854,7 +2957,7 @@ def lineBot(op):
                         else:
                             line.sendMessage(msg.to,"ปิดป้องกันสมาชิก   ")
 
-                elif msg.text.lower() == '.กันเข้า':
+                elif msg.text.lower() == 'กันเข้า':
                     if RfuProtect["Protectjoin"] == True:
                         if settings["lang"] == "JP":
                             line.sendMessage(msg.to,"เปิดป้องกันคนเข้า   ")
@@ -2867,7 +2970,7 @@ def lineBot(op):
                         else:
                             line.sendMessage(msg.to,"เปิดป้องกันคนเข้า   ")
 
-                elif msg.text.lower() == '.ปิดกันเข้า':
+                elif msg.text.lower() == 'ปิดกันเข้า':
                     if RfuProtect["Protectjoin"] == False:
                         if settings["lang"] == "JP":
                             line.sendMessage(msg.to,"ปิดป้องกันคนเข้า   ")
@@ -2880,7 +2983,7 @@ def lineBot(op):
                         else:
                             line.sendMessage(msg.to,"ปิดป้องกันคนเข้า   ")
 
-                elif msg.text.lower() == '.เปิดหมด':
+                elif msg.text.lower() == 'เปิดป้องกัน':
                     if RfuProtect["inviteprotect"] == True:
                         if settings["lang"] == "JP":
                             line.sendMessage(msg.to,"✰เปิดป้องกันทั้งหมด✰")
@@ -2944,7 +3047,7 @@ def lineBot(op):
                         else:
                             line.sendMessage(msg.to,"เปิดป้องกันบุคคลภายน้อกเข้ากลุ่ม")
 
-                elif msg.text.lower() == '.ปิดหมด':
+                elif msg.text.lower() == 'ปิดป้องกัน':
                     if RfuProtect["inviteprotect"] == False:
                         if settings["lang"] == "JP":
                             line.sendMessage(msg.to,"✰ปิดป้องกันทั้งหมด✰")
@@ -3009,7 +3112,7 @@ def lineBot(op):
                             line.sendMessage(msg.to,"ปิดป้องกันบุคคลภายน้อกเข้ากลุ่ม")
 
 #==============FINNISHING PROTECT========================#
-                elif msg.text.lower() == '.เปิดรับแขก':
+                elif msg.text.lower() == 'เปิดรับแขก':
                         if settings["Wc"] == True:
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"เปิดข้อความต้อนรับเมื่อมีสมาชิกเข้ากลุ่มไว้อยู่แล้ว   ")
@@ -3017,7 +3120,7 @@ def lineBot(op):
                             settings["Wc"] = True
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"เปิดข้อความต้อนรับเมื่อมีสมาชิกเข้ากลุ่ม   ")
-                elif msg.text.lower() == '.ปิดรับแขก':
+                elif msg.text.lower() == 'ปิดรับแขก':
                         if settings["Wc"] == False:
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"ปิดข้อความต้อนรับเมื่อมีสมาชิกเข้ากลุ่มไว้อยู่แล้ว   ")
@@ -3026,7 +3129,7 @@ def lineBot(op):
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"ปิดข้อความต้อนรับเมื่อมีสมาชิกเข้ากลุ่ม   ")
                                 
-                elif msg.text.lower() == '.เปิดทักเตะ':
+                elif msg.text.lower() == 'เปิดทักเตะ':
                         if settings["Nk"] == True:
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"เปิดข้อความแจ้งเตือนเมื่อมีคนลบสมาชิกในกลุ่มไว้อยู่แล้ว...")
@@ -3035,7 +3138,7 @@ def lineBot(op):
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"เปิดข้อความแจ้งเตือนเมื่อมีคนลบสมาชิกในกลุ่ม...")
                                 
-                elif msg.text.lower() == '.ปิดทักเตะ':
+                elif msg.text.lower() == 'ปิดทักเตะ':
                         if settings["Nk"] == False:
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"ปิดข้อความแจ้งเตือนเมื่อมีคนลบสมาชิกในกลุ่มไว้อยู่แล้ว..")
@@ -3044,7 +3147,7 @@ def lineBot(op):
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"เปิดข้อความแจ้งเตือนเมื่อมีคนลบสมาชิกในกลุ่มแล้ว...")
 
-                elif msg.text.lower() == '.เปิดส่งแขก':
+                elif msg.text.lower() == 'เปิดส่งแขก':
                         if settings["Lv"] == True:
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"เปิดข้อความอำลาเมื่อมีสมาชิกออกกลุ่มไว้อยู่แล้ว   ")
@@ -3052,7 +3155,7 @@ def lineBot(op):
                             settings["Lv"] = True
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"เปิดข้อความอำลาเมื่อมีสมาชิกออกกลุ่ม   ")
-                elif msg.text.lower() == '.ปิดส่งแขก':
+                elif msg.text.lower() == 'ปิดส่งแขก':
                         if settings["Lv"] == False:
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"ปิดข้อความอำลาเมื่อมีสมาชิกออกกลุ่มไว้อยู่แล้ว   ")
@@ -3060,7 +3163,7 @@ def lineBot(op):
                             settings["Lv"] = False
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"ปิดข้อความอำลาเมื่อมีสมาชิกออกกลุ่ม   ")
-                elif msg.text.lower() == '.เปิดคท':
+                elif msg.text.lower() == 'เปิดคท':
                         if settings["checkContact"] == True:
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"เปิดระบบอ่านข้อมูลด้วยคอนแทคไว้อยู่แล้ว ")
@@ -3068,7 +3171,7 @@ def lineBot(op):
                             settings["checkContact"] = True
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"เปิดระบบอ่านข้อมูลด้วยคอนแทค ")
-                elif msg.text.lower() == '.ปิดคท':
+                elif msg.text.lower() == 'ปิดคท':
                         if settings["checkContact"] == False:
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"ปิดระบบอ่านข้อมูลด้วยคอนแทคไว้อยู่แล้ว ")
@@ -3076,7 +3179,7 @@ def lineBot(op):
                             settings["checkContact"] = False
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"ปิดระบบอ่านข้อมูลด้วยคอนแทค ")
-                elif msg.text.lower() == '.เปิดเช็คโพส':
+                elif msg.text.lower() == 'เปิดเช็คโพส':
                         if settings["checkPost"] == True:
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"เปิดระบบเช็คโพสบนทามไลน์ไว้อยู่แล้ว " )
@@ -3084,7 +3187,7 @@ def lineBot(op):
                             settings["checkPost"] = True
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"เปิดระบบเช็คโพสบนทามไลน์ ")
-                elif msg.text.lower() == '.ปิดเช็คโพส':
+                elif msg.text.lower() == 'ปิดเช็คโพส':
                         if settings["checkPost"] == False:
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"ปิดระบบเช็คโพสบนทามไลน์ไว้อยู่แล้ว ")
@@ -3092,7 +3195,7 @@ def lineBot(op):
                             settings["checkPost"] = False
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"ปิดระบบเช็คโพสบนทามไลน์ ")
-                elif text.lower() == ".แปลงโฉม":
+                elif text.lower() == "แปลงโฉม":
                     settings["changePictureProfile"] = True
                     line.sendMessage(to, "ส่งรูปภาพลงมาได้เลยครับผม")
                 elif text.lower() == ".เปลี่ยนรูปกลุ่ม":
@@ -3102,42 +3205,67 @@ def lineBot(op):
                         line.sendMessage(to, "ส่งรูปภาพลงมาไดเเลยครับผม")
                 elif text.lower() == ".ดับไฟ":
                     line.sendContact(to, "u1f41296217e740650e0448b96851a3e2',")
-
-                elif text.lower() == '.ลบรัน':
+#===========≠===============เขียนโดย◇─•۞✟ℓℓஆՁゆຸ۞•─===========================#       
+                elif text.lower() == 'ลบรัน':
                     gid = line.getGroupIdsInvited()
                     start = time.time()
                     for i in gid:
                         line.rejectGroupInvitation(i)
                     elapsed_time = time.time() - start
                     line.sendMessage(to, "ลบรันเสร็จแล้วขอรับ")
-                    line.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))
-                    
-                elif text.lower() == '.ลบรันคิก':
-                    gid = line.getGroupIdsInvited()
+                    line.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))							
+#===========≠=================เขียนโดย◇─•۞✟ℓℓஆՁゆຸ۞•─=========================#
+                elif text.lower() == 'ลบรันคิก':
+                    gid = ki1.getGroupIdsInvited()
+                    gid = ki2.getGroupIdsInvited()
+                    gid = ki3.getGroupIdsInvited()
+                    gid = ki4.getGroupIdsInvited()
+                    gid = ki5.getGroupIdsInvited()
+                    gid = ki6.getGroupIdsInvited()
+                    gid = ki7.getGroupIdsInvited() 
+                    gid = ki8.getGroupIdsInvited()
+                    gid = ki9.getGroupIdsInvited()
+                    gid = ki10.getGroupIdsInvited()
                     start = time.time()
                     for i in gid:
-                        ki.rejectGroupInvitation(i)
-                        ke.rejectGroupInvitation(i)
-                        kc.rejectGroupInvitation(i)
-                        kk.rejectGroupInvitation(i)
-                        km.rejectGroupInvitation(i)
+                        ki1.rejectGroupInvitation(i)
+                        ki2.rejectGroupInvitation(i)
+                        ki3.rejectGroupInvitation(i)
+                        ki4.rejectGroupInvitation(i)
+                        ki5.rejectGroupInvitation(i)
+                        ki6.rejectGroupInvitation(i)
+                        ki7.rejectGroupInvitation(i)
+                        ki8.rejectGroupInvitation(i)
+                        ki9.rejectGroupInvitation(i)
+                        ki10.rejectGroupInvitation(i)
                     elapsed_time = time.time() - start
-                    ki.sendMessage(to, "ลบรันเสร็จแล้วขอรับ")
-                    ki.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))
-                    ke.sendMessage(to, "ลบรันเสร็จแล้วขอรับ")
-                    ke.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))
-                    kc.sendMessage(to, "ลบรันเสร็จแล้วขอรับ")
-                    kc.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))
-                    kk.sendMessage(to, "ลบรันเสร็จแล้วขอรับ")
-                    kk.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))
-                    km.sendMessage(to, "ลบรันเสร็จแล้วขอรับ")
-                    km.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))
-                    
-                elif ".ลงดำ" in msg.text:
+                    ki1.sendMessage(to, "ลบรันคิกทั้งหมดเสร็จแล้วขอรับ")
+                    ki1.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))
+                    ki2.sendMessage(to, "ลบรันคิกทั้งหมดเสร็จแล้วขอรับ")
+                    ki2.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))
+                    ki3.sendMessage(to, "ลบรันคิกทั้งหมดเสร็จแล้วขอรับ")
+                    ki3.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))	
+                    ki4.sendMessage(to, "ลบรันคิกทั้งหมดเสร็จแล้วขอรับ")
+                    ki4.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))
+                    ki5.sendMessage(to, "ลบรันคิกทั้งหมดเสร็จแล้วขอรับ")
+                    ki5.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))
+                    ki6.sendMessage(to, "ลบรันคิกทั้งหมดเสร็จแล้วขอรับ")
+                    ki6.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))
+                    ki7.sendMessage(to, "ลบรันคิกทั้งหมดเสร็จแล้วขอรับ")
+                    ki7.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))
+                    ki8.sendMessage(to, "ลบรันคิกทั้งหมดเสร็จแล้วขอรับ")
+                    ki8.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))
+                    ki9.sendMessage(to, "ลบรันคิกทั้งหมดเสร็จแล้วขอรับ")
+                    ki9.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))
+                    ki10.sendMessage(to, "ลบรันคิกทั้งหมดเสร็จแล้วขอรับ")
+                    ki10.sendMessage(to, "ระยะเวลาที่ใช้: %sวินาที" % (elapsed_time))
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#                    
+                elif "ลงดำ" in msg.text:
                   if msg._from in Family:
                       if msg.toType == 2:
                            print ("All Banlist")
-                           _name = msg.text.replace(".ลงดำ","")
+                           _name = msg.text.replace("ลงดำ","")
                            gs = line.getGroup(msg.to)
                            line.sendMessage(msg.to,"แบนสมาชิกทุกคนในห้องนี้แล้ว＼（○＾ω＾○）／")
                            targets = []
@@ -3156,7 +3284,7 @@ def lineBot(op):
                                        except:
                                            line.sentMessage(msg.to,"พบข้อผิดพลาดที่ไม่ทราบสาเหตุ")
 										   
-                elif '.แบน' in text.lower():
+                elif 'แบน' in text.lower():
                        targets = []
                        key = eval(msg.contentMetadata["MENTION"])
                        key["MENTIONEES"] [0] ["M"]
@@ -3172,7 +3300,7 @@ def lineBot(op):
                            except:
                                line.sendMessage(msg.to,"Contact Not Found")
 
-                elif '.ล้างแบน' in text.lower():
+                elif 'ล้างแบน' in text.lower():
                        targets = []
                        key = eval(msg.contentMetadata["MENTION"])
                        key["MENTIONEES"] [0] ["M"]
@@ -3188,7 +3316,7 @@ def lineBot(op):
                            except:
                                line.sendMessage(msg.to,"Contact Not Found")
                 
-                elif msg.text in [".เช็คดำ"]:
+                elif msg.text in ["เช็คดำ"]:
                   if msg._from in Family:
                     if settings["blacklist"] == {}:
                         line.sendMessage(msg.to,"ไม่พบ") 
@@ -4633,11 +4761,25 @@ def lineBot(op):
                       time.sleep(0.01)
                       line.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
                       time.sleep(0.01)
-                      ki.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                      ki1.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
                       time.sleep(0.01)
-                      kk.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                      ki2.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
                       time.sleep(0.01)
-                      ke.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                      ki3.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                      time.sleep(0.01)
+                      ki4.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                      time.sleep(0.01)
+                      ki5.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                      time.sleep(0.01)
+                      ki6.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                      time.sleep(0.01)
+                      ki7.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                      time.sleep(0.01)
+                      ki8.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                      time.sleep(0.01)
+                      ki9.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                      time.sleep(0.01)
+                      ki10.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
                       time.sleep(0.01)
                       km.kickoutFromGroup(op.param1,[op.param2])
                       km.leaveGroup(op.param1)
@@ -4653,11 +4795,25 @@ def lineBot(op):
                       time.sleep(0.01)
                       line.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
                       time.sleep(0.01)
-                      ki.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                      ki1.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
                       time.sleep(0.01)
-                      kk.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                      ki2.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
                       time.sleep(0.01)
-                      ke.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                      ki3.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                      time.sleep(0.01)
+                      ki4.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                      time.sleep(0.01)
+                      ki5.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                      time.sleep(0.01)
+                      ki6.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                      time.sleep(0.01)
+                      ki7.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                      time.sleep(0.01)
+                      ki8.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                      time.sleep(0.01)
+                      ki9.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
+                      time.sleep(0.01)
+                      ki10.acceptGroupInvitationByTicket(op.param1,format(str(ticket)))
                       time.sleep(0.01)
                       km.kickoutFromGroup(op.param1,[op.param2])
                       km.leaveGroup(op.param1)
@@ -4675,7 +4831,7 @@ def lineBot(op):
                     random.choice(Rfu).kickoutFromGroup(receiver,[sender])
                     random.choice(Rfu).sendText(msg.to,"ตรวจพบคำพูดหยาบคายไม่สุภาพ จำเป็นต้องนำออกเพื่อความสงบสุขของสมาชิก (｀・ω・´)")
             if settings ["Api"] == True:
-            	if msg.text in ["ป๊า","ป๊าเรส","ลุง","เรส","นาย","เพื่อน","จาร์ย","อาจาร์ย","เฮีย"]:
+            	if msg.text in ["กำ","กำนะ",".กำ","กำ.","กรรม"]:
                     line.sendMessage(msg.to, str(settings["comment"]))
             if settings ["Api"] == True:
                 if msg.text in ["บอท","เซล","เซลบอท","selfbot","คนรึบอท","Help","help",".help","/help","คำสั่ง"]:
@@ -4966,7 +5122,7 @@ def lineBot(op):
             except:
                 pass
         if op.type == 55:
-            print (" [™❍✯͜͡RED™SAMURI✯͜͡❂➣]  ")
+            print ("[༄۞ꪶꪶꪣꪫꪊุ۞࿐]")
             try:
                 if op.param1 in read['readPoint']:
                     if op.param2 in read['readMember'][op.param1]:
