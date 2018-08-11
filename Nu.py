@@ -2228,17 +2228,7 @@ def lineBot(op):
                     say = text.replace(sep[0] + " ","")
                     lang = 'bn'
                     tts = gTTS(text=say, lang=lang)
-                    tts.save("hasil.mp3")
-                    line.sendAudio(msg.to,"hasil.mp3")
-                    
-                elif msg.text.lower().startswith("say-ca "):
-                    sep = text.split(" ")
-                    say = text.replace(sep[0] + " ","")
-                    lang = 'ca'
-                    tts = gTTS(text=say, lang=lang)
-                    tts.save("hasil.mp3")
-                    line.sendAudio(msg.to,"hasil.mp3")
-                    
+
                 elif msg.text.lower().startswith("say-zh "):
                     sep = text.split(" ")
                     say = text.replace(sep[0] + " ","")
