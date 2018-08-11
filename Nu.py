@@ -3403,7 +3403,6 @@ def lineBot(op):
                   f=codecs.open('st2__b.json','w','utf-8')
                   json.dump(settings["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-
             if op.param3 in ki1MID:
               if op.param2 not in Family:
                 try:
@@ -3473,8 +3472,7 @@ def lineBot(op):
                   settings["blacklist"][op.param2] = True
                   f=codecs.open('st2__b.json','w','utf-8')
                   json.dump(settings["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
-#=============================================================================
-                  
+#=============================================================================                
             if op.param3 in ki2MID:
               if op.param2 not in Family:
                 try:
@@ -3504,8 +3502,7 @@ def lineBot(op):
                   settings["blacklist"][op.param2] = True
                   f=codecs.open('st2__b.json','w','utf-8')
                   json.dump(settings["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                  
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
             if op.param3 in ki3MID:
               if op.param2 not in Family:
                 try:
@@ -3565,7 +3562,6 @@ def lineBot(op):
                   settings["blacklist"][op.param2] = True
                   f=codecs.open('st2__b.json','w','utf-8')
                   json.dump(settings["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)                  
-
 			                  
             if op.param3 in ki5MID:
               if op.param2 not in Family:
@@ -3777,67 +3773,7 @@ def lineBot(op):
                 ki8.leaveRoom(op.param1)
                 ki9.leaveRoom(op.param1)
                 ki10.leaveRoom(op.param1)
-
-        if op.type == 25:
-            msg = op.message
-            if msg.contentType == 13:
-                if settings["contact"] == True:
-                    #msg.contentType = 0
-                   if 'displayName' in msg.contentMetadata:
-                       contact = line.getContact(msg.contentMetadata["mid"])
-                       try:
-                           cu = line.getProfileCoverURL(msg.contentMetadata["mid"])
-                       except:
-                           cu = ""
-                       line.sendMessage(msg.to,"[ชื่อ]:\n" + msg.contentMetadata["displayName"] + "\n[mid]:\n" + msg.contentMetadata["mid"] + "\n[เข้าสู่ระบบ]:\n" + contact.statusMessage + "\n[โปรไฟล์]:\nhttp://dl.profile.line-cdn.net/" + contact.pictureStatus + "\n[หน้าปก]:\n" + str(cu))
-                   else:
-                       contact = line.getContact(msg.contentMetadata["mid"])
-                       try:
-                           cu = line.getProfileCoverURL(msg.contentMetadata["mid"])
-                       except:
-                           cu = ""
-                       line.sendMessage(msg.to,"[ชื่อ]:\n" + contact.displayName + "\n[mid]:\n" + msg.contentMetadata["mid"] + "\n[เข้าสู่ระบบ]:\n" + contact.statusMessage + "\n[โปรไฟล์]:\nhttp://dl.profile.line-cdn.net/" + contact.pictureStatus + "\n[หน้าปก]:\n" + str(cu))
-
 #==============================================================================#
-        if op.type == 25:
-            msg = op.message
-            if msg.contentType == 13:
-                if settings["wblack"] == True:
-                    if msg.contentMetadata["mid"] in settings["commentBlack"]:
-                        line.sendMessage(msg.to,"sudah masuk daftar hitam")
-                        settings["wblack"] = False
-                    else:
-                        settings["commentBlack"][msg.contentMetadata["mid"]] = True
-                        settings["wblack"] = False
-                        line.sendMessage(msg.to,"Itu tidak berkomentar")
-                elif settings["dblack"] == True:
-                    if msg.contentMetadata["mid"] in settings["commentBlack"]:
-                        del settings["commentBlack"][msg.contentMetadata["mid"]]
-                        line.sendMessage(msg.to,"Done")
-                        settings["dblack"] = False
-                    else:
-                        settings["dblack"] = False
-                        line.sendMessage(msg.to,"Tidak ada dalam daftar hitam")
-#-------------------------------------------------------------------------------
-                elif settings["wblacklist"] == True:
-                    if msg.contentMetadata["mid"] in settings["blacklist"]:
-                        line.sendMessage(msg.to,"sudah masuk daftar hitam")
-                        settings["wblacklist"] = False
-                    else:
-                        settings["blacklist"][msg.contentMetadata["mid"]] = True
-                        settings["wblacklist"] = False
-                        line.sendMessage(msg.to,"Done")
-                        
-                elif settings["dblacklist"] == True:
-                    if msg.contentMetadata["mid"] in settings["blacklist"]:
-                        del settings["blacklist"][msg.contentMetadata["mid"]]
-                        line.sendMessage(msg.to,"Done")
-                        settings["dblacklist"] = False
-                    else:
-                        settings["dblacklist"] = False
-                        line.sendMessage(msg.to,"Done")
-                        
-                       
 #-------------------------------------------------------------------------------
         if op.type == 19:
             try:
