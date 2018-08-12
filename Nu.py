@@ -4860,7 +4860,47 @@ def lineBot(op):
             if settings ["Api"] == True:
             	if msg.text in ["กำ","กำนะ",".กำ","กำ.","กรรม"]:
                     line.sendMessage(msg.to,"จะกำอะไรหนักหนา รู้มั๊ยมันเจ็บ")
-
+        if op.type in [25,26]:
+            msg = op.message
+            if msg.contentType == 16:
+                if settings["checkPost"] == True:
+                        try:
+                            ret_ = "[ ข้อมูลของโพสนี้ ]"
+                            if msg.contentMetadata["serviceType"] == "GB":
+                                contact = line.getContact(sender)
+                                auth = "\n  ผู้เขียนโพส : {}".format(str(contact.displayName))
+                            else:
+                                auth = "\n  ผู้เขียนโพส : {}".format(str(msg.contentMetadata["serviceName"]))
+                            purl = "\n  ลิ้งโพส : {}".format(str(msg.contentMetadata["postEndUrl"]).replace("line://","https://line.me/R/"))
+                            ret_ += auth
+                            ret_ += purl
+                            if "mediaOid" in msg.contentMetadata:
+                                object_ = msg.contentMetadata["mediaOid"].replace("svc=myhome|sid=h|","")
+                                if msg.contentMetadata["mediaType"] == "V":
+                                    if msg.contentMetadata["serviceType"] == "GB":
+                                        ourl = "\n  Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(msg.contentMetadata["mediaOid"]))
+                                        murl = "\n  Media URL : https://obs-us.line-apps.com/myhome/h/download.nhn?{}".format(str(msg.contentMetadata["mediaOid"]))
+                                    else:
+                                        ourl = "\n  Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(object_))
+                                        murl = "\n  Media URL : https://obs-us.line-apps.com/myhome/h/download.nhn?{}".format(str(object_))
+                                        ret_ += murl
+                                else:
+                                    if msg.contentMetadata["serviceType"] == "GB":
+                                        ourl = "\n Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(msg.contentMetadata["mediaOid"]))
+                                    else:
+                                        ourl = "\n Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(object_))
+                                ret_ += ourl
+                            if "stickerId" in msg.contentMetadata:
+                                stck = "\n  Stiker : https://line.me/R/shop/detail/{}".format(str(msg.contentMetadata["packageId"]))
+                                ret_ += stck
+                            if "text" in msg.contentMetadata:
+                                text = "\n ข้อความโดยย่อ : {}".format(str(msg.contentMetadata["text"]))
+                                ret_ += text
+                            ret_ += "\n[ สิ้นสุดการเช็คโพส ]"
+                            line.sendMessage(to, str(ret_))
+                        except:
+                            line.sendMessage(to, "เกิดข้อผิดะลาดในการเช็คโพสนี้") 
+        if op.type == 26:
         if op.type == 26:
             msg = op.message
             text = msg.text
