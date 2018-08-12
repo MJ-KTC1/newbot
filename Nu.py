@@ -4901,7 +4901,6 @@ def lineBot(op):
                         except:
                             line.sendMessage(to, "เกิดข้อผิดะลาดในการเช็คโพสนี้") 
         if op.type == 26:
-        if op.type == 26:
             msg = op.message
             text = msg.text
             msg_id = msg.id
