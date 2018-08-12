@@ -4869,7 +4869,7 @@ def lineBot(op):
           #  if settings ["Api"] == True:
         #        if msg.text in [".ประกาศ","โฆษณา","ประชาสัมพัน","ประกาศ"]:
          #       	line.sendMessage(msg.to, str(settings["comment"]))
-        if op.type in [25,26]:
+        if op.type == [25-26]:
             msg = op.message
             if msg.contentType == 16:
                 if settings["checkPost"] == True:
