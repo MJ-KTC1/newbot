@@ -1012,10 +1012,10 @@ def lineBot(op):
                 elif text.lower() == 'ปิดบล็อค':
                     settings["autoAdd"] = False
                     line.sendMessage(to, "Autoblock disabled.")
-                elif text.lower() == 'เปิดเข้า':
+                elif text.lower() == 'เปิดเข้ากลุ่ม':
                     settings["autoJoin"] = True
                     line.sendMessage(to, "Autojoin enabled.")
-                elif text.lower() == 'ปิดเข้า':
+                elif text.lower() == 'ปิดเข้ากลุ่ม':
                     settings["autoJoin"] = False
                     line.sendMessage(to, "Auto Join disabled.")
                 elif "gcancel:" in msg.text:
@@ -1039,10 +1039,10 @@ def lineBot(op):
                                 line.sendText(msg.to,str(settings["eror"]))
                         else:
                                 line.sendText(msg.to,"Bizarre ratings")					
-                elif text.lower() == 'เปิดออก':
+                elif text.lower() == 'เปิดออกแชท':
                     settings["autoLeave"] = True
                     line.sendMessage(to, "เปิดระบบออกแชทรวมอัตโนมัติ")
-                elif text.lower() == 'ปิดออก':
+                elif text.lower() == 'ปิดออกแชท':
                     settings["autoLeave"] = False
                     line.sendMessage(to, "Autoleave disabled.")
                 elif text.lower() == 'เปิดอ่าน':
@@ -1063,10 +1063,10 @@ def lineBot(op):
                 elif text.lower() == 'ปิดมุด':
                     settings["autoJoinTicket"] = False
                     line.sendMessage(to, "Autojoin byTicket  disabled.")
-                elif text.lower() == 'เปิดเผือก':
+                elif text.lower() == 'เปิดข้อความ':
                     settings["unsendMessage"] = True
                     line.sendMessage(to, "unsendMessage  enabled.")
-                elif text.lower() == 'ปิดเผือก':
+                elif text.lower() == 'ปิดข้อความ':
                     settings["unsendMessage"] = False
                     line.sendMessage(to, "unsendMessage disabled.")
 #==============================================================================#
@@ -1096,13 +1096,13 @@ def lineBot(op):
                 elif text.lower() == 'ตัส':
                     me = line.getContact(lineMID)
                     line.sendMessage(msg.to,"[StatusMessage]\n" + me.statusMessage)
-                elif text.lower() == '.รูปโปร':
+                elif text.lower() == 'ดิส':
                     me = line.getContact(lineMID)
                     line.sendImageWithURL(msg.to,"http://dl.profile.line-cdn.net/" + me.pictureStatus)
-                elif text.lower() == 'วีดีโอโปร':
+                elif text.lower() == 'วีดีโอดิส':
                     me = line.getContact(lineMID)
                     line.sendVideoWithURL(msg.to,"http://dl.profile.line-cdn.net/" + me.pictureStatus + "/vp")
-                elif text.lower() == 'รูปปก':
+                elif text.lower() == 'ปก':
                     me = line.getContact(lineMID)
                     cover = line.getProfileCoverURL(lineMID)    
                     line.sendImageWithURL(msg.to, cover)
@@ -1289,11 +1289,11 @@ def lineBot(op):
                     except Exception as e:
                         line.sendText(msg.to, str (e))
 
-                elif msg.text in ["Ghost on",".เปิดคิกผี"]:
+                elif msg.text in ["Ghost on","/G"]:
                         settings["Ghost"] = True
                         line.sendText(msg.to,"เปิดระบบเรียกคิกผีแล้วท่าน..(○ﾟεﾟ○)")
 
-                elif msg.text in ["Ghost on",".ปิดคิกผี"]:
+                elif msg.text in ["Ghost off","/Gy"]:
                         settings["Ghost"] = False
                         line.sendText(msg.to,"ปิดระบบเรียกคิกผีเรียบร้อย..(´⊙ω⊙`)")
                         
@@ -1533,7 +1533,7 @@ def lineBot(op):
                             no += 1
                         ret_ += "\n จำนวน {} กลุ่ม".format(str(len(groups)))
                         ki3.sendMessage(to, str(ret_))				
-                elif "เชิญคลอ" == msg.text.lower():
+                elif "เชินคลอ" == msg.text.lower():
                     line.inviteIntoGroupCall(msg.to,[uid.mid for uid in line.getGroup(msg.to).members if uid.mid != line.getProfile().mid])
                     line.sendMessage(msg.to,"เชิญเข้าร่วมการโทรสำเร็จ(｀・ω・´)")
                 elif ".sh " in msg.text.lower():
@@ -1543,7 +1543,7 @@ def lineBot(op):
                             line.sendText(msg.to,subprocess.getoutput(spl[1]))
                         except:
                             pass
-                elif msg.text.lower() == 'เชิญแอด':
+                elif msg.text.lower() == 'เชินแอด':
                 	if msg.toType == 2:                
                            ginfo = line.getGroup(receiver)
                            try:
@@ -1592,8 +1592,8 @@ def lineBot(op):
                         line.sendText(msg.to,"กดที่นี่เพื่อเขย่าข้อความด้านบน:\nline://nv/chatMsg?chatId="+msg.to+"&messageId="+msg.id)
        
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                elif "ไม่รับเชิญ " in msg.text.lower():
-                    spl = re.split("ไม่รับเชิญ ",msg.text,flags=re.IGNORECASE)
+                elif "ลบรัน2 " in msg.text.lower():
+                    spl = re.split("ลบรัน2 ",msg.text,flags=re.IGNORECASE)
                     if spl[0] == "":
                         spl[1] = spl[1].strip()
                         ag = line.getGroupIdsInvited()
@@ -1652,8 +1652,8 @@ def lineBot(op):
                         prof.displayName = line.nmxstring(spl[1])
                         line.updateProfile(prof)
                         line.sendText(msg.to,"สำเร็จแล้ว")
-                elif "มุด " in msg.text.lower():
-                    spl = re.split("มุด ",msg.text,flags=re.IGNORECASE)
+                elif "มุด: " in msg.text.lower():
+                    spl = re.split("มุด: ",msg.text,flags=re.IGNORECASE)
                     if spl[0] == "":
                         try:
                             gid = spl[1].split(" ")[0]
@@ -1661,38 +1661,7 @@ def lineBot(op):
                             line.acceptGroupInvitationByTicket(gid,ticket)
                         except Exception as e:
                             line.sendText(msg.to,str(e))	
-                						
-                elif msg.text.lower().startswith("sms "):
-                    pnum = re.split("sms ",msg.text,flags=re.IGNORECASE)[1]
-                    pnum = "66"+pnum[1:]
-                    GACReq = GACSender.send(pnum)
-                    if GACReq.responseNum == 0:
-                        if msg.toType != 0:
-                                line.sendText(msg.to,"ส่ง SMS สำเร็จแล้ว (｀・ω・´)")
-                        else:
-                                line.sendText(msg.from_,"ส่ง SMS สำเร็จแล้ว (｀・ω・´)")
-                    elif GACReq.responseNum == 1:
-                        if msg.toType != 0:
-                                line.sendText(msg.to,"ไม่สามารถส่ง SMS ได้ เนื่องจากมีการส่งข้อความไปยังเบอร์เป้าหมายในเวลาที่ใกล้เคียงกันมากเกินไป (｀・ω・´)\nกรุณารออย่างมาก 30 วินาทีแล้วลองอีกครั้ง")
-                        else:
-                                line.sendText(msg.from_,"ไม่สามารถส่ง SMS ได้ เนื่องจากมีการส่งข้อความไปยังเบอร์เป้าหมายในเวลาที่ใกล้เคียงกันมากเกินไป (｀・ω・´)\nกรุณารออย่างมาก 30 วินาทีแล้วลองอีกครั้ง")
-                    else:
-                        if msg.toType != 0:
-                                line.sendText(msg.to,"พบข้อผิดพลาดที่ไม่รู้จัก (｀・ω・´)")
-                        else:
-                                line.sendText(msg.from_,"พบข้อผิดพลาดที่ไม่รู้จัก (｀・ω・´)")
-                elif msg.text.lower() == ".groupurl":
-                    if msg.toType == 2:
-                        line.sendText(msg.to,"http://line.me/R/ti/g/"+str(line.reissueGroupTicket(msg.to)))
-                    else:
-                        line.sendText(msg.to,"คำสั่งนี้ใช้ได้เฉพาะในกลุ่มเท่านั้น")
-                elif ".groupurl " in msg.text.lower():
-                    spl = re.split(".groupurl ",msg.text,flags=re.IGNORECASE)
-                    if spl[0] == "":
-                        try:
-                            line.sendText(msg.to,"http://line.me/R/ti/g/"+str(line.reissueGroupTicket(spl[1])))
-                        except Exception as e:
-                            line.sendText(msg.to,"พบข้อผิดพลาด (เหตุผล \""+e.reason+"\")")
+
                 if "gift " in msg.text.lower():
                     red = re.compile(re.escape('gift '),re.IGNORECASE)
                     themeid = red.sub('',msg.text)
@@ -1850,7 +1819,7 @@ def lineBot(op):
                     else:
                         line.sendMessage(receiver,"Lurking has not been set.")
 #==============================================================================#
-                elif msg.text in ["มูฟวี่"]:
+                elif msg.text in ["หนัง"]:
                     hasil = "https://youtu.be/2QKg5SZ_35I"
                     A = hasil
                     line.sendVideoWithURL(msg.to, A)
@@ -1859,25 +1828,25 @@ def lineBot(op):
 #            if msg.toType == 0:
 #                if sender != line.profile.mid:
 #==============================================================================#
-                elif "ประกาศกลุ่ม " in msg.text:
-                    bc = msg.text.replace(".ประกาศกลุ่ม ","")
+                elif "ประกาศกลุ่ม: " in msg.text:
+                    bc = msg.text.replace("ประกาศกลุ่ม: ","")
                     gid = line.getGroupIdsJoined()
                     for i in gid:
-                        line.sendText(i,"======[ข้อความประกาศกลุ่ม]======\n\n"+bc+"\n\nBy: RED SAMURI SELFBOT!!")
+                        line.sendText(i,"======[ข้อความประกาศกลุ่ม]======\n\n"+bc+"\n\n[นี้เป็นข้อความประกาศขออภัยที่รบกวน]")
                     
-                elif "ประกาศแชท " in msg.text:
-                    bc = msg.text.replace(".ประกาศแชท ","")
+                elif "ประกาศแชท: " in msg.text:
+                    bc = msg.text.replace("ประกาศแชท: ","")
                     gid = line.getAllContactIds()
                     for i in gid:
-                        line.sendText(i,"======[ข้อความประกาศแชท]======\n\n"+bc+"\n\nBy: RED SAMURI SELFBOT!!")
+                        line.sendText(i,"======[ข้อความประกาศแชท]======\n\n"+bc+"\n\n[นี้เป็นข้อความประกาศขออภัยที่รบกวน]")
             
-                elif "ส่งรูปภาพตามกลุ่ม: " in msg.text:
+                elif "ส่งรูปกลุ่ม: " in msg.text:
                     bc = msg.text.replace(".ส่งรูปภาพตามกลุ่ม: ","")
                     gid = line.getGroupIdsJoined()
                     for i in gid:
                         line.sendImageWithURL(i, bc)
                     
-                elif "ส่งรูปภามตามแชท: " in msg.text:
+                elif "ส่งรูปแชท: " in msg.text:
                     bc = msg.text.replace(".ส่งรูปภาพตามแชท: ","")
                     gid = line.getAllContactIds()
                     for i in gid:
@@ -1896,10 +1865,10 @@ def lineBot(op):
                         if hr == day[i]: hasil = hari[i]
                     for k in range(0, len(bulan)):
                         if bln == str(k): bln = bulan[k-1]
-                    readTime = "🌴ปฏิทินโดย SAMURAI SELFBOT🌴" + "\n\n" + hasil + "\nที่ " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nเวลา : [ " + timeNow.strftime('%H:%M:%S') + " ]" + "\n\nBY: ™❍✯͜͡RED™SAMURI✯͜͡❂➣ "
+                    readTime = "ปฏิทินโดย ༄۞ꪶꪶꪣꪫꪊุ۞࿐ " + "\n\n" + hasil + "\nที่ " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nเวลา : [ " + timeNow.strftime('%H:%M:%S') + " ]" + "\n\nBY: ™❍✯͜͡RED™SAMURI✯͜͡❂➣ "
                     line.sendMessage(msg.to, readTime)
 
-                elif "screenshotwebsite " in msg.text.lower():
+                elif "screenshotwebsite: " in msg.text.lower():
                     sep = text.split(" ")
                     query = text.replace(sep[0] + " ","")
                     with requests.session() as web:
@@ -1907,7 +1876,7 @@ def lineBot(op):
                         data = r.text
                         data = json.loads(data)
                         line.sendImageWithURL(to, data["result"])
-                elif "data " in msg.text.lower():
+                elif "data: " in msg.text.lower():
                     sep = msg.text.split(" ")
                     tanggal = msg.text.replace(sep[0] + " ","")
                     r=requests.get('https://script.google.com/macros/exec?service=AKfycbw7gKzP-WYV2F5mc9RaR7yE3Ve1yN91Tjs91hp_jHSE02dSv9w&nama=ervan&tanggal='+tanggal)
@@ -1921,7 +1890,7 @@ def lineBot(op):
                     ret_ += "\n╚══[ Success ]"
                     line.sendMessage(to, str(ret_))
                 
-                elif "ไอจี " in msg.text.lower():
+                elif "ไอจี: " in msg.text.lower():
                     sep = text.split(" ")
                     search = text.replace(sep[0] + " ","")
                     with requests.session() as web:
@@ -1950,7 +1919,7 @@ def lineBot(op):
                             line.sendMessage(to, str(ret_))
                         except:
                             line.sendMessage(to, "Pengguna tidak ditemukan")
-                elif "รูปไอจี " in msg.text.lower():
+                elif "รูปไอจี: " in msg.text.lower():
                     separate = msg.text.split(" ")
                     user = msg.text.replace(separate[0] + " ","")
                     profile = "https://www.instagram.com/" + user
@@ -1967,7 +1936,7 @@ def lineBot(op):
                                 r = x.get(page)
                                 print((node['display_src']))
                                 line.sendImageWithURL(msg.to,node['display_src'])
-                elif "รูป " in msg.text.lower():
+                elif "รูป: " in msg.text.lower():
                     separate = msg.text.split(" ")
                     search = msg.text.replace(separate[0] + " ","")
                     with requests.session() as web:
@@ -1981,7 +1950,7 @@ def lineBot(op):
                             a = items.index(path)
                             b = len(items)
                             line.sendImageWithURL(to, str(path))
-                elif "รูปการ์ตูน " in msg.text.lower():
+                elif "กาตูน: " in msg.text.lower():
                     separate = msg.text.split(" ")
                     search = msg.text.replace(separate[0] + " ","")
                     with requests.session() as web:
@@ -2015,7 +1984,7 @@ def lineBot(op):
                         ret_ += "\n╚══[ จำนวนที่พบ {} ]".format(len(datas))
                         line.sendMessage(to, str(ret_))
       
-                elif "ยูทูป " in msg.text.lower():
+                elif "ยูทูป: " in msg.text.lower():
                     sep = text.split(" ")
                     search = text.replace(sep[0] + " ","")
                     params = {"search_query": search}
@@ -2033,14 +2002,8 @@ def lineBot(op):
                             ret_ += "\n╠ https://www.youtube.com{}".format(str(data["href"]))
                         ret_ += "\n╚══[ จำนวนที่พบ {} ]".format(len(datas))
                         line.sendMessage(to, str(ret_))
-                        
-                elif "กูเกิ้ล " in msg.text:
-                    a = msg.text.replace("กูเกิ้ล ","")
-                    b = urllib.quote(a)
-                    line.sendText(msg.to,"กรุณารอสักครู่...")
-                    line.sendText(msg.to, "https://www.google.com/" + b)
-                        
-                elif "วีดีโอ " in msg.text.lower():
+
+                elif "วีดีโอ: " in msg.text.lower():
                     sep = text.split(" ")
                     search = text.replace(sep[0] + "วีดีโอ ","")
                     params = {"search_query": search}
@@ -2059,7 +2022,7 @@ def lineBot(op):
                         ret_ += "\n╚══[ จำนวนที่พบ {} ]".format(len(datas))
                         line.sendMessage(to, str(ret_))
                         
-                elif "หนัง " in msg.text.lower():
+                elif "หาหนัง: " in msg.text.lower():
                     sep = text.split(" ")
                     search = text.replace(sep[0] + "หนัง ","")
                     params = {"search_query": search}
@@ -2078,7 +2041,7 @@ def lineBot(op):
                         ret_ += "\n╚══[ จำนวนที่พบ {} ]".format(len(datas))
                         line.sendMessage(to, str(ret_))
                         
-                elif "เพลง " in msg.text.lower():
+                elif "เพลง: " in msg.text.lower():
                     sep = text.split(" ")
                     search = text.replace(sep[0] + "เพลง ","")
                     params = {"search_query": search}
@@ -2185,8 +2148,8 @@ def lineBot(op):
 
                 elif msg.text == "เว็บโป๊":
                 	line.sendMessage(receiver,">nekopoi.host\n>sexvideobokep.com\n>memek.com\n>pornktube.com\n>faketaxi.com\n>videojorok.com\n>watchmygf.mobi\n>xnxx.com\n>pornhd.com\n>xvideos.com\n>vidz7.com\n>m.xhamster.com\n>xxmovies.pro\n>youporn.com\n>pornhub.com\n>youjizz.com\n>thumzilla.com\n>anyporn.com\n>brazzers.com\n>redtube.com\n>youporn.com")
-                elif msg.text == "ประกาศ":
-                	line.sendMessage(msg.to,str(settings["message1"]))
+     #           elif msg.text == "ประกาศ":
+          #      	line.sendMessage(msg.to,str(settings["message1"]))
                 elif msg.text.lower() == 'ดึงแอด':
                 	if msg.toType == 2:                
                            ginfo = line.getGroup(receiver)
@@ -2200,25 +2163,7 @@ def lineBot(op):
                            else:
                                line.inviteIntoGroup(receiver,[gcmid])
                                line.sendMessage(receiver, "Pembuat Group Sudah di dalam")
-
-                elif msg.text in ["ไม่รับเชิน"]:
-                    if msg.toType == 2:
-                        ginfo = line.getGroup(receiver)
-                        try:
-                            line.leaveGroup(receiver)							
-                        except:
-                            pass
-                elif msg.text in ["เช็คไอดี"]: 
-                    gruplist = line.getAllContactIds()
-                    kontak = line.getContacts(gruplist)
-                    num=1
-                    msgs="™❍✯͜͡RED™SAMURI✯͜͡❂➣"
-                    for ids in kontak:
-                        msgs+="\n[%i] %s" % (num, ids.mid)
-                        num=(num+1)
-                    msgs+="\nจำนวน  %i" % len(kontak)
-                    line.sendMessage(receiver, msgs)
-                    
+   
                 elif msg.text in ["เปิดแทคเตะ"]:
                     settings["kickMention"] = True
                     line.sendMessage(msg.to,"เปิดระบบเตะคนแท็ก")
@@ -2335,7 +2280,7 @@ def lineBot(op):
                 elif msg.text in [".ดึง","ดึง"]:
                         settings["winvite"] = True
                         line.sendMessage(msg.to,"send a contact to invite user")                            
-                elif msg.text.lower() == "ยกเชิญ":
+                elif msg.text.lower() == "ยกเชิน":
                     if msg.toType == 2:
                         group = line.getGroup(msg.to)
                         gMembMids = [contact.mid for contact in group.invitee]
@@ -2427,7 +2372,7 @@ def lineBot(op):
                                km.sendMessage(msg.to,"จำกัด")
 
 
-                elif 'เชิญ' in text.lower():
+                elif 'เชิน' in text.lower():
                        targets = []
                        key = eval(msg.contentMetadata["MENTION"])
                        key["MENTIONEES"] [0] ["M"]
