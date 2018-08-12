@@ -4602,10 +4602,7 @@ def lineBot(op):
                         G.preventedJoinByTicket = True
                         ki9.updateGroup(G)
                         settings["blacklist"][op.param2] = True
-            except:
-                pass
-#==============================================================================#
-#~~~~~~~~~~~~~~~~~~~ ผี~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                 elif op.param3 in kmMID:
                     if op.param2 in lineMID:
                         G = km.getGroup(op.param1)
