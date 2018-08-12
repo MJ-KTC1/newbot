@@ -4863,9 +4863,9 @@ def lineBot(op):
             if settings ["Api"] == True:
           #      if msg.text in ["บอท","เซล","เซลบอท","selfbot","คนรึบอท","Help","help",".help","/help","คำสั่ง"]:
               #      line.sendMessage(msg.to, str(settings["comment"]))
-            if settings ["Api"] == True:
-                if msg.text in ["55","555","5555","55555","55+","555+","5555+","ขำ",".ขำ"]:
-                    line.sendText(msg.to,"ตลกไรหนักหนาาา😑")
+            #if settings ["Api"] == True:
+            #    if msg.text in ["55","555","5555","55555","55+","555+","5555+","ขำ",".ขำ"]:
+            #        line.sendText(msg.to,"ตลกไรหนักหนาาา😑")
           #  if settings ["Api"] == True:
         #        if msg.text in [".ประกาศ","โฆษณา","ประชาสัมพัน","ประกาศ"]:
          #       	line.sendMessage(msg.to, str(settings["comment"]))
