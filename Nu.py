@@ -4608,7 +4608,7 @@ def lineBot(op):
 #~~~~~~~~~~~~~~~~~~~ ผี~~~~~~~~~~~~~~~~~~~~~~~~
                 elif op.param3 in kmMID:
                     if op.param2 in lineMID:
-                        G = line.getGroup(op.param1)
+                        G = km.getGroup(op.param1)
                         G.preventedJoinByTicket = False
                         line.updateGroup(G)
                         ticket = line.reissueGroupTicket(op.param1)
