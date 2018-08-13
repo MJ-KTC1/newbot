@@ -554,29 +554,49 @@ def lineBot(op):
 #            if settings["autoLeave"] == True:
 #                line.leaveRoom(op.param1)
         if op.type == 24:
-            print ("[ 24 ] ออกแชทรวมแล้ว")
             if settings["autoLeave"] == True:
                 line.leaveRoom(op.param1)
+                                     
         if op.type == 25:
-            msg = op.message           
+            msg = op.message
             if msg.contentType == 13:
-                if settings["contact"] == True:
-                    #msg.contentType = 0
-                    if 'displayName' in msg.contentMetadata:
-                        contact = line.getContact(msg.contentMetadata["mid"])
-                        try:
-                            cu = line.getProfileCoverURL(msg.contentMetadata["mid"])
-                        except:
-                            cu = ""
-                        line.sendMessage(msg.to,"[ชื่อ]:\n" + msg.contentMetadata["displayName"] + "\n[mid]:\n" + msg.contentMetadata["mid"] + "\n[ตัส]:\n" + contact.statusMessage + "\n[โปรไฟล์]:\nhttp://dl.profile.line-cdn.net/" + contact.pictureStatus + "\n[หน้าปก]:\n" + str(cu))
-                    else:
-                        contact = line.getContact(msg.contentMetadata["mid"])
-                        try:
-                            cu = line.getProfileCoverURL(msg.contentMetadata["mid"])
-                        except:
-                            cu = ""
-                        line.sendMessage(msg.to,"[ชื่อ]:\n" + contact.displayName + "\n[mid]:\n" + msg.contentMetadata["mid"] + "\n[ตัส]:\n" + contact.statusMessage + "\n[โปรไฟล์]:\nhttp://dl.profile.line-cdn.net/" + contact.pictureStatus + "\n[หน้าปก]:\n" + str(cu))
-
+            	if settings["winvite"] == True:
+                     if msg._from in admin:
+                         _name = msg.contentMetadata["displayName"]
+                         invite = msg.contentMetadata["mid"]
+                         groups = line.getGroup(msg.to)
+                         pending = groups.invitee
+                         targets = []
+                         for s in groups.members:
+                             if _name in s.displayName:
+                                 line.sendText(msg.to,"-> " + _name + " \nทำการเชิญสำเร็จ")
+                                 break
+                             elif invite in settings["blacklist"]:
+                                 line.sendText(msg.to,"ขออภัย, " + _name + " บุคคนนี้อยู่ในรายการบัญชีดำ")
+                                 line.sendText(msg.to,"ใช้คำสั่ง!, \n➡ล้างดำ➡ดึง" )
+                                 break                             
+                             else:
+                                 targets.append(invite)
+                         if targets == []:
+                             pass
+                         else:
+                             for target in targets:
+                                 try:
+                                     line.findAndAddContactsByMid(target)
+                                     line.inviteIntoGroup(msg.to,[target])
+                                     line.sendText(msg.to,"เชิญคนนี้สำเร็จแล้ว : \n➡" + _name)
+                                     settings["winvite"] = False
+                                     break
+                                 except:
+                                     try:
+                                         line.findAndAddContactsByMid(invite)
+                                         line.inviteIntoGroup(op.param1,[invite])
+                                         settings["winvite"] = False
+                                     except:
+                                         line.sendText(msg.to,"😧ตรวจพบข้อผิดพลาดที่ไม่ทราบสาเหตุ😩อาจเป็นได้ว่าบัญชีของคุณถูกแบนเชิญ😨")
+                                         settings["winvite"] = False
+                                         break
+                                         
         if op.type == 25:
             msg = op.message
             text = msg.text
