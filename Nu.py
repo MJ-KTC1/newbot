@@ -12,24 +12,24 @@ from googletrans import Translator
 #==============================================================================#
 botStart = time.time()
 #==============================================================================#
-line = LINE('sunu0734@gmail.com','sunu2018')
+line = LINE()
 #line = LINE("เมล","พาส")
 #line = LINE()
 #line.log("Auth Token : " + str(line.authToken))
 #line.log("Timeline Token : " + str(line.tl.channelAccessToken))
-
-#~~~~~~~~~~~~~~~~~~~~คิกผี~~~~~~~~~~~~~~~~~~~~`
-ki1 = LINE('nunu4844@gmail.com','sunu2018')
-ki2 = LINE('su3nu2018@gmail.com','sunu2018,)
-ki3 = LINE('su2nu2018@gmail.com','sunu2018,)
-ki4 = LINE('su6nu2018@gmail.com','sunu2018,)
-ki5 = LINE('su15nu2018@gmail.com','sunu2018,)
-ki6 = LINE('su5nu2018@gmail.com','sunu2018,)
-ki7 = LINE('su12nu2018@gmail.com','sunu2018,)
-ki8 = LINE('nu6bot2018@gmail.com','sunu2018,)
-ki9 = LINE('su4nu2018@gmail.com','sunu2018,)
-ki10 = LINE('su7nu2018@gmail.com','sunu2018,)
-km = LINE('su21nu2018@gmail.com','sunu2018susu,)
+#===========================~เขียนโดย༄۞ꪶꪶꪣꪫꪊุ۞࿐===================================================================================
+#line = LINE('susu76917@gmail.com','nunu_kap2018')
+ki1 = LINE('nu2bot2018@gmail.com','nunu_kap2018')
+ki2 = LINE('nu3bot2018@gmail.com','nunu_kap2018')
+ki3 = LINE('nu4bot2018@gmail.com','nunu_kap2018')
+ki4 = LINE('nu8bot2018@gmail.com','nunu_kap2018')
+ki5 = LINE('nu10bot2018@gmail.com','nunu_kap2018')
+ki6 = LINE('bot1nu2018@gmail.com','nunu_kap2018')
+ki7 = LINE('bot2nu2018@gmail.com','nunu_kap2018')
+ki8 = LINE('bot3nu2018@gmail.com','nunu_kap2018')
+ki9 = LINE('nu11bot2018@gmail.com','nunu_kap2018')
+ki10 = LINE('nu9bot2018@gmail.com','nunu_kap2018')
+km = LINE()
 #km.log("Auth Token : " + str(ke.authToken))
 #km.log("Timeline Token : " + str(ke.tl.channelAccessToken))
 print ("Login Succes")
@@ -165,9 +165,9 @@ settings = {
     "changePictureProfile":False,
     "unsendMessage": False,
     "autoJoinTicket": False,
-    "welcome":"🙏สวีสดีครับคนมาใหม่🙏",
-    "kick":"😱อุ๊ต๊ะ😱",
-    "bye":"🙌บาย..",
+    "welcome":"ยังไม่ข้อความต้อนรับ(กรุณาตั้ง)",
+    "kick":"ยังไม่มีข้อความเตะ(กรุณาตั้ง)",
+    "bye":"ยังไม่มีข้อความออก (กรุณาตั้ง)",
     "Respontag":"😳",
     "eror":"คุณใช้คำสั่งผิด กรุณาศึกษาวิธีใช้ หรือสอบถามกับผู้สร้าง โดยพิมคำสั่ง *.ผส*เพื่อแสดง คท ของผู้สร้าง",
     "spam":{},
@@ -178,9 +178,8 @@ settings = {
     "pro_name": {},
     "message1":"BY:\n╔══════════════┓\n╠™༄۞ꪶꪶꪣꪫꪊุ۞࿐ \n╚══════════════┛",
     "message":"บัญชีนี้ถูกป้องกันโดย Selfbot ༄۞ꪶꪶꪣꪫꪊุ۞࿐ ระบบได้ทำการบล็อคคุณอัตโนมัติเนื่องจากคุณยังไม่ได้ยืนยันตัวตนกับผู้สร้างบอท\nสามารถยืนตัวตนได้ง่ายโดยการพิม unblockกับ ༄۞ꪶꪶꪣꪫꪊุ۞࿐ ระบบจะทำการปลดบล็อคท่านโดยอัตโนมัต",
-    "comment":"""🎋RED BOT LINE THAILAND🎋
+    "comment":"""
 
-SELFBOT by:
 ╔══════════════┓
 ╠™༄۞ꪶꪶꪣꪫꪊุ۞࿐ 
 ╚══════════════┛""",
@@ -478,6 +477,10 @@ def myhelp():
 ╠❂➣ ออกทุกกลุ่ม
 ╠❂➣ ไล่ดำ
 ╠❂➣ ล้างห้อง
+╠❂➣ 1-10ชื่อ: 
+╠❂➣ 1-10ดิส
+╠❂➣ ผีชื่อ: 
+╠❂➣ ผีดิส
 ╚═════════════════════┛
 
  ༄۞@ID:LINE㋡۞࿐
@@ -2170,7 +2173,7 @@ def lineBot(op):
                          line.sendMessage(msg.to, "ตั้งข้อความเรืยบร้อย")
                      else:
                          settings["message"] = spl
-                         line.sendMessage(msg.to, "™❍✯͜͡RED™SAMURI✯͜͡❂➣\n👇ตั้งข้อความตอบโต้เมื่อมีคนแอดแล้ว ดังนี้👇\n\n👉{}".format(str(spl)))
+                         line.sendMessage(msg.to, "👇ตั้งข้อความตอบโต้เมื่อมีคนแอดแล้ว ดังนี้👇\n\n👉{}".format(str(spl)))
                          
                 elif 'คอมเม้น: ' in msg.text:
                   if msg._from in admin:
@@ -2179,7 +2182,7 @@ def lineBot(op):
                          line.sendMessage(msg.to, "ตั้งข้อความเรืยบร้อย")
                      else:
                          settings["comment"] = spl
-                         line.sendMessage(msg.to, "™❍✯͜͡RED™SAMURI✯͜͡❂➣\n👇ตั้งข้อความคอมเม้นของคุณแล้ว ดังนี้👇\n\n👉{}".format(str(spl))) 
+                         line.sendMessage(msg.to, "👇ตั้งข้อความคอมเม้นของคุณแล้ว ดังนี้👇\n\n👉{}".format(str(spl))) 
                     
                 elif 'ตั้งแทค: ' in msg.text:
                   if msg._from in admin:
@@ -2188,7 +2191,7 @@ def lineBot(op):
                          line.sendMessage(msg.to, "ตั้งข้อความเรืยบร้อย")
                      else:
                          settings["Respontag"] = spl
-                         line.sendMessage(msg.to, "™❍✯͜͡RED™SAMURI✯͜͡❂➣\n👇ตั้งข้อความตอบโต้เมื่อมีคนแทคแล้ว👇\n\n👉{}".format(str(spl)))
+                         line.sendMessage(msg.to, "👇ตั้งข้อความตอบโต้เมื่อมีคนแทคแล้ว👇\n\n👉{}".format(str(spl)))
                          
                 elif 'ตั้งเตะ: ' in msg.text:
                   if msg._from in admin:
@@ -2197,7 +2200,7 @@ def lineBot(op):
                          line.sendMessage(msg.to, "ตั้งข้อความคนคนลบสมาชิดเรียบร้อย")
                      else:
                           settings["kick"] = spl
-                          line.sendMessage(msg.to, "™❍✯͜͡RED™SAMURI✯͜͡❂➣\nตั้งค่าข้อความเมื่อมีคนลบสมาชิกแล้ว\nดังนี้👇\n\n👉{}".format(str(spl)))
+                          line.sendMessage(msg.to, "ตั้งค่าข้อความเมื่อมีคนลบสมาชิกแล้ว\nดังนี้👇\n\n👉{}".format(str(spl)))
 
                 elif 'ตั้งออก: ' in msg.text:
                   if msg._from in admin:
@@ -2206,7 +2209,7 @@ def lineBot(op):
                          line.sendMessage(msg.to, "ตั้งข้อความคนออกเรียบร้อย")
                      else:
                           settings["bye"] = spl
-                          line.sendMessage(msg.to, "™❍✯͜͡RED™SAMURI✯͜͡❂➣\nตั้งค่าข้อความเมื่อมีคนออกจากกลุ่มแล้ว\nดังนี้👇\n\n👉{}".format(str(spl)))
+                          line.sendMessage(msg.to, "ตั้งค่าข้อความเมื่อมีคนออกจากกลุ่มแล้ว\nดังนี้👇\n\n👉{}".format(str(spl)))
 
                 elif 'ตั้งเข้า: ' in msg.text:
                   if msg._from in admin:
@@ -2215,7 +2218,7 @@ def lineBot(op):
                          line.sendMessage(msg.to, "ตั้งข้อความคนเข้าเรียบร้อยแล้ว")
                      else:
                           settings["welcome"] = spl
-                          line.sendMessage(msg.to, "™❍✯͜͡RED™SAMURI✯͜͡❂➣\nตั้งค่าข้อความเมื่อมีคนเข้ากลุ่มแล้ว\nดังนี้👇\n\n👉{}".format(str(spl)))
+                          line.sendMessage(msg.to, "ตั้งค่าข้อความเมื่อมีคนเข้ากลุ่มแล้ว\nดังนี้👇\n\n👉{}".format(str(spl)))
 
                 elif msg.text.lower().startswith("textig "):
                     sep = msg.text.split(" ")
@@ -2250,7 +2253,7 @@ def lineBot(op):
                     line.sendMessage(msg.to,"ทำการลบัญชีดำทั้งหมดเรียร้อย")
                     print ("Clear Ban")
 
-                elif text.lower() == "มาหอย":
+                elif text.lower() == "ทีม":
                     if msg.toType == 2:
                         group = line.getGroup(to)
                         group.preventedJoinByTicket = False
@@ -2290,7 +2293,7 @@ def lineBot(op):
                         ticket = line.reissueGroupTicket(to)
                         km.acceptGroupInvitationByTicket(to,format(str(ticket)))
                         time.sleep(0.01)
-                        km.sendMessage(msg.to,"คิกผี รายงานตัว")
+                        km.sendMessage(msg.to,"คิกผี รายงานตัว นะจ่ะๆ")
                         group.preventedJoinByTicket = True
                         line.updateGroup(group)
                         print ("คิกผีเข้า ")
@@ -2406,7 +2409,7 @@ def lineBot(op):
                                 pass
                                 print ("Remove Chat Kicker")
 
-                elif text.lower() == "หนีหอย":
+                elif text.lower() == "ไปหำ":
                     if msg._from in Family:
                         ki1.leaveGroup(msg.to)
                         ki2.leaveGroup(msg.to)
@@ -2425,10 +2428,16 @@ def lineBot(op):
                     if msg._from in Family:
                         gid = line.getGroupIdsJoined()
                         for i in gid:
-                            ki.leaveGroup(i)
-                            kk.leaveGroup(i)
-                            kc.leaveGroup(i)
-                            ke.leaveGroup(i)
+                            ki1.leaveGroup(i)
+                            ki2.leaveGroup(i)
+                            ki3.leaveGroup(i)
+                            ki4.leaveGroup(i)
+                            ki5.leaveGroup(i)
+                            ki6.leaveGroup(i)
+                            ki7.leaveGroup(i)
+                            ki8.leaveGroup(i)
+                            ki9.leaveGroup(i)
+                            ki10.leaveGroup(i)
                             km.leaveGroup(i)
                             print ("คิกออกทุกกลุ่ม")
                 elif "ชื่อ: " in text.lower():
@@ -2570,6 +2579,17 @@ def lineBot(op):
                         ki10.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
                         ki10.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
                         print ("Update Name")
+			
+                elif "ผีชื่อ: " in text.lower():
+                    if msg._from in Family:
+                        proses = text.split(": ")
+                        string = text.replace(proses[0] + ": ","")
+                        profile_A = km.getProfile()
+                        profile_A.displayName = string
+                        km.updateProfile(profile_A)
+                        km.sendMessage(msg.to,"เปลี่ยนชื่อแล้วเป็น " + string)
+                        km.sendMessage(msg.to,"ถูกใจข่อยหลายคักเด้อลูกพี่(◡‿◡✿) ")
+                        print ("Update Name")
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                 elif "ตัสคิก: " in text.lower():
                     if msg._from in Family:
@@ -2585,6 +2605,7 @@ def lineBot(op):
                         profile_H = ki8.getProfile()  
                         profile_I = ki9.getProfile()
                         profile_J = ki10.getProfile()
+                        profile_K = km.getProfile()
                         profile_A.statusMessage = string
                         profile_B.statusMessage = string
                         profile_C.statusMessage = string
@@ -2595,6 +2616,7 @@ def lineBot(op):
                         profile_H.statusMessage = string
                         profile_I.statusMessage = string
                         profile_J.statusMessage = string
+                        profile_K.statusMessage = string
                         ki1.updateProfile(profile_A)
                         ki2.updateProfile(profile_B)
                         ki3.updateProfile(profile_C)
@@ -2605,6 +2627,7 @@ def lineBot(op):
                         ki8.updateProfile(profile_H)
                         ki9.updateProfile(profile_I)
                         ki10.updateProfile(profile_J)
+                        km.updateProfile(profile_K)
                         line.sendMessage(msg.to,"Update Bio All Kicker to : " + string)
                         print ("Update Bio All Kicker")
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -3040,16 +3063,49 @@ def lineBot(op):
                             settings["checkPost"] = False
                             if settings["lang"] == "JP":
                                 line.sendMessage(to,"ปิดระบบเช็คโพสบนทามไลน์ ")
-                elif text.lower() == "เปลี่ยนรูป":
+                elif text.lower() == "1ดิส":
                     settings["changePictureProfile"] = True
-                    line.sendMessage(to, "ส่งรูปภาพลงมาได้เลยครับผม")
+                    ki1.sendMessage(to, "ลงรูปมาจ่ะ(◡‿◡✿) ")
+                elif text.lower() == "2ดิส":
+                    settings["changePictureProfile"] = True
+                    ki2.sendMessage(to, "ลงรูปมาจ่ะ(◡‿◡✿) ")
+                elif text.lower() == "3ดิส":
+                    settings["changePictureProfile"] = True
+                    ki3.sendMessage(to, "ลงรูปมาจ่ะ(◡‿◡✿) ")
+                elif text.lower() == "4ดิส":
+                    settings["changePictureProfile"] = True
+                    ki4.sendMessage(to, "ลงรูปมาจ่ะ(◡‿◡✿) ")
+                elif text.lower() == "5ดิส":
+                    settings["changePictureProfile"] = True
+                    ki5.sendMessage(to, "ลงรูปมาจ่ะ(◡‿◡✿) ")
+                elif text.lower() == "6ดิส":
+                    settings["changePictureProfile"] = True
+                    ki6.sendMessage(to, "ลงรูปมาจ่ะ(◡‿◡✿) ")
+                elif text.lower() == "7ดิส":
+                    settings["changePictureProfile"] = True
+                    ki7.sendMessage(to, "ลงรูปมาจ่ะ(◡‿◡✿) ")
+                elif text.lower() == "8ดิส":
+                    settings["changePictureProfile"] = True
+                    ki8.sendMessage(to, "ลงรูปมาจ่ะ(◡‿◡✿) ")
+                elif text.lower() == "9ดิส":
+                    settings["changePictureProfile"] = True
+                    ki9.sendMessage(to, "ลงรูปมาจ่ะ(◡‿◡✿) ")
+                elif text.lower() == "10ดิส":
+                    settings["changePictureProfile"] = True
+                    ki10.sendMessage(to, "ลงรูปมาจ่ะ(◡‿◡✿) ")
+                elif text.lower() == "ดิสผี":
+                    settings["changePictureProfile"] = True
+                    km.sendMessage(to, "ลงรูปมาจ่ะ(◡‿◡✿) ")
+                elif text.lower() == "เปลี่ยนดิส":
+                    settings["changePictureProfile"] = True
+                    line.sendMessage(to, "ลงรูปมาจ่ะ(◡‿◡✿) ")
                 elif text.lower() == "เปลี่ยนรูปกลุ่ม":
                     if msg.toType == 2:
                         if to not in settings["changeGroupPicture"]:
                             settings["changeGroupPicture"].append(to)
                         line.sendMessage(to, "ส่งรูปภาพลงมาไดเเลยครับผม")
-                elif text.lower() == "ดับไฟ":
-                    line.sendContact(to, "u1f41296217e740650e0448b96851a3e2',")
+ #               elif text.lower() == "ดับไฟ":
+  #                  line.sendContact(to, "u1f41296217e740650e0448b96851a3e2',")
 #===========≠===============เขียนโดย◇─•۞✟ℓℓஆՁゆຸ۞•─===========================#       
                 elif text.lower() == 'ลบรัน':
                     gid = line.getGroupIdsInvited()
@@ -3196,12 +3252,84 @@ def lineBot(op):
                         y += "\nDefinition: "+str(data["list"][0]["definition"])
                         y += "\nExample: "+str(data["list"][0]["example"])
                         line.sendMessage(to, str(y))
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             elif msg.contentType == 1:
                 if settings["changePictureProfile"] == True:
                     path = line.downloadObjectMsg(msg_id)
                     settings["changePictureProfile"] = False
                     line.updateProfilePicture(path)
-                    line.sendMessage(to, "ทำการแปลงโฉมเสร็จเรียบร้อย")
+                    line.sendMessage(to, "เปลี่ยนดิส")
+                    line.sendMessage(to, "สำเสร็จ แล้ว")
+            elif msg.contentType == 1:
+                if settings["changePictureProfile"] == True:
+                    path = ki1.downloadObjectMsg(msg_id)
+                    settings["changePictureProfile"] = False
+                    ki1.updateProfilePicture(path)
+                    ki1.sendMessage(to, "เปลี่ยนดิสแล้ว นะจ่ะ")
+                    ki1.sendMessage(to, "ถูกใจข่อยหลาย เด้อลูกพี่")
+            elif msg.contentType == 1:
+                if settings["changePictureProfile"] == True:
+                    path = ki2.downloadObjectMsg(msg_id)
+                    settings["changePictureProfile"] = False
+                    ki2.updateProfilePicture(path)
+                    ki2.sendMessage(to, "เปลี่ยนดิสแล้ว นะจ่ะ")
+                    ki2.sendMessage(to, "ถูกใจข่อยหลาย เด้อลูกพี่")
+            elif msg.contentType == 1:
+                if settings["changePictureProfile"] == True:
+                    path = ki3.downloadObjectMsg(msg_id)
+                    settings["changePictureProfile"] = False
+                    ki3.updateProfilePicture(path)
+                    ki3.sendMessage(to, "เปลี่ยนดิสแล้ว นะจ่ะ")
+                    ki3.sendMessage(to, "ถูกใจข่อยหลาย เด้อลูกพี่")
+            elif msg.contentType == 1:
+                if settings["changePictureProfile"] == True:
+                    path = ki4.downloadObjectMsg(msg_id)
+                    settings["changePictureProfile"] = False
+                    ki4.updateProfilePicture(path)
+                    ki4.sendMessage(to, "เปลี่ยนดิสแล้ว นะจ่ะ")
+                    ki4.sendMessage(to, "ถูกใจข่อยหลาย เด้อลูกพี่")
+            elif msg.contentType == 1:
+                if settings["changePictureProfile"] == True:
+                    path = ki5.downloadObjectMsg(msg_id)
+                    settings["changePictureProfile"] = False
+                    ki5.updateProfilePicture(path)
+                    ki5.sendMessage(to, "เปลี่ยนดิสแล้ว นะจ่ะ")
+                    ki5.sendMessage(to, "ถูกใจข่อยหลายเด้อ ลูกพี่")
+            elif msg.contentType == 1:
+                if settings["changePictureProfile"] == True:
+                    path = ki6.downloadObjectMsg(msg_id)
+                    settings["changePictureProfile"] = False
+                    ki6.updateProfilePicture(path)
+                    ki6.sendMessage(to, "เปลี่ยนดิสแล้ว นะจ่ะ")
+                    ki6.sendMessage(to, "ถูกใจข่อยหลายเด้อ ลูกพี่")
+            elif msg.contentType == 1:
+                if settings["changePictureProfile"] == True:
+                    path = ki7.downloadObjectMsg(msg_id)
+                    settings["changePictureProfile"] = False
+                    ki7.updateProfilePicture(path)
+                    ki7.sendMessage(to, "เปลี่ยนดิสแล้ว นะจ่ะ")
+                    ki7.sendMessage(to, "ถูกใจข่อยหลายเด้อ ลูกพี่")
+            elif msg.contentType == 1:
+                if settings["changePictureProfile"] == True:
+                    path = ki8.downloadObjectMsg(msg_id)
+                    settings["changePictureProfile"] = False
+                    ki8.updateProfilePicture(path)
+                    ki8.sendMessage(to, "เปลี่ยนดิสแล้ว นะจ่ะ")
+                    ki8.sendMessage(to, "ถูกใจข่อยหลายเด้อ ลูกพี่")
+            elif msg.contentType == 1:
+                if settings["changePictureProfile"] == True:
+                    path = ki9.downloadObjectMsg(msg_id)
+                    settings["changePictureProfile"] = False
+                    ki9.updateProfilePicture(path)
+                    ki9.sendMessage(to, "เปลี่ยนดิส แล้ว นะจ่ะ")
+                    ki9.sendMessage(to, "ถูกใจข่อยหลายเด้อ ลูกพี่")
+            elif msg.contentType == 1:
+                if settings["changePictureProfile"] == True:
+                    path = ki10.downloadObjectMsg(msg_id)
+                    settings["changePictureProfile"] = False
+                    ki10.updateProfilePicture(path)
+                    ki10.sendMessage(to, "เปลี่ยนดิสแล้วนะ จ่ะ")
+                    ki10.sendMessage(to, "ถูกใจขอยหลายเด้อ ลูกพี่")
                 if msg.toType == 2:
                     if to in settings["changeGroupPicture"]:
                         path = line.downloadObjectMsg(msg_id)
@@ -4976,7 +5104,7 @@ def lineBot(op):
                  return
              dan = line.getContact(op.param2)
              tgb = line.getGroup(op.param1)
-             line.sendMessage(op.param1,str(settings["kick"]) + "\nเฮ้ย {}, คือหยังมันโหดแท้วะΣ(っﾟДﾟ；)っ ".format(str(dan.displayName)))
+#             line.sendMessage(op.param1,str(settings["kick"]) + "\nเฮ้ย {}, คือหยังมันโหดแท้วะΣ(っﾟДﾟ；)っ ".format(str(dan.displayName)))
              line.sendContact(op.param1, op.param2)
              line.sendMessage(op.param1,"สเตตัส\n{}".format(str(dan.statusMessage)))
              line.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
