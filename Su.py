@@ -1022,12 +1022,15 @@ def lineBot(op):
                     settings["unsendMessage"] = False
                     line.sendMessage(to, "unsendMessage disabled.")
 #==============================================================================#
+                elif text.lower() == 'คท':
+                    sendMessageWithMention(to, lineMID)
+                    line.sendContact(to, lineMID)
                 elif text.lower() == 'Me':
                     sendMessageWithMention(to, lineMID)
                     line.sendContact(to, lineMID)
                 elif text.lower() == 'ผส':
                     sendMessageWithMention(to, lineMID)
-                    line.sendContact(to, "u8f4b03bd2f026a30dbff351d5a08dfc3")
+                    line.sendContact(to, "ud3a6bfda60a956cca0f58f2a14bae808")
                 elif text.lower() == 'ไอดี':
                     line.sendMessage(msg.to,"[MID]\n" +  lineMID)
                 elif text.lower() == 'คอมเม้น':
