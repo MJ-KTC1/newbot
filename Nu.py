@@ -12,24 +12,24 @@ from googletrans import Translator
 #==============================================================================#
 botStart = time.time()
 #==============================================================================#
-#line = LINE()
+line = LINE('')
 #line = LINE("เมล","พาส")
 #line = LINE()
 #line.log("Auth Token : " + str(line.authToken))
 #line.log("Timeline Token : " + str(line.tl.channelAccessToken))
 
 #~~~~~~~~~~~~~~~~~~~~คิกผี~~~~~~~~~~~~~~~~~~~~`
-line = LINE()
-ki1 = LINE()
-ki2 = LINE()
-ki3 = LINE()
-ki4 = LINE()
-ki5 = LINE()
-ki7 = LINE()
-ki8 = LINE()
-ki9 = LINE()
-ki10 = LINE()
-km = LINE()
+ki1 = LINE('nunu4844@gmail.com','sunu2018')
+ki2 = LINE('su3nu2018@gmail.com','sunu2018,)
+ki3 = LINE('su2nu2018@gmail.com','sunu2018,)
+ki4 = LINE('su6nu2018@gmail.com','sunu2018,)
+ki5 = LINE('su15nu2018@gmail.com','sunu2018,)
+ki6 = LINE('su5nu2018@gmail.com','sunu2018,)
+ki7 = LINE('su12nu2018@gmail.com','sunu2018,)
+ki8 = LINE('nu6bot2018@gmail.com','sunu2018,)
+ki9 = LINE('su4nu2018@gmail.com','sunu2018,)
+ki10 = LINE('su7nu2018@gmail.com','sunu2018,)
+km = LINE('su21nu2018@gmail.com','sunu2018susu,)
 #km.log("Auth Token : " + str(ke.authToken))
 #km.log("Timeline Token : " + str(ke.tl.channelAccessToken))
 print ("Login Succes")
@@ -883,7 +883,7 @@ def lineBot(op):
                 elif text.lower() == 'ข้อมูล':
                     try:
                         arr = []
-                        owner = "u8f4b03bd2f026a30dbff351d5a08dfc3"
+                        owner = "ud3a6bfda60a956cca0f58f2a14bae808"
                         creator = line.getContact(owner)
                         contact = line.getContact(lineMID)
                         grouplist = line.getGroupIdsJoined()
