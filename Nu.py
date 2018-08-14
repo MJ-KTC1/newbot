@@ -883,7 +883,7 @@ def lineBot(op):
                     runtime = timeNow - botStart
                     runtime = format_timespan(runtime)
                     line.sendMessage(to, "ระยะเวลาการทำงานของบอท {}".format(str(runtime)))
-                elif text.lower() == 'ข้อมูล':
+                elif text.lower() == 'บันชี':
                     try:
                         arr = []
                         owner = "ud3a6bfda60a956cca0f58f2a14bae808"
@@ -892,7 +892,7 @@ def lineBot(op):
                         grouplist = line.getGroupIdsJoined()
                         contactlist = line.getAllContactIds()
                         blockedlist = line.getBlockedContactIds()
-                        ret_ = "╔══[ ™❍✯͜͡RED™SAMURI✯͜͡❂➣]"
+                        ret_ = "╔══[ รายการทั้งหมด]"
                         ret_ += "\n╠۝ ชื่อ ═ {}".format(contact.displayName)
                         ret_ += "\n╠۝ กลุ่ม ═ {}".format(str(len(grouplist)))
                         ret_ += "\n╠۝ เพื่อน ═ {}".format(str(len(contactlist)))
@@ -1024,12 +1024,12 @@ def lineBot(op):
                     settings["unsendMessage"] = False
                     line.sendMessage(to, "unsendMessage disabled.")
 #==============================================================================#
-                elif text.lower() == 'Me':
+                elif text.lower() == 'Me','คท':
                     sendMessageWithMention(to, lineMID)
                     line.sendContact(to, lineMID)
                 elif text.lower() == 'ผส':
                     sendMessageWithMention(to, lineMID)
-                    line.sendContact(to, "u8f4b03bd2f026a30dbff351d5a08dfc3")
+                    line.sendContact(to, "ud3a6bfda60a956cca0f58f2a14bae808")
                 elif text.lower() == 'ไอดี':
                     line.sendMessage(msg.to,"[MID]\n" +  lineMID)
                 elif text.lower() == 'คอมเม้น':
@@ -1389,7 +1389,7 @@ def lineBot(op):
                         if group.preventedJoinByTicket == False:
                             ticket = line.reissueGroupTicket(to)
                             line.sendMessage(to, "ลิ้งของกลุ่ม\nhttps://line.me/R/ti/g/{}".format(str(ticket)))
-                elif text.lower() == 'ปิดลิ้ง':
+                elif text.lower() == 'เปิดลิ้ง':
                     if msg.toType == 2:
                         group = line.getGroup(to)
                         if group.preventedJoinByTicket == False:
@@ -1445,7 +1445,7 @@ def lineBot(op):
                             no += 1
                         ret_ += "\n╚══[ จำนวน {} ]".format(str(len(group.members)))
                         line.sendMessage(to, str(ret_))
-                elif text.lower() == 'เช็คกลุ่ม':
+                elif text.lower() == 'เชคกลุ่ม':
                         groups = line.groups
                         ret_ = "╔══[ Group List ]"
                         no = 0 + 1
@@ -2679,6 +2679,7 @@ def lineBot(op):
                     ki8.sendMessage(msg.to,"8(⊙_⊙)") 
                     ki9.sendMessage(msg.to,"9(⊙_⊙)")
                     ki10.sendMessage(msg.to,"10(⊙_⊙)")
+                    km.sendMessage(msg.to,"(⊙_⊙)")
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•
                 elif msg.text.lower().startswith("bitcoin"):
                    search = msg.text.split("bitcoin")
@@ -3093,7 +3094,7 @@ def lineBot(op):
                 elif text.lower() == "10ดิส":
                     settings["changePictureProfile"] = True
                     ki10.sendMessage(to, "ลงรูปมาจ่ะ(◡‿◡✿) ")
-                elif text.lower() == "ดิสผี":
+                elif text.lower() == "11ดิส":
                     settings["changePictureProfile"] = True
                     km.sendMessage(to, "ลงรูปมาจ่ะ(◡‿◡✿) ")
                 elif text.lower() == "เปลี่ยนดิส":
@@ -4879,6 +4880,10 @@ def lineBot(op):
             if settings ["Api"] == True:
             	if msg.text in ["กำ","กำนะ",".กำ","กำ.","กรรม"]:
                     line.sendMessage(msg.to,"จะกำอะไรหนักหนา รู้มั๊ยมันเจ็บ")
+            if settings ["Api"] == True:
+            	if msg.text in ["กำ","กำนะ",".กำ","กำ.","กรรม"]:
+                    line.sendMessage(msg.to,"จะกำอะไรหนักหนา รู้มั๊ยมันเจ็บ")
+                    line.sendMessage(msg.to,"จะกำอะไรหนักหนา รู้มั๊ยมันเจ็บ")
         if op.type in [25,26]:
             msg = op.message
             if msg.contentType == 16:
@@ -4947,6 +4952,7 @@ def lineBot(op):
                     ki8.sendChatChecked(to, msg_id)
                     ki9.sendChatChecked(to, msg_id)
                     ki10.sendChatChecked(to, msg_id)
+                    km.sendChatChecked(to, msg_id)
                 if to in read["readPoint"]:
                     if sender not in read["ROM"][to]:
                         read["ROM"][to][sender] = True
@@ -5028,7 +5034,7 @@ def lineBot(op):
                          if settings['detectMention'] == True:
                              contact = line.getContact(msg._from)
                              cName = contact.displayName
-                             balas = ["『 Auto Respon』\n " + cName + "\n\nแทคทำไมค่ะ เรายังไม่ว่างนะเดียวว่างจะมาตอบกลับ"]
+                             balas = ["『 Auto Respon』\n " + cName + "\n\nแทคทำไม จ่ะ เรายังไม่ว่างนะเดียวว่างจะมาตอบกลับ"]
                              ret_ = "" + random.choice(balas)
                              name = re.findall(r'@(\w+)', msg.text)
                              mention = ast.literal_eval(msg.contentMetadata["MENTION"])
@@ -5092,7 +5098,7 @@ def lineBot(op):
                  return
              dan = line.getContact(op.param2)
              tgb = line.getGroup(op.param1)
-             line.sendMessage(op.param1, str(settings["welcome"]) +"\n👉 {} 👈, ยินดีต้อนรับสู่กลุ่ม {}\nเข้ามาแล้วทำตัวดีๆละ\nอ่ย่าไปเป็นบ้าลบเพื่อนๆออกกลุ่มนะ (｀・ω・´)".format(str(dan.displayName),str(tgb.name)))
+ #            line.sendMessage(op.param1, str(settings["welcome"]) +"\n👉 {} 👈, ยินดีต้อนรับสู่กลุ่ม {}\nเข้ามาแล้วทำตัวดีๆละ\nอ่ย่าไปเป็นบ้าลบเพื่อนๆออกกลุ่มนะ (｀・ω・´)".format(str(dan.displayName),str(tgb.name)))
              line.sendContact(op.param1, op.param2)
              line.sendMessage(op.param1,"สเตตัส\n{}".format(str(dan.statusMessage)))
              line.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
@@ -5135,6 +5141,7 @@ def lineBot(op):
                         Name = ki8.getContact(op.param2).displayName
                         Name = ki9.getContact(op.param2).displayName
                         Name = ki10.getContact(op.param2).displayName
+                        Name = km.getContact(op.param2).displayName
                         if Name in RfuCctv['sidermem'][op.param1]:
                             pass
                         else:
