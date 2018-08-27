@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from gyevha import *
+from linepy import *
 from datetime import datetime
 from time import sleep
 from bs4 import BeautifulSoup
@@ -8,46 +8,32 @@ from humanfriendly import format_timespan, format_size, format_number, format_le
 import time, random, sys, json, codecs, threading, glob, re, string, os, requests, subprocess, six, ast, pytz, urllib, urllib.parse
 from gtts import gTTS
 from googletrans import Translator
- 
-# Ini Untuk Login Via Lik Dan Via Emal
-#gye = LINE()
-#gye = LINE("Email","Password")
-#gye.log("Auth Token : " + str(gye.authToken))
-#channelToken = gye.getChannelResult()
-#gye.log("Channel Token : " + str(channelToken))
-
-# Silahkan Edit Sesukamu
-# Asalkan Rapih Dan Respon
-# jika ingin login Via qr Ganti Saja
-# Atau Login Via Emal
-# Mudeng Orang kalo Ra Mudeng
-# Sungguh Terlalu
-# Jangan Lupa Add Admin 
-# id Line ( aisyagye )
+#==============================================================================#
+botStart = time.time()
 #==============================================================================#
 botStart = time.time()
 #kalo mau login code qr disini pake
-gye = LINE()
+gye = LINE("sunu0734@gmail.com","sunu2018")
 gye.log("Auth Token : " + str(gye.authToken))
 channelToken = gye.getChannelResult()
 gye.log("Channel Token : " + str(channelToken))
 
-ais = LINE()
+ais = LINE("bot5su2019@gmail.com","nunu_kap2019")
 ais.log("Auth Token : " + str(ais.authToken))
 channelToken = ais.getChannelResult()
 ais.log("Channel Token : " + str(channelToken))
 
-ki2 = LINE()
+ki2 = LINE("bot6su2019@gmail.com","nunu_kap2019)
 ki2.log("Auth Token : " + str(ki2.authToken))
 channelToken = ki2.getChannelResult()
 ki2.log("Channel Token : " + str(channelToken))
 
-ki3 = LINE()
+ki3 = LINE("su21nu2018@gmail.com","sunu2018susu")
 ki3.log("Auth Token : " + str(ki3.authToken))
 channelToken = ki3.getChannelResult()
 ki3.log("Channel Token : " + str(channelToken))
 
-ki4 = LINE()
+ki4 = LINE("susu2bot2018@gmail.com","nunu_kap2019)
 ki4.log("Auth Token : " + str(gye.authToken))
 channelToken = ki4.getChannelResult()
 ki4.log("Channel Token : " + str(channelToken))
@@ -63,17 +49,16 @@ ki4.log("Channel Token : " + str(channelToken))
 #ki4 = LINE("EtWyu42OHWKSaxPHY3yd.jTri3xzV4E2Z1xvWxjTrRq.s1oy5gbYMT2haZV7l6yzV0bp5gONcnu+bGSSJ1mbT0c=")
 
 KAC = [gye,ais,ki2,ki3,ki4]
-GUE = [ais,ki2,ki3,ki4] # ini jangan luh hapus peak ini fungsi Ciak alias kick
-#maksudnya agar bot sb/induk gak ikutan nge kick Mudeng ora
+GUE = [ais,ki2,ki3,ki4]
 gyeMID = gye.profile.mid
 aisMID = ais.profile.mid
 ki2MID = ki2.profile.mid
 ki3MID = ki3.profile.mid
 ki4MID = ki4.profile.mid
 Bots = [gyeMID,aisMID,ki2MID,ki3MID,ki4MID] #ini jangan dinrubah Gunanya agar bot tidak saling kick
-creator = ["u104e95aaefb53cf411f77353f6a96ece"]
-Owner = ["u104e95aaefb53cf411f77353f6a96ece"]
-admin = ["u104e95aaefb53cf411f77353f6a96ece"]
+creator = ["ud3a6bfda60a956cca0f58f2a14bae808"]
+Owner = ["ud3a6bfda60a956cca0f58f2a14bae808"]
+admin = ["ud3a6bfda60a956cca0f58f2a14bae808"]
 
 gyeProfile = gye.getProfile()
 aisProfile = ais.getProfile()
@@ -81,7 +66,7 @@ ki2Profile = ki2.getProfile()
 ki2Profile = ki3.getProfile()
 ki2Profile = ki4.getProfile()
 
-lineSettings = gye.getSettings()
+gyeSettings = gye.getSettings()
 aisSettings = ais.getSettings()
 ki2Settings = ki2.getSettings()
 ki3Settings = ki3.getSettings()
@@ -149,10 +134,10 @@ def sendMessageWithMention(to, mid):
         
 def helpmessage():
     helpMessage = "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ GYEVHA BOTS" + "\n" + \
+                  "║͜͡☆➣༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐" + "\n" + \
                   "╰════════╬♥╬════════╯" + "\n" + \
                   "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ HELP" + "\n" + \
+                  "║͜͡☆➣วิธีใช้งานโดย ย่อ" + "\n" + \
                   "╰════════╬♥╬════════╯" + "\n" + \
                   "╭════════╬♥╬════════╮" + "\n" + \
                   "║͜͡☆➣ Help 1" + "\n" + \
@@ -170,16 +155,16 @@ def helpmessage():
                   "║͜͡☆➣ Kickallmember" + "\n" + \
                   "╰════════╬♥╬════════╯" + "\n" + \
                   "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ GYEVHA BOTS" + "\n" + \
+                  "║͜͡☆➣༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐" + "\n" + \
                   "╰════════╬♥╬════════╯"
     return helpMessage
     
 def helptexttospeech():
     helpTextToSpeech =   "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ GYEVHA BOTS" + "\n" + \
+                  "║͜͡☆➣ ༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐" + "\n" + \
                   "╰════════╬♥╬════════╯" + "\n" + \
                   "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ HELP 2" + "\n" + \
+                  "║͜͡☆➣ วิธีใช้งาน 2" + "\n" + \
                   "╰════════╬♥╬════════╯" + "\n" + \
                   "╭════════╬♥╬════════╮" + "\n" + \
                   "║͜͡☆➣ Help 1" + "\n" + \
@@ -212,16 +197,16 @@ def helptexttospeech():
                   "║͜͡☆➣ Lurking" + "\n" + \
                   "╰════════╬♥╬════════╯" + "\n" + \
                   "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ GYEVHA BOTS" + "\n" + \
+                  "║͜͡☆➣༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐" + "\n" + \
                   "╰════════╬♥╬════════╯"
     return helpTextToSpeech
     
 def helptranslate():
     helpTranslate =    "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ GYEVHA BOTS" + "\n" + \
+                  "║͜͡☆➣༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐ " + "\n" + \
                   "╰════════╬♥╬════════╯" + "\n" + \
                   "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ HELP 3" + "\n" + \
+                  "║͜͡☆➣ วิธีใช้งาน 3" + "\n" + \
                   "╰════════╬♥╬════════╯" + "\n" + \
                   "╭════════╬♥╬════════╮" + "\n" + \
                   "║͜͡☆➣ AdminLit" + "\n" + \
@@ -262,7 +247,7 @@ def helptranslate():
                   "║͜͡☆➣ KickAllMember"+ "\n" + \
                   "╰════════╬♥╬════════╯" + "\n" + \
                   "╭════════╬♥╬════════╮" + "\n" + \
-                  "║͜͡☆➣ GYEVHA BOTS" + "\n" + \
+                  "║͜͡☆➣༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐" + "\n" + \
                   "╰════════╬♥╬════════╯"
     return helpTranslate
 #==============================================================================#
@@ -355,7 +340,7 @@ def lineBot(op):
                 if text.lower() == 'help':
                     helpMessage = helpmessage()
                     gye.sendMessage(to, str(helpMessage))
-                    gye.sendContact(to, "u104e95aaefb53cf411f77353f6a96ece")
+                    gye.sendContact(to, "ud3a6bfda60a956cca0f58f2a14bae808")
                     gye.sendMessage(to,"█░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█\n█░░║║║╠─║─║─║║║║║╠─░░█\n█░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░█")
                 elif text.lower() == 'help 1':
                     helpTextToSpeech = helptexttospeech()
@@ -384,7 +369,7 @@ def lineBot(op):
                 elif text.lower() == 'about':
                     try:
                         arr = []
-                        owner = "u104e95aaefb53cf411f77353f6a96ece"
+                        owner = "ud3a6bfda60a956cca0f58f2a14bae808"
                         creator = gye.getContact(owner)
                         contact = gye.getContact(gyeMID)
                         grouplist = gye.getGroupIdsJoined()
@@ -403,7 +388,7 @@ def lineBot(op):
                     except Exception as e:
                         gye.sendMessage(msg.to, str(e))
 #==============================================================================#
-                elif text.lower() == 'status':
+                elif text.lower() == 'set':
                     try:
                         ret_ = "╭════════╬♥╬════════╮\n ║͜͡☆➣ ♥ Status Bots ♥\n ╰════════╬♥╬════════╯\n ╭════════╬♥╬════════╮\n"
                         if settings["protect"] == True: ret_ += "║͜͡☆➣ Protect ✅"
@@ -636,30 +621,30 @@ def lineBot(op):
                             else:
                                 gye.sendMessage(msg.to,"➲ Protection Cancel Invite Already Off")
 #-------------------------------------------------------------------------------
-                elif text.lower() == 'pro on':
+                elif text.lower() == 'เปิดป้องกัน':
                         settings["protect"] = True
                         settings["qrprotect"] = True
                         settings["inviteprotect"] = True
                         settings["cancelprotect"] = True
                         settings["join link"] = True
-                        gye.sendMessage(msg.to,"Join link on")
-                        gye.sendMessage(msg.to,"Qrprotect on")
-                        gye.sendMessage(msg.to,"Protect on")
-                        gye.sendMessage(msg.to,"Inviteprotect on")
-                        gye.sendMessage(msg.to,"Cancelprotect on")
-                        gye.sendMessage(msg.to,"➲ All Protect Set To On")
+                        random.sendMessage(msg.to,"Join link on")
+                        random.sendMessage(msg.to,"Qrprotect on")
+                        random.sendMessage(msg.to,"Protect on")
+                        random.sendMessage(msg.to,"Inviteprotect on")
+                        random.sendMessage(msg.to,"Cancelprotect on")
+                        random.sendMessage(msg.to,"➲ All Protect Set To On")
                         		            
-                elif text.lower() == 'pro off':
+                elif text.lower() == 'ปิดป้องกัน':
              #       if msg._from in Owner:
                         settings["protect"] = False
                         settings["qrprotect"] = False
                         settings["inviteprotect"] = False
                         settings["cancelprotect"] = False
-                        gye.sendMessage(msg.to,"Qrprotect Off")
-                        gye.sendMessage(msg.to,"Protect Off")
-                        gye.sendMessage(msg.to,"Inviteprotect Off")
-                        gye.sendMessage(msg.to,"Cancelprotect Off")
-                        gye.sendMessage(msg.to,"➲ All Protect Set To Modar")
+                        random.sendMessage(msg.to,"Qrprotect Off")
+                        random.sendMessage(msg.to,"Protect Off")
+                        random.sendMessage(msg.to,"Inviteprotect Off")
+                        random.sendMessage(msg.to,"Cancelprotect Off")
+                        random.sendMessage(msg.to,"➲ All Protect Set To Modar")
             #        else:
              #           gye.sendMessage(msg.to,"Just for Owner")
 #-------------------------------------------------------------------------------
@@ -716,7 +701,7 @@ def lineBot(op):
                         ki2.sendContact(to, ki2MID)
                         ki3.sendContact(to, ki3MID)
                         ki4.sendContact(to, ki4MID)
-                elif text.lower() in ["balik"]:    
+                elif text.lower() in ["หนีหอย"]:    
                     #gye.leaveGroup(msg.to)
                     ais.leaveGroup(msg.to)
                     ki2.leaveGroup(msg.to)
@@ -728,7 +713,7 @@ def lineBot(op):
                     ki2.leaveGroup(msg.to)
                     ki3.leaveGroup(msg.to)
                     ki4.leaveGroup(msg.to)      
-                elif text.lower() in ["halo"]:    
+                elif text.lower() in ["มาหอย"]:    
                     G = gye.getGroup(msg.to)
                     ginfo = gye.getGroup(msg.to)
                     G.preventedJoinByTicket = False
@@ -739,11 +724,11 @@ def lineBot(op):
                     ki2.acceptGroupInvitationByTicket(msg.to,Ticket)
                     ki3.acceptGroupInvitationByTicket(msg.to,Ticket)
                     ki4.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    G = gye.getGroup(msg.to)
+                    G = random.getGroup(msg.to)
                     G.preventedJoinByTicket = True
-                    gye.updateGroup(G)
+                    random.updateGroup(G)
                     G.preventedJoinByTicket(G)
-                    gye.updateGroup(G)
+                    random.updateGroup(G)
                 
                 elif text.lower() == 'me':
                     sendMessageWithMention(to, gyeMID)
@@ -1104,12 +1089,12 @@ def lineBot(op):
                 elif text.lower() == 'tag':
                     group = gye.getGroup(msg.to)
                     nama = [contact.mid for contact in group.members]
-                    k = len(nama)//100
+                    k = len(nama)//20
                     for a in range(k+1):
                         txt = u''
                         s=0
                         b=[]
-                        for i in group.members[a*100 : (a+1)*100]:
+                        for i in group.members[a*20 : (a+1)*20]:
                             b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
                             s += 7
                             txt += u'@Alin \n'
