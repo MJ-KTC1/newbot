@@ -307,7 +307,7 @@ def sendMessageWithMention(to, lineMID):
         logError(error)
  
 def myhelp():
-    myHelp = "✰「  SELFBOT 🌸ℓຫຼี้छՃิ🌸  」✰   " + "\n" \
+    myHelp = "✰「༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐」✰   " + "\n" \
                   "🍭「บัญชี」" + "\n" + \
                   "🍭「คำสั่ง1-5」วิทีใช้งานมี5คำสั่ง" + "\n" + \
                   "🍭「Languange」" + "\n" + \
@@ -442,14 +442,14 @@ def myhelp():
                   "🍭「Tag1-2」ดูข้อความล่าสุด" + "\n" + \
                   "🌧🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦" + "\n" + \
                   "۞~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~۞" + "\n" + \
-                  "❄「─•۞✟ℓℓஆՁՃิ۞•─」❄" + "\n" + \
-                  "❄「@ID. http://line.me/ti/p/p-susu000nunu 」❄" + "\n" + \
+                  "❄「༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐」❄" + "\n" + \
+                  "❄「 http://line.me/ti/p/p-nunu_kap123 」❄" + "\n" + \
                   "❄════"
     return myHelp
 
     
 def helpset():
-    helpSet = "╭════[─•۞✟ℓℓஆՁゆຸ۞•─] " + "\n" + \
+    helpSet = "╭════[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐] " + "\n" + \
     "║แชร์เปิด/ปิด]" + "\n" + \
     "║สแปม]" + "\n" + \
     "║อัฟวีดีโอ]" + "\n" + \
@@ -2519,7 +2519,7 @@ def lineBot(op):
                             ki4.leaveGroup(i) 
                             print ("Kicker Leave All group")
 
-                elif "ชื่อใหม่: " in text.lower():
+                elif "ชื่อ: " in text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
@@ -2529,7 +2529,7 @@ def lineBot(op):
                         line.sendMessage(msg.to,"Update to " + string)
                         print ("Update Name")
 
-                elif "ตัสใหม่: " in msg.text.lower():
+                elif "ตัส: " in msg.text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
@@ -2737,48 +2737,48 @@ def lineBot(op):
                 elif text.lower() == "รายงาน":
                     if msg._from in Family:
                         profile = ki1.getProfile()
-                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
+                        text = profile.displayName + "༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐ [ 1 ]\nรายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki1.sendMessage(to, text)                                
                         profile = ki2.getProfile()
-                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
+                        text = profile.displayName + "༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐ [ 2 ]\nรายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki2.sendMessage(to, text)                                
                         profile = ki3.getProfile()
-                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
+                        text = profile.displayName + "༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐ [ 3 ]\nรายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki3.sendMessage(to, text)
                         profile = ki4.getProfile()
-                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
+                        text = profile.displayName + "༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐ [ 4 ]\nรายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki4.sendMessage(to, text)                                
                         profile = ki5.getProfile()
-                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
+                        text = profile.displayName + "༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐ [ 5 ]\nรายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki5.sendMessage(to, text)                                
                         profile = ki6.getProfile()
-                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
+                        text = profile.displayName + "༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐ [ 6 ]\nรายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki6.sendMessage(to, text)
                         profile = ki7.getProfile()
-                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
+                        text = profile.displayName + "༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐ [ 7 ]\nรายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki7.sendMessage(to, text)
                         profile = ki8.getProfile()
-                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
+                        text = profile.displayName + "༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐ [ 8 ]\nรายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki8.sendMessage(to, text)                                
                         profile = ki9.getProfile()
-                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
+                        text = profile.displayName + "༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐ [ 9 ]\nรายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki9.sendMessage(to, text)                                
                         profile = ki10.getProfile()
-                        text = profile.displayName + "รายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
+                        text = profile.displayName + "༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐ [ 10 ]\nรายงานตัว\nเจ้าค่ะ (◡‿◡✿) "
                         ki10.sendMessage(to, text)
                         print ("Kicker Respon")
 
                 elif msg.text in ["บอท"]:
-                    ki1.sendMessage(msg.to,"1(⊙_⊙)")
-                    ki2.sendMessage(msg.to,"2(⊙_⊙)")
-                    ki3.sendMessage(msg.to,"3(⊙_⊙)")
-                    ki4.sendMessage(msg.to,"4(⊙_⊙)")   
-                    ki5.sendMessage(msg.to,"5(⊙_⊙)")
-                    ki6.sendMessage(msg.to,"6(⊙_⊙)")
-                    ki7.sendMessage(msg.to,"5(⊙_⊙)")
-                    ki8.sendMessage(msg.to,"8(⊙_⊙)") 
-                    ki9.sendMessage(msg.to,"9(⊙_⊙)")
-                    ki10.sendMessage(msg.to,"10(⊙_⊙)")
+                    ki1.sendMessage(msg.to,"[เรียกหา พ่อง]\n1(⊙_⊙)")
+                    ki2.sendMessage(msg.to,"[เรียกหา พ่อง]\n2(⊙_⊙)")
+                    ki3.sendMessage(msg.to,"[เรียกหา พ่อง]\n3(⊙_⊙)")
+                    ki4.sendMessage(msg.to,"[เรียกหา พ่อง]\n4(⊙_⊙)")   
+                    ki5.sendMessage(msg.to,"[เรียกหา พ่อง]\n5(⊙_⊙)")
+                    ki6.sendMessage(msg.to,"[เรียกหา พ่อง]\n6(⊙_⊙)")
+                    ki7.sendMessage(msg.to,"[เรียกหา พ่อง]\n7(⊙_⊙)")
+                    ki8.sendMessage(msg.to,"[เรียกหา พ่อง]\n8(⊙_⊙)") 
+                    ki9.sendMessage(msg.to,"[เรียกหา พ่อง]\n9(⊙_⊙)")
+                    ki10.sendMessage(msg.to,"[เรียกหา พ่อง]\n10(⊙_⊙)")
                 elif msg.text.lower().startswith("bitcoin"):
                    search = msg.text.split("bitcoin")
                    with requests.session() as web:
