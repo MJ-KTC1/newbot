@@ -76,9 +76,11 @@ ki8MID = ki8.profile.mid
 ki8Profile = ki8.getProfile()
 ki8Settings = ki8.getSettings()
 
+
 ki9MID = ki9.profile.mid
 ki9Profile = ki9.getProfile()
 ki9Settings = ki9.getSettings()
+
 
 ki10MID = ki10.profile.mid
 ki10Profile = ki10.getProfile()
