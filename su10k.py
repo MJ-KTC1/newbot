@@ -18,56 +18,25 @@ from googletrans import Translator
 #==============================================================================#
 botStart = time.time()
 #==============================================================================#
-#line = LINE()
-#line = LINE("เมล","พาส")
-line = LINE('sunu0734@gmail.com','sunu2018')
-line.log("Auth Token : " + str(line.authToken))
-line.log("Timeline Token : " + str(line.tl.channelAccessToken))
-
-
-ki1 = LINE('nunu4844@gmail.com','sunu2018')
-ki1.log("Auth Token : " + str(ki1.authToken))
-ki1.log("Timeline Token : " + str(ki1.tl.channelAccessToken))
-
-ki2 = LINE('su3nu2018@gmail.com','sunu2018')
-ki2.log("Auth Token : " + str(ki2.authToken))
-ki2.log("Timeline Token : " + str(ki2.tl.channelAccessToken))
-
-ki3 = LINE('su2nu2018@gmail.com','sunu2018')
-ki3.log("Auth Token : " + str(ki3.authToken))
-ki3.log("Timeline Token : " + str(ki3.tl.channelAccessToken))
-
-ki4 = LINE('su6nu2018@gmail.com','sunu2018')
-ki4.log("Auth Token : " + str(ki4.authToken))
-ki4.log("Timeline Token : " + str(ki4.tl.channelAccessToken))
-
-
-ki5 = LINE('su15nu2018@gmail.com','sunu2018')
-ki5.log("Auth Token : " + str(ki5.authToken))
-ki5.log("Timeline Token : " + str(ki5.tl.channelAccessToken))
-
-ki6 = LINE('su5nu2018@gmail.com','sunu2018')
-ki6.log("Auth Token : " + str(ki6.authToken))
-ki6.log("Timeline Token : " + str(ki6.tl.channelAccessToken))
-
-ki7 = LINE('su12nu2p18@gmail.com','sunu2018')
-ki7.log("Auth Token : " + str(ki7.authToken))
-ki7.log("Timeline Token : " + str(ki7.tl.channelAccessToken))
-
-ki8 = LINE('nu6bot2018@gmail.com','sunu2018')
-ki8.log("Auth Token : " + str(ki8.authToken))
-ki8.log("Timeline Token : " + str(ki8.tl.channelAccessToken))
-
-
-ki9 = LINE('su4nu2018@gmail.com','sunu2018')
-ki9.log("Auth Token : " + str(ki9.authToken))
-ki9.log("Timeline Token : " + str(ki9.tl.channelAccessToken))
-
-
-ki10 = LINE('su7nu2018@gmail.com','sunu2018')
-ki10.log("Auth Token : " + str(ki10.authToken))
-ki10.log("Timeline Token : " + str(ki10.tl.channelAccessToken))
-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+line = LINE()
+#line = LINE("sunu0734@gmail.com","sunu2018")
+print ("=ล็อคอินเชลแล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
+ki1 = LINE("su4nu2018@gmail.com","sunu2018")
+print ("=ล็อคอินคิก1แล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
+ki2 = LINE("bot1su2019@gmail.com","nunu_kap2019")
+print ("=ล็อคอินคิก2แล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
+ki3 = LINE("bot2su2019@gmail.com","nunu_kap2019")
+print ("=ล็อคอินคิก3แล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
+ki4 = LINE("bot3su2019@gmail.com","nunu_kap2019")
+print ("=ล็อคอินคิก4แล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
+ki5 = LINE("bot4su2019@gmail.com","nunu_kap2019")
+print ("=ล็อคอินคิก5แล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
+ki6 = LINE("bot5su2019@gmail.com","nunu_kap2019")
+print ("=ล็อคอินคิก6แล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
+ki7 = LINE("bot6su2019@gmail.com","nunu_kap2019")
+print ("=ล็อคอินคิก7แล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
+ki8 = LINE("susu2bot2018@gmail.com","nunu_kap2019")
 
 print ("Login Succes")
 
@@ -133,16 +102,16 @@ settings = json.load(settingsOpen)
 Rfu = [line,ki1,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,ki10]
 Exc = [ki1,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,ki10]
 lineMID = line.getProfile().mid
-kiMID = ki1.getProfile().mid
-kkMID = ki2.getProfile().mid
-kcMID = ki3.getProfile().mid
-kcMID = ki4.getProfile().mid
-kiMID = ki5.getProfile().mid
-kkMID = ki6.getProfile().mid
-kcMID = ki7.getProfile().mid
-kcMID = ki8.getProfile().mid
-kiMID = ki9.getProfile().mid
-kkMID = ki10.getProfile().mid
+ki1MID = ki1.getProfile().mid
+ki2MID = ki2.getProfile().mid
+ki3MID = ki3.getProfile().mid
+ki4MID = ki4.getProfile().mid
+ki5MID = ki5.getProfile().mid
+ki6MID = ki6.getProfile().mid
+ki7MID = ki7.getProfile().mid
+ki8MID = ki8.getProfile().mid
+ki9MID = ki9.getProfile().mid
+ki10MID = ki10.getProfile().mid
 bot1 = line.getProfile().mid
 RfuBot=[lineMID,ki1MID,ki2MID,ki3MID,ki4MID,ki5MID,ki6MID,ki7MID,ki8MID,ki9MID,ki10MID]
 Family=["ud3a6bfda60a956cca0f58f2a14bae808",lineMID,ki1MID,ki2MID,ki3MID,ki4MID,ki5MID,ki6MID,ki7MID,ki8MID,ki9MID,ki10MID,]
@@ -343,7 +312,7 @@ def sendMessageWithMention(to, lineMID):
         logError(error)
  
 def myhelp():
-    myHelp = "✰「  SELFBOT 🌸ℓຫຼี้छՃิ🌸  」✰   " + "\n" \
+    myHelp = "✰「༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐」✰   " + "\n" \
                   "🍭「บัญชี」" + "\n" + \
                   "🍭「คำสั่ง1-5」วิทีใช้งานมี5คำสั่ง" + "\n" + \
                   "🍭「Languange」" + "\n" + \
@@ -478,14 +447,14 @@ def myhelp():
                   "🍭「Tag1-2」ดูข้อความล่าสุด" + "\n" + \
                   "🌧🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦" + "\n" + \
                   "۞~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~۞" + "\n" + \
-                  "❄「─•۞✟ℓℓஆՁՃิ۞•─」❄" + "\n" + \
-                  "❄「@ID. http://line.me/ti/p/p-susu000nunu 」❄" + "\n" + \
+                  "❄「༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐」❄" + "\n" + \
+                  "❄「 http://line.me/ti/p/p-nunu_kap123  」❄" + "\n" + \
                   "❄════"
     return myHelp
 
     
 def helpset():
-    helpSet = "╭════[─•۞✟ℓℓஆՁゆຸ۞•─] " + "\n" + \
+    helpSet = "╭═༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐ " + "\n" + \
     "║แชร์เปิด/ปิด]" + "\n" + \
     "║สแปม]" + "\n" + \
     "║อัฟวีดีโอ]" + "\n" + \
