@@ -1,78 +1,30 @@
-from GENERATOR import *
-from datetime import datetime
-from time import sleep
-from bs4 import BeautifulSoup
-from gtts import gTTS
-from googletrans import Translator
+# -*- ─•۞✟ℓℓஆՁゆຸ۞•─ -*-
+from linepy import *
+from akad.ttypes import *
 from multiprocessing import Pool, Process
-from ffmpy import FFmpeg
-import time, random, asyncio, timeit, sys, json, codecs, threading, glob, re, string, os, requests, subprocess, six, urllib, urllib.parse, ast, pytz, wikipedia, pafy, youtube_dl, atexit
+from time import sleep
+from datetime import datetime
+from bs4 import BeautifulSoup
+from humanfriendly import format_timespan, format_size, format_number, format_length
+#import time, random, sys, json, codecs, threading, glob, re, string, os, requests, subprocess, six, ast, pytz, urllib.request, urllib.parse, urllib.error, urllib.parse,base64,antolib,subprocess,unicodedata,GACSender
+import time, random, sys, json, codecs, threading, glob, re, string, os, requests, subprocess, six, ast, pytz, urllib, urllib.parse
+from gtts import gTTS
+import html5lib,shutil
+import wikipedia,goslate
+#import youtube_dl, pafy, asyncio
+from multiprocessing import Pool, Process
+from googletrans import Translator
 
-#cl = RIDEN()
-cl = RIDEN(authTokenRFU="EwyXwTEbrfGokoS2Y4v8.sgl/sXGRl9guOXcolZzI6a.PABzl7j4CubRpzzxk5scU1NlRnj2xOGnwM5c/CGFZt8=")
-cl.log("YOUR TOKEN : {}".format(str(cl.authToken)))
-channel = RIDENChannel(cl,cl.server.CHANNEL_ID['LINE_TIMELINE'])
-cl.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
+#line = LINE()
+#line = LINE("เมล","พาส")
+cl = LINE('sunu0734@gmail.com','sunu2018')
+cl.log("Auth Token : " + str(cl.authToken))
+cl.log("Timeline Token : " + str(cl.tl.channelAccessToken))
 
-#riden1 = RIDEN()
-riden1 = RIDEN(authTokenRFU="EwZPEfP04NyvrkwvT5j6.ciAODWIOJBp4UC40YB2aPG.AFkJbxee/KyH9wm9P14BPL1ntHFzmSHu9+fvgxeBPEg=")
-riden1.log("YOUR TOKEN : {}".format(str(riden1.authToken)))
-channel = RIDENChannel(riden1,riden1.server.CHANNEL_ID['LINE_TIMELINE'])
-riden1.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
 
-#riden2 = RIDEN()
-riden2 = RIDEN(authTokenRFU="EwYRdytxSIqQYb1FuAN6.WKcub2t+uJueUYfdC1qAbG.kcuE5u3klvfwd1IYM+zs5xkxbo3+pIsLrjZ/Um1ti5U=")
-riden2.log("YOUR TOKEN : {}".format(str(riden2.authToken)))
-channel = RIDENChannel(riden2,riden2.server.CHANNEL_ID['LINE_TIMELINE'])
-riden2.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
-
-#riden3 = RIDEN()
-riden3 = RIDEN(authTokenRFU="EwzQfNY5yaHg3Rs3OIy9.WrtAVyZDRBvprHExwvnXkq.5lj592fbau7e3dxelya1Ih8v9FHQpCe09CU7Jrf66xU=")
-riden3.log("YOUR TOKEN : {}".format(str(riden3.authToken)))
-channel = RIDENChannel(riden3,riden3.server.CHANNEL_ID['LINE_TIMELINE'])
-riden3.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
-
-#riden4 = RIDEN()
-riden4 = RIDEN(authTokenRFU="EwPYN0FSJU0JDHi4hWl6.uEr21FsOaeuLSWAmhT6MLG.GUW49h6Z9j04PmS0EyEtIqOAFQkTkAwAcJ/DRgND10M=")
-riden4.log("YOUR TOKEN : {}".format(str(riden4.authToken)))
-channel = RIDENChannel(riden4,riden4.server.CHANNEL_ID['LINE_TIMELINE'])
-riden4.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
-
-#riden5 = RIDEN()
-riden5 = RIDEN(authTokenRFU="EwbrWv7qWM8v94CdUyK5.Sz2c6sOTITJoE7jUS5iGXq.FDG0JGe4PkMZwquZtC2ht1esMg7CC++qcFyPlMYSr/Q=")
-riden5.log("YOUR TOKEN : {}".format(str(riden5.authToken)))
-channel = RIDENChannel(riden5,riden5.server.CHANNEL_ID['LINE_TIMELINE'])
-riden5.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
-
-#riden6 = RIDEN()
-riden6 = RIDEN(authTokenRFU="EwzQtRP0ncBWcdjdpjg5.u+xXLFQSlbSB6sUpVT4zzq.772R8hojuD36MeWapgIUQnCMyOKAUEpCa7I5wcJQ6zE=")
-riden6.log("YOUR TOKEN : {}".format(str(riden6.authToken)))
-channel = RIDENChannel(riden6,riden6.server.CHANNEL_ID['LINE_TIMELINE'])
-riden6.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
-
-#riden7 = RIDEN()
-riden7 = RIDEN(authTokenRFU="EwkYEgwbk6VUfHK5Tewf.SRsUzuDklMrk69jt3WvkhW.jigL8Rxr9t6I/fpBkf1cEjg1DolBqhezX8k8vpsPnQs=")
-riden7.log("YOUR TOKEN : {}".format(str(riden7.authToken)))
-channel = RIDENChannel(riden7,riden7.server.CHANNEL_ID['LINE_TIMELINE'])
-riden7.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
-
-#riden8 = RIDEN()
-riden8 = RIDEN(authTokenRFU="Ew91coutN2nBG5cihRI3.NFnOcElHuDdTQG5zISlFKW.jiFt9BmKDxIShf6PHAtaRgJxLsawVmpLvLoCTggJZyw=")
-riden8.log("YOUR TOKEN : {}".format(str(riden8.authToken)))
-channel = RIDENChannel(riden8,riden8.server.CHANNEL_ID['LINE_TIMELINE'])
-riden8.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
-
-#riden9 = RIDEN()
-riden9 = RIDEN(authTokenRFU="EwrFEPERf8My3Q9BdKac.XwGHfami0C6EGZ533rnqZa.3n1R+i5/pqpAFhMiHN52G0zxJ+9/Tlrtd0Zccz/K+Sc=")
-riden9.log("YOUR TOKEN : {}".format(str(riden9.authToken)))
-channel = RIDENChannel(riden9,riden9.server.CHANNEL_ID['LINE_TIMELINE'])
-riden9.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
-
-#riden10 = RIDEN()
-riden10 = RIDEN(authTokenRFU="EwFZogXW3THy9KnwDRv5.4DANLenrmne5/CxD4zQP5q.pDWYzrGYkwh0ZakYaDNMdrUHm7iBrmLRNc1QPBl7Sbk=")
-riden10.log("YOUR TOKEN : {}".format(str(riden10.authToken)))
-channel = RIDENChannel(riden10,riden10.server.CHANNEL_ID['LINE_TIMELINE'])
-riden10.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
+riden1 = LINE('nunu4844@gmail.com','sunu2018')
+riden1.log("Auth Token : " + str(riden1.authToken))
+riden1.log("Timeline Token : " + str(riden1.tl.channelAccessToken))
 
 print ("BY:【さัএπัஞ✵ບิथℓℓҨतΩ】")
 
