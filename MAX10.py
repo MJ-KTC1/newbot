@@ -26,7 +26,7 @@ riden1 = LINE('nunu4844@gmail.com','sunu2018')
 riden1.log("Auth Token : " + str(riden1.authToken))
 riden1.log("Timeline Token : " + str(riden1.tl.channelAccessToken))
 
-print ("BY:【さัএπัஞ✵ບิथℓℓҨतΩ】")
+print ("ลอคอินแล้ว")
 
 clProfile = cl.getProfile()
 clSettings = cl.getSettings()
@@ -58,7 +58,7 @@ Squad = {
     "UnsendPesan":True,
     "SpamInvite":False,
     "Contact":False,
-    "GName":"【さัএπัஞ✵ບิथℓℓҨतΩ】",
+    "GName":"─•۞✟ℓℓஆՁゆຸ۞•─",
     "AutoRespon":True,
     "KickRespon":False,
     "KillOn":False,
