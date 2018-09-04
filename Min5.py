@@ -159,57 +159,8 @@ settings = {
     "comment1":""" [SELF BOT MIN PY3 ON...] """,
     "comment":"""    ─┅═✥👊ᵀᴴᴬᴵᴸᴬᴺᴰ👊✥═┅─ 
   💀[มินทีมทดลองบอท]💀 
-╠════════════════════
-╠    ─┅═✥👊ᵀᴴᴬᴵᴸᴬᴺᴰ👊✥═┅─ 
-╠      💀[ BOTLINE]💀
-╠════════════════════
-╠📌มีบริการให้เช่าเซลบอท
-╠📌ร่างครึ่งคนครึ่งบอท
-╠📌ราคาว่ากันตามคุณภาพนะครับ
-╠📌ราคาแรกเข้าจ่าย300บาท
-╠📌  เดือนต่อไป จ่าย200บาท
-╠📌เพิ่มคิกเกอร์ตัวละ100👌
-╠▶บินได้ครับ,รันได้ครับ
-╠▶ป้องกันกลุ่มเจอบินได้
-╠▶มีเปิดปิดแสกนคำหยาบกับบอทบิน
-╠▶แอบดูคนอ่านแบบดึง คท.ได้
-╠▶แทคได้,รันแชทได้
-╠▶สั่งบล็อคใครก็ได้
-╠▶ลบแชทได้ , มุลิ้งก์ได้
-╠▶กันรันได้100%,ลบรันได้
-╠▶เช็คโพส,เช็คคท,เช็คข้อมูลคนอื่นได้
-╠▶เช็คข้อมูลตัวเอง,เช็คข้อมูลกลุ่มได้
-╠▶ปฏิเสธคำเชิญแบบใส่ข้อความลงไปได้
-╠▶ดึงห้องรวมได้
-╠▶ปฏิเสธกลุ่มเชิญตามจำนวนสมาชิกได้
-╠▶เล่นเซลในแชทสต.ได้
-╠▶ตั้งข้อความคนเข้าคนออกได้
-╠▶ตั้งข้อความคนลบสมาชิกได้
-╠▶ตั้งข้อความคนแอดได้
-╠▶เรียกดูการตั้งค่าข้อความได้ทั้งหมด
-╠════════════════════
-╠⚫อัพเดตลูกเล่นใหม่ๆทุกเดือน⚫
-╠════════════════════
-╠🔘มีความสามารถอีกเยอะ🔘
-╠       🎀สนใจรีบทัก🎀
-╠🔷ระบบpython3🔷
-╠▶ฟังชั่นล้นหลาม คุณภาพแน่นปึ๊ก
-╠▶กำลังรอให้คุณเป็นเจ้าของ....
-╠════════════════════
-╠⏭https://line.me/ti/p/Gumin_789
-╠▶https://line.me/ti/p/Gumin_789
-╠▶คุณจะได้เป็นเจ้าของ เซลบอทคุณภาพดีก่อนใครๆ
-╠▶(ทักก่อนจิ้ม...ไม่งั้นโดนออโต้บล็อคนะจ๊ะ)
-╠▶selfbot by:
-╔══════════════┓
-╠™[BY.มินทีมทดลองบอท]
-╚══════════════┛
-╠════════════════════
-╠เป็นเจ้าของเซลบอทคุณภาพดีก่อนใคร
-╠(ทักก่อนจิ้ม...เพราะใช้ออโต้บล็อคนะจ๊ะ)
-╠selfbot by 
-╠════════════════════
-╚════[ รัปประกันความพึงพอใจ ]""",
+
+""",
     "userAgent": [
         "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0",
         "Mozilla/5.0 (X11; U; Linux amd64; rv:5.0) Gecko/20100101 Firefox/5.0 (Debian)",
@@ -800,24 +751,6 @@ def lineBot(op):
                 if text is None:
                     return
 #==============================================================================#
-                if ".พูด " in msg.text.lower():
-                    spl = re.split(".พูด ",msg.text,flags=re.IGNORECASE)
-                    if spl[0] == "":
-                        mts = spl[1]
-                        mtsl = mts.split()
-                        mtsTimeArg = len(mtsl) - 1
-                        mtsTime = mtsl[mtsTimeArg]
-                        del mtsl[mtsTimeArg]
-                        mtosay = " ".join(mtsl)
-                        global Rapid1To
-                        Rapid1To = msg.to
-                        RapidTime = mtsTime
-                        rmtosay = []
-                        for count in range(0,int(RapidTime)):
-                            rmtosay.insert(count,mtosay)
-                        p = Pool(20)
-                        p.map(Rapid1Say,rmtosay)
-                        p.close()
                 if text.lower() == 'คำสั่ง':
                     myHelp = myhelp()
                     line.sendMessage(to, str(myHelp))  
@@ -867,16 +800,16 @@ def lineBot(op):
                    line.sendImageWithFooter(to, path, userid, path, line.getContact(sender).displayName)
                    line.sendFooter(to, "My Profile\nMid : "+str(sender)+"\nName : "+str(contact.displayName)+"\nStatus :\n"+str(contact.statusMessage), userid, "http://dl.profile.line-cdn.net/"+line.getContact(sender).pictureStatus, line.getContact(sender).displayName)                
 #============================
-                elif text.lower() == '.เริ่มใหม่':
+                elif text.lower() == 'รีบอท':
                     line.sendMessage(to, "กำลังเริ่มต้นใหม่ ... โปรดรอสักครู่ ..")
                     line.sendMessage(to, "Success Restarting.")
                     restartBot()
-                elif text.lower() == '.หำออน':
+                elif text.lower() == 'ออน':
                     timeNow = time.time()
                     runtime = timeNow - botStart
                     runtime = format_timespan(runtime)
-                    line.sendMessage(to, "🐯รอสักครู...🐯")
-                    line.sendMessage(to, "🐯ระยะเวลาการทำงานของบอท 🐯 {}".format(str(runtime)))
+                    line.sendMessage(to, "รอสักครู...")
+                    line.sendMessage(to, "ระยะเวลาการทำงานของบอท {}".format(str(runtime)))
                 elif text.lower() == '.ข้อมูล':
                     try:
                         arr = []
@@ -887,19 +820,19 @@ def lineBot(op):
                         contactlist = line.getAllContactIds()
                         blockedlist = line.getBlockedContactIds()
                         ret_ = "╔══[BY.มินทีมทดลองบอท]"
-                        ret_ += "\n╠🐯 ชื่อ ═ {}".format(contact.displayName)
-                        ret_ += "\n╠🐯 กลุ่ม ═ {}".format(str(len(grouplist)))
-                        ret_ += "\n╠🐯 เพื่อน ═ {}".format(str(len(contactlist)))
-                        ret_ += "\n╠?? บล็อค ═ {}".format(str(len(blockedlist)))
+                        ret_ += "\n╠ชื่อ ═ {}".format(contact.displayName)
+                        ret_ += "\n╠กลุ่ม ═ {}".format(str(len(grouplist)))
+                        ret_ += "\n╠เพื่อน ═ {}".format(str(len(contactlist)))
+                        ret_ += "\n╠บล็อค ═ {}".format(str(len(blockedlist)))
                         ret_ += "\n╠══[สถานะ] ═ {}".format(contact.statusMessage)
-                        ret_ += "\n╠🐯 ผู้สร้าง ═ {}".format(creator.displayName)
+                        ret_ += "\n╠ผู้สร้าง ═ {}".format(creator.displayName)
                         ret_ += "\n╚══[BY.มินทีมทดลองบอท]"
                         line.sendContact(to, owner)
                         line.sendMessage(to, str(ret_))
                     except Exception as e:
                         line.sendMessage(msg.to, str(e))
 #==============================================================================#
-                elif text.lower() == '.set':
+                elif text.lower() == 'set':
                     try:
                         ret_ = "╔════[ 🐯MY การตั้งค่า🐯 ]═════┓"
                         if settings["autoBlock"] == True: ret_ += "\n╠ ออโต้บล็อค  เปิด"
@@ -1027,7 +960,7 @@ def lineBot(op):
                     settings["unsendMessage"] = False
                     line.sendMessage(to, "unsendMessage disabled.")           
 #==============================================================================#
-                elif msg.text.lower() == ".หำ":
+                elif msg.text.lower() == "คท":
                     me = line.getContact(lineMID)
                     line.sendMessage(msg.to,"[👇ชื่อของพี่👇]")
                     sendMessageWithMention(to, lineMID)
@@ -1037,7 +970,7 @@ def lineBot(op):
                     cover = line.getProfileCoverURL(lineMID)
                     line.sendImageWithURL(msg.to, cover)
                     line.sendMessage(msg.to,str(settings["comment"]))
-                elif text.lower() == '.me':
+                elif text.lower() == 'me':
                     sendMessageWithMention(to, lineMID)
                     line.sendContact(to, lineMID)
                 elif text.lower() == '.cr':
@@ -1503,10 +1436,10 @@ def lineBot(op):
                             line.sendText(msg.to,"🐯ข้อความสเตตัส🐯:\n"+userData.statusMessage)
                             line.sendText(msg.to,"🐯ไอดีบัญชี🐯: "+userData.mid)
                 
-                elif "รับแก้ไฟล์+เพิ่มไฟล์+แก้ภาษา\n💝ราคาดูที่หน้างาน💝\n👉มีบริการให้เช่าบอทSAMURAI\nราคา300บาทต่อเดือน💖\n#เพิ่มคิกเกอร์ตัวละ100👌\n🎀สนใจรีบทัก..บอทpython3ฟังชั่นล้นหลาม🎁กำลังรอให้คุณเป็นเจ้าของ\n(ผมจะอยู่ที่ห้องนี้แค่15นาทีนะจ๊ะ)\nselfbot by:\n╔══════════════┓\n[BY.มินทีมทดลองบอท] \n╚══════════════┛" in msg.text:
-                    spl = msg.text.split("รับแก้ไฟล์+เพิ่มไฟล์+แก้ภาษา\n💝ราคาดูที่หน้างาน💝\n👉มีบริการให้เช่าบอทSAMURAI\nราคา300บาทต่อเดือน💖\n#เพิ่มคิกเกอร์ตัวละ100👌\n🎀สนใจรีบทัก..บอทpython3ฟังชั่นล้นหลาม🎁กำลังรอให้คุณเป็นเจ้าของ\n(ผมจะอยู่ที่ห้องนี้แค่15นาทีนะจ๊ะ)\nselfbot by:\n╔══════════════┓\n[BY.มินทีมทดลองบอท]➣ \n╚══════════════┛")
-                    if spl[len(spl)-1] == "":
-                        line.sendText(msg.to,"กดที่นี่เพื่อเขย่าข้อความด้านบน:\nline://nv/chatMsg?chatId="+msg.to+"&messageId="+msg.id)
+     #           elif "รับแก้ไฟล์+เพิ่มไฟล์+แก้ภาษา\n💝ราคาดูที่หน้างาน💝\n👉มีบริการให้เช่าบอทSAMURAI\nราคา300บาทต่อเดือน💖\n#เพิ่มคิกเกอร์ตัวละ100👌\n🎀สนใจรีบทัก..บอทpython3ฟังชั่นล้นหลาม🎁กำลังรอให้คุณเป็นเจ้าของ\n(ผมจะอยู่ที่ห้องนี้แค่15นาทีนะจ๊ะ)\nselfbot by:\n╔══════════════┓\n[BY.มินทีมทดลองบอท] \n╚══════════════┛" in msg.text:
+        #            spl = msg.text.split("รับแก้ไฟล์+เพิ่มไฟล์+แก้ภาษา\n💝ราคาดูที่หน้างาน💝\n👉มีบริการให้เช่าบอทSAMURAI\nราคา300บาทต่อเดือน💖\n#เพิ่มคิกเกอร์ตัวละ100👌\n🎀สนใจรีบทัก..บอทpython3ฟังชั่นล้นหลาม🎁กำลังรอให้คุณเป็นเจ้าของ\n(ผมจะอยู่ที่ห้องนี้แค่15นาทีนะจ๊ะ)\nselfbot by:\n╔══════════════┓\n[BY.มินทีมทดลองบอท]➣ \n╚══════════════┛")
+              #      if spl[len(spl)-1] == "":
+                     #   line.sendText(msg.to,"กดที่นี่เพื่อเขย่าข้อความด้านบน:\nline://nv/chatMsg?chatId="+msg.to+"&messageId="+msg.id)
                 elif ".รัน @" in msg.text:
                     print ("[Command]covergroup")
                     _name = msg.text.replace(".รัน @","")
