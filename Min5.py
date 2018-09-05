@@ -918,30 +918,30 @@ def lineBot(op):
                 elif text.lower() == '.เปิดอ่าน':
                     settings["autoRead"] = True
                     line.sendMessage(to, "✨เปิดการอ่านข้อความอัตโนมัต✨")
-                elif text.lower() == '.ปิดอ่าน':
+                elif text.lower() == 'ปิดอ่าน':
                     settings["autoRead"] = False
                     line.sendMessage(to, "✨ปิดการอ่านข้อความอัตโนมัต✨")
-                elif text.lower() == '.เปิดติ๊ก':
+                elif text.lower() == 'เปิดติ๊ก':
                     settings["checkSticker"] = True
                     line.sendMessage(to, "✨เปิดระบบการเช็คสติ๊กเกอร์✨")
                     line.sendMessage(to, "✨โปรดส่งสติ๊กเกอร์เพื่อเช็ค✨")
-                elif text.lower() == '.ปิดติ๊ก':
+                elif text.lower() == 'ปิดติ๊ก':
                     settings["checkSticker"] = False
                     line.sendMessage(to, "✨ปิดระบบการเช็คสติ๊กเกอร์✨")
-                elif text.lower() == '.เปิดหำมุด':
+                elif text.lower() == 'เปิดมุด':
                     settings["autoJoinTicket"] = True
                     line.sendMessage(to, "✨เปิดการมุดเข้าลิ้งโดยอัตมัต✨")
-                elif text.lower() == '.ปิดหำมุด':
+                elif text.lower() == 'ปิดมุด':
                     settings["autoJoinTicket"] = False
                     line.sendMessage(to, "✨ปิดการมุดเข้าลิ้งอัตโนมัต✨")
-                elif text.lower() == '.เปิดเผือก':
+                elif text.lower() == 'เปิดเผือก':
                     settings["unsendMessage"] = True
                     line.sendMessage(to, "unsendMessage  enabled.")
-                elif text.lower() == '.ปิดเผือก':
+                elif text.lower() == 'ปิดเผือก':
                     settings["unsendMessage"] = False
                     line.sendMessage(to, "unsendMessage disabled.")           
 #==============================================================================#
-                elif msg.text.lower() == "คท":
+                elif msg.text.lower() == "me":
                     me = line.getContact(lineMID)
                     line.sendMessage(msg.to,"[👇ชื่อของพี่👇]")
                     sendMessageWithMention(to, lineMID)
@@ -951,31 +951,31 @@ def lineBot(op):
                     cover = line.getProfileCoverURL(lineMID)
                     line.sendImageWithURL(msg.to, cover)
                     line.sendMessage(msg.to,str(settings["comment"]))
-                elif text.lower() == 'me':
+                elif text.lower() == 'คท':
                     sendMessageWithMention(to, lineMID)
                     line.sendContact(to, lineMID)
-                elif text.lower() == '.cr':
+                elif text.lower() == 'cr':
                     sendMessageWithMention(to, lineMID)
                     line.sendContact(to, "ufad8bc98e4811b51115039219b8f8faf")
-                elif text.lower() == '.ไอดี':
-                    line.sendMessage(msg.to,"🐯MID🐯\n" +  lineMID)
-                elif text.lower() == '.ชื่อ':
+                elif text.lower() == 'ไอดี':
+                    line.sendMessage(msg.to,"MID\n" +  lineMID)
+                elif text.lower() == 'ชื่อ':
                     me = line.getContact(lineMID)
-                    line.sendMessage(msg.to,"🐯[DisplayName]🐯\n" + me.displayName)
-                elif text.lower() == '.ตัส':
+                    line.sendMessage(msg.to,"[DisplayName]\n" + me.displayName)
+                elif text.lower() == 'ตัส':
                     me = line.getContact(lineMID)
-                    line.sendMessage(msg.to,"🐯[StatusMessage]🐯\n" + me.statusMessage)
-                elif text.lower() == '.รูปโปร':
+                    line.sendMessage(msg.to,"[StatusMessage]\n" + me.statusMessage)
+                elif text.lower() == 'รูปดิส':
                     me = line.getContact(lineMID)
                     line.sendImageWithURL(msg.to,"http://dl.profile.line-cdn.net/" + me.pictureStatus)
-                elif text.lower() == '.วีดีโอโปร':
+                elif text.lower() == 'วีดีโอดิส':
                     me = line.getContact(lineMID)
                     line.sendVideoWithURL(msg.to,"http://dl.profile.line-cdn.net/" + me.pictureStatus + "/vp")
-                elif text.lower() == '.รูปปก':
+                elif text.lower() == 'รูปปก':
                     me = line.getContact(lineMID)
                     cover = line.getProfileCoverURL(lineMID)    
                     line.sendImageWithURL(msg.to, cover)
-                elif text.lower() == '.คอมเม้น':
+                elif text.lower() == 'คอมเม้น':
                     line.sendMessage(msg.to,str(settings["comment"]))
                 elif text.lower() == '.ทักเข้า':
                     line.sendMessage(msg.to, str(settings["welcome"]))
@@ -1026,7 +1026,7 @@ def lineBot(op):
                             contact = line.getContact(ls)
                             mi_d = contact.mid
                             line.sendContact(to, mi_d)
-                elif msg.text.lower().startswith(".คท "):
+                elif msg.text.lower().startswith("คท "):
                     if 'MENTION' in list(msg.contentMetadata.keys())!= None:
                         names = re.findall(r'@(\w+)', text)
                         mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -1039,7 +1039,7 @@ def lineBot(op):
                             contact = line.getContact(ls)
                             mi_d = contact.mid
                             line.sendContact(msg.to, mi_d)
-                elif msg.text.lower().startswith(".ไอดี "):
+                elif msg.text.lower().startswith("ไอดี "):
                     if 'MENTION' in list(msg.contentMetadata.keys())!= None:
                         names = re.findall(r'@(\w+)', text)
                         mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -1052,7 +1052,7 @@ def lineBot(op):
                         for ls in lists:
                             ret_ += "\n{}" + ls
                         line.sendMessage(msg.to, str(ret_))
-                elif msg.text.lower().startswith(".ชื่อ "):
+                elif msg.text.lower().startswith("ชื่อ "):
                     if 'MENTION' in list(msg.contentMetadata.keys())!= None:
                         names = re.findall(r'@(\w+)', text)
                         mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -1064,7 +1064,7 @@ def lineBot(op):
                         for ls in lists:
                             contact = line.getContact(ls)
                             line.sendMessage(msg.to, "[ Display Name ]\n" + contact.displayName)
-                elif msg.text.lower().startswith(".ตัส "):
+                elif msg.text.lower().startswith("ตัส "):
                     if 'MENTION' in list(msg.contentMetadata.keys())!= None:
                         names = re.findall(r'@(\w+)', text)
                         mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -1076,7 +1076,7 @@ def lineBot(op):
                         for ls in lists:
                             contact = line.getContact(ls)
                             line.sendMessage(msg.to, "[ Status Message ]\n{}" + contact.statusMessage)
-                elif msg.text.lower().startswith(".รูป "):
+                elif msg.text.lower().startswith("ดิส "):
                     if 'MENTION' in list(msg.contentMetadata.keys())!= None:
                         names = re.findall(r'@(\w+)', text)
                         mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -1088,7 +1088,7 @@ def lineBot(op):
                         for ls in lists:
                             path = "http://dl.profile.line.naver.jp/" + line.getContact(ls).pictureStatus
                             line.sendImageWithURL(msg.to, str(path))
-                elif msg.text.lower().startswith(".วีดีโอโปร "):
+                elif msg.text.lower().startswith("วีดีโอ "):
                     if 'MENTION' in list(msg.contentMetadata.keys())!= None:
                         names = re.findall(r'@(\w+)', text)
                         mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -1100,7 +1100,7 @@ def lineBot(op):
                         for ls in lists:
                             path = "http://dl.profile.line.naver.jp/" + line.getContact(ls).pictureStatus + "/vp"
                             line.sendImageWithURL(msg.to, str(path))
-                elif msg.text.lower().startswith(".ปก "):
+                elif msg.text.lower().startswith("ปก "):
                     if line != None:
                         if 'MENTION' in list(msg.contentMetadata.keys())!= None:
                             names = re.findall(r'@(\w+)', text)
@@ -1113,10 +1113,10 @@ def lineBot(op):
                             for ls in lists:
                                 path = line.getProfileCoverURL(ls)
                                 line.sendImageWithURL(msg.to, str(path))
-                elif ".โพส " in msg.text:
-                    tl_text = msg.text.replace(".โพส ","")
+                elif "โพส " in msg.text:
+                    tl_text = msg.text.replace("โพส ","")
                     line.sendText(msg.to,"line://home/post?userMid="+lineMID+"&postId="+line.new_post(tl_text)["result"]["post"]["postInfo"]["postId"])
-                elif ".หำก๊อปปี้ " in msg.text:
+                elif "ก๊อปปี้ " in msg.text:
                   if msg._from in admin:
                     targets = []
                     key = eval(msg.contentMetadata["MENTION"])
@@ -1145,7 +1145,7 @@ def lineBot(op):
                             line.sendMessage(msg.to, "Failed!")
                             print (e)
 
-                elif msg.text in [".หำคืนร่าง"]:
+                elif msg.text in ["คืนร่าง"]:
                     try:
                         line.updateProfile.pictureStatus(backup.pictureStatus)
                         line.updateProfile.statusMessage(backup.statusMessage)
@@ -1154,7 +1154,7 @@ def lineBot(op):
                     except Exception as e:
                         line.sendText(msg.to, str (e))
                         
-                elif msg.text in ["Allprotect on",".หำปลอดภัย"]:
+                elif msg.text in ["Allprotect on","/P"]:
                         settings["kickMention"] = True
                         settings["Aip"] = False
                         RfuProtect["protect"] = True
@@ -1163,9 +1163,9 @@ def lineBot(op):
                         RfuProtect["linkprotect"] = True 
                         RfuProtect["Protectguest"] = True
                         RfuProtect["Protectjoin"] = True
-                        line.sendText(msg.to,"🐯การตั้งค่าชุดรักษาความปลอดภัยทั้งหมด เปิดแล้ว🐯")
+                        line.sendText(msg.to,"การตั้งค่าชุดรักษาความปลอดภัยทั้งหมด เปิดแล้ว")
 						
-                elif msg.text in ["Allprotect off",".ปิดป้องกัน"]:
+                elif msg.text in ["Allprotect off","/Y"]:
                         settings["kickMention"] = False
                         settings["Aip"] = False
                         RfuProtect["protect"] = False
@@ -1174,9 +1174,9 @@ def lineBot(op):
                         RfuProtect["linkprotect"] = False 
                         RfuProtect["Protectguest"] = False
                         RfuProtect["Protectjoin"] = False
-                        line.sendText(msg.to,"🐯การตั้งค่าชุดรักษาความปลอดภัยทั้งหมด ปิดแล้ว🐯")
+                        line.sendText(msg.to,"การตั้งค่าชุดรักษาความปลอดภัยทั้งหมด ปิดแล้ว")
                         
-                elif msg.text in ["Allmsg on",".เปิดข้อความ"]:
+                elif msg.text in ["Allmsg on","เปิดข้อความ"]:
                         settings["Wc"] = True
                         settings["Lv"] = True
                         settings["Nk"] = True
@@ -1188,9 +1188,9 @@ def lineBot(op):
                         settings["detectMention"] = True
                         settings["delayMention"] = True
                         settings["Api"] = True
-                        line.sendText(msg.to,"🐯การตั้งค่าชุดข้อความทั้งหมด เปิดแล้ว🐯")
+                        line.sendText(msg.to,"การตั้งค่าชุดข้อความทั้งหมด เปิดแล้ว")
 						
-                elif msg.text in ["Allmsg off",".ปิดข้อความ"]:
+                elif msg.text in ["Allmsg off","ปิดข้อความ"]:
                         settings["Wc"] = False
                         settings["Lv"] = False
                         settings["Nk"] = False
@@ -1202,7 +1202,7 @@ def lineBot(op):
                         settings["potoMention"] = False
                         settings["delayMention"] = False
                         settings["Api"] = False
-                        line.sendText(msg.to,"🐯การตั้งค่าชุดข้อความทั้งหมด ปิด🐯")
+                        line.sendText(msg.to,"การตั้งค่าชุดข้อความทั้งหมด ปิด")
 #==============================================================================#
                 elif msg.text.lower().startswith("mimicadd "):
                     targets = []
