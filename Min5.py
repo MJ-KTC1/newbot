@@ -646,7 +646,7 @@ def lineBot(op):
                                  line.sendText(msg.to,"-> " + _name + " \nทำการเชิญสำเร็จ")
                                  break
                              elif invite in settings["blacklist"]:
-                                 line.sendText(msg.to,"ขออภัย, 🐯" + _name + " บุคคนนี้อยู่ในรายการบัญชีดำ🐯")
+                                 line.sendText(msg.to,"ขออภัย," + _name + " บุคคนนี้อยู่ในรายการบัญชีดำ")
                                  line.sendText(msg.to,"ใช้คำสั่ง!, \n➡ล้างดำ➡ดึง" )
                                  break                             
                              else:
@@ -658,7 +658,7 @@ def lineBot(op):
                                  try:
                                      line.findAndAddContactsByMid(target)
                                      line.inviteIntoGroup(msg.to,[target])
-                                     line.sendText(msg.to,"เชิญคนนี้สำเร็จแล้ว : \n➡" + _name)
+                                     line.sendText(msg.to,"ทำการเชินสำเร็จแล้ว : \n➡" + _name)
                                      settings["winvite"] = False
                                      break
                                  except:
@@ -667,7 +667,7 @@ def lineBot(op):
                                          line.inviteIntoGroup(op.param1,[invite])
                                          settings["winvite"] = False
                                      except:
-                                         line.sendText(msg.to,"😧ตรวจพบข้อผิดพลาดที่ไม่ทราบสาเหตุ😩อาจเป็นได้ว่าบัญชีของคุณถูกแบนเชิญ😨")
+                                         line.sendText(msg.to,"ตรวจพบข้อผิดพลาดที่ไม่ทราบสาเหตุอาจเป็นได้ว่าบัญชีของคุณถูกแบนเชิญ")
                                          settings["winvite"] = False
                                          break
         if op.type == 25:
@@ -705,7 +705,7 @@ def lineBot(op):
                  if msg._from in admin: 
                    if msg.contentMetadata["mid"] in settings["blacklist"]:
                         del settings["blacklist"][msg.contentMetadata["mid"]]
-                        line.sendText(msg.to,"🐯เพิ่มบัญชีนี้ในรายการสีขาวเรียบร้อยแล้ว🐯")
+                        line.sendText(msg.to,"เพิ่มบัญชีนี้ในรายการสีขาวเรียบร้อยแล้ว")
                         settings["dblacklist"] = False
 
                    else:
@@ -748,7 +748,7 @@ def lineBot(op):
                 elif text.lower() == 'คำสั่ง3':
                     socMedia = socmedia()
                     line.sendMessage(to, str(socMedia))
-                elif text.lower() == 'คำสั่งคิก':
+                elif text.lower() == 'คำสั่ง4':
                     helpTextToSpeech = helptexttospeech()
                     line.sendMessage(to, str(helpTextToSpeech))
                 elif text.lower() == '.\\sett':
@@ -771,7 +771,7 @@ def lineBot(op):
                     speed = time.time() - start
                     ping = speed * 1000
                     line.sendMessage(to, "The result is {} ms".format(str(speedtest(ping))))
-                elif text.lower() == '.ดิสเรา':
+                elif text.lower() == 'ดิส':
                    contact = line.getContact(lineMID)
                    cu = line.getProfileCoverURL(lineMID)
                    path = str(cu)
@@ -791,7 +791,7 @@ def lineBot(op):
                     runtime = format_timespan(runtime)
                     line.sendMessage(to, "รอสักครู...")
                     line.sendMessage(to, "ระยะเวลาการทำงานของบอท {}".format(str(runtime)))
-                elif text.lower() == '.ข้อมูล':
+                elif text.lower() == 'ข้อมูล':
                     try:
                         arr = []
                         owner = "ufad8bc98e4811b51115039219b8f8faf"
@@ -815,7 +815,7 @@ def lineBot(op):
 #==============================================================================#
                 elif text.lower() == 'set':
                     try:
-                        ret_ = "╔════[ 🐯MY การตั้งค่า🐯 ]═════┓"
+                        ret_ = "╔════[  การตั้งค่า ]═════┓"
                         if settings["autoBlock"] == True: ret_ += "\n╠ ออโต้บล็อค  เปิด"
                         else: ret_ += "\n╠ ออโต้บล็อค   ปิด "
                         if settings["autoAdd"] == True: ret_ += "\n╠ ออโต้แอด  เปิด"
@@ -870,22 +870,22 @@ def lineBot(op):
                         line.sendMessage(to, str(ret_))
                     except Exception as e:
                         line.sendMessage(msg.to, str(e))
-                elif text.lower() == '.เปิดบล็อค':
+                elif text.lower() == 'ปิดบล็อค':
                     settings["autoBlock"] = True
                     line.sendMessage(to, "✨ออโต้บล็อคทำงาน✨")
-                elif text.lower() == '.ปิดบล็อค':
+                elif text.lower() == 'ปิดบล็อค':
                     settings["autoBlock"] = False
                     line.sendMessage(to, "✨ออโต้บล็อคปิดการทำงาน✨")
-                elif text.lower() == '.เปิดแอด':
+                elif text.lower() == 'เปิดแอด':
                     settings["autoAdd"] = True
                     line.sendMessage(to, "✨ออโต้แอดทำงาน✨")
-                elif text.lower() == '.ปิดแอด':
+                elif text.lower() == 'ปิดแอด':
                     settings["autoAdd"] = False
                     line.sendMessage(to, "✨ออโต้แอดปิดทำงาน✨")                                        
-                elif text.lower() == '.เปิดเข้า':
+                elif text.lower() == 'เปิดเข้า':
                     settings["autoJoin"] = True
                     line.sendMessage(to, "✨เปิดการเข้ารวมการเชิญออโต้✨")
-                elif text.lower() == '.ปิดเข้า':
+                elif text.lower() == 'ปิดเข้า':
                     settings["autoJoin"] = False
                     line.sendMessage(to, "✨ปิดการเข้ารวมการเชิญออโต้✨")
                 elif "gcancel:" in msg.text:
@@ -909,10 +909,10 @@ def lineBot(op):
                                 line.sendText(msg.to,str(settings["eror"]))
                         else:
                                 line.sendText(msg.to,"Bizarre ratings")					
-                elif text.lower() == '.เปิดออก':
+                elif text.lower() == 'เปิดออก':
                     settings["autoLeave"] = True
                     line.sendMessage(to, "✨เปิดระบบออกแชทรวมอัตโนมัติ✨")
-                elif text.lower() == '.ปิดออก':
+                elif text.lower() == 'ปิดออก':
                     settings["autoLeave"] = False
                     line.sendMessage(to, "✨ปิดระบบออกแชทรวมอัตโนมัต✨")
                 elif text.lower() == '.เปิดอ่าน':
